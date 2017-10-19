@@ -9,7 +9,7 @@
  - [ 基于 Mac OS X 部署 ](./cf_osx.md)
  - [ 基于 Docker 部署 ](./cf_docker.md)
  - [ 源码打包部署 ](./cf_source.md)
-* [ 3. 快速入门 ](#) QH Run Build
+* [ 3. 快速入门 ](#) 
   - [ iOS 项目构建 ](./quick_iosBuild.md)
 * [ 4. Yml 配置文件 ](#) GY
    - [ iOS 模板 ](./yml_ios.md)
@@ -18,7 +18,8 @@
   - [ 常见问题 ](./other_faqs.md) WAITING
   - [ Bug 反馈 ](./other_feedBack.md) WAITING
   - [ 参与协作 Flow.ci ](./other_cooperate.md) DM
-  - [ CI 与 DevOps 的关系 ](./) WAITING
+  - [ CI 与 DevOps 的关系 ](./other_ci_devops.md) WAITING
+  - [ 如何找到 Provisioning Profiles & 证书文件 ](./other_p12.md) √
 * [ 7. 管理员文档 ](#) QH
   - [ 简介 ](./admin_base.md) √
   - [ Flow 管理 ](./admin_flow.md) √
