@@ -60,11 +60,9 @@ Flow.ci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需�
 <img src="https://images-cdn.shimo.im/tO03tDIS7MYAY07H/iosbuildlog.jpg" style="zoom:30%">
 
 
-
 ### <a name="ios_get_ipa">4、获取产物</a>
 
-
-
+打开构建日志 “Get_IPA_File” 根据产物输出路径获取产品。
 
 
 
