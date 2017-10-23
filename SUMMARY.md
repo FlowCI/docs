@@ -16,7 +16,6 @@
 * [ 5. 最佳实践 ](./) 可举例团队内部使用，一定要跟持续发布 & 发布质量相关
 * [ 6. 其它 ](#) 
   - [ 常见问题 ](./other_faqs.md) WAITING
-  - [ Bug 反馈 ](./other_feedBack.md) WAITING
   - [ 参与协作 Flow.ci ](./other_cooperate.md) DM
   - [ CI 与 DevOps 的关系 ](./other_ci_devops.md) WAITING
   - [ 如何找到 Provisioning Profiles & 证书文件 ](./other_p12.md) √
