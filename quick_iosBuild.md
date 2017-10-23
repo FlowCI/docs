@@ -37,21 +37,9 @@
 
 这里我们选择 “SSH” 方式连接 Git 仓库并且输入项目 “Git 仓库地址” 。
 
-Flow.ci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需要 “手动添加 webhook 地址到你的 Git 仓库”，添加方式如下：
+Flow.ci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需要 “手动添加 webhook 地址到你的 Git 仓库”，参见：[ 如何添加 webhook 地址到你的 Git 仓库？](./other_faqs.md#add_webhook)
 
-在 GitHub 中打开你的项目，然后依次点击 “Settings” - “Webhooks” - “Add webhook”。
-
-图3
-
-<img src="https://images-cdn.shimo.im/ik4ER7hszvw2b0NZ/addwebhook.jpg" style="zoom:30%">
-
-在 “Payload URL” 中输入 webhook 地址，并选择 “Content type” 为 application/json。
-
-推荐修改触发 webhook 的事件为 Push & PullRequest，不使用默认的 “Send me everything”。
-
-最后点击 “Add webhook” 按钮完成创建。
-
-回到 Flow ci “配置 Git 仓库” 界面，点击 “连接测试” 按钮，测试是否成功连接 Git 仓库。测试成功后，点击 “完成” 按钮，完成 Flow 创建。
+添加完成后回到 Flow ci “配置 Git 仓库” 界面，点击 “连接测试” 按钮，测试是否成功连接 Git 仓库。测试成功后，点击 “完成” 按钮，完成 Flow 创建。
 
 ### <a name="ios_build_trigger">3、触发构建</a>
 
