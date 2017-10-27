@@ -1,12 +1,12 @@
 # 基于 Linux 的安装
 
-最少运行配置:
+最小运行环境:
 
 - Java 8 (JRE or JDK)
 - 至少 1 G 的内存
 - 1 G 以上的空间
 
-推荐运行配置: 
+推荐运行环境: 
 
 - Java 8 (JRE or JDK)
 - 4 G 以上的内存
@@ -159,8 +159,8 @@ task.instance.mos.toggle.clean = true
 
 启动 Apache Tomcat 后，可通过在浏览器中键入 `所配置的路径/index ` 地址，验证服务是否启动成功。
 
-> 例如: 所配置的网址为: http://hello.flowci.com
-> 两个服务在 Tomcat 中配置的路径分别为 `flow-api`， `flow-control-center`，则在浏览器中输入 http://hello.flowci.com/flow-api/index 验证主 API 服务是否启动成功，输入 http://hello.flowci.com/flow-control-center/index 验证控制中心的服务是否启动成功。
+> 例如: 所配置的网址为: http://yourhost.com
+> 两个服务在 Tomcat 中配置的路径分别为 `flow-api`， `flow-control-center`，则在浏览器中输入 http://yourhost.com/flow-api/index 验证主 API 服务是否启动成功，输入 http://yourhost.com/flow-control-center/index 验证控制中心的服务是否启动成功。
 
 
 ### 通过源码安装 Flow.ci 页面
