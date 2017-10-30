@@ -28,7 +28,7 @@ Flow.ci 目前只支持基于 Git 的版本控制系统，所以需要在机器�
 
 **Tomcat**
 
-Tomcat 8.0 以上
+Tomcat 8.5 以上
 
 **MySQL**
 
@@ -40,14 +40,14 @@ MySQL 5.6 以上
 
 > 提示: Flow.ci 使用 maven 编译，3.0 以上版本， 可以在命令行中输入 `mvn -v` 检查 maven 是否正确安装。
 
-通过以下命令，编译所需要的 war / jar 包，结果输出在 ./dist 文件夹下
+  通过以下命令，编译所需要的 war / jar 包，结果输出在 ./dist 文件夹下
 
-```
+  ```bash
 git clone -b master https://github.com/FlowCI/flow-platform.git
 cd flow-platform
 mvn clean package -DskipTests=true
 ls ./dist
-```
+  ```
 
 ##### 配置 Flow.ci
 
@@ -78,7 +78,7 @@ ls ./dist
    jdbc.url = jdbc:mysql://127.0.0.1:3306/flow_api_db?useSSL=false
    jdbc.username = db_username
    jdbc.password = db_password
-   jdbc.pool.size = 200
+   jdbc.pool.size = 50
    jdbc.commit.auto = false
    jdbc.connection.timeout = 20000
 
@@ -163,10 +163,36 @@ task.instance.mos.toggle.clean = true
 > 两个服务在 Tomcat 中配置的路径分别为 `flow-api`， `flow-control-center`，则在浏览器中输入 http://yourhost.com/flow-api/index 验证主 API 服务是否启动成功，输入 http://yourhost.com/flow-control-center/index 验证控制中心的服务是否启动成功。
 
 
-### 通过源码安装 Flow.ci 页面
+### 通过源码安装 Flow.ci web 页面
 
 Flow.ci 采用的为前后端分离的结构，所以需要用户在安装后台服务后，安装 web 界面。
 
 #### 安装前的准备
 
-**Nginx**
+**node.js**
+
+Node.js v6.6.0 以上版本
+
+**npm**
+
+npm v3 以上版本
+
+
+##### 获取源码并编译
+
+通过以下脚本编译 web 项目，编译成功后，请在 dist 文件夹下查看编译好的项目文件。
+
+> 请根据配置的 API URL 替换 `FLOW_WEB_API` 环境变量。
+
+```bash
+git clone -b master https://github.com/FlowCI/flow-web.git
+cd flow-web
+export NODE_ENV=production
+export FLOW_WEB_API="http://your_flow_api_url"
+npm run compile
+```
+
+##### 部署
+
+web 可以部署在任意 http 应用服务器上，如 Nginx, Apache Http Server 等。
+> 提示: web 项目使用 react 构建，需要在部署到 http 应用服务器后，配置服务器的路由，否则会无法刷新页面。如在 Nginx 上，需添加配置 `try_files $uri /index.html;`
