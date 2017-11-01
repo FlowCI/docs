@@ -7,7 +7,7 @@
 - [ 查询 Agent 状态 & 当前任务 ](#agent_info)
 - [ Agent 操作 ](#agent_operate)
 
-**Agent 名词解释**：Agent 是 Flow.ci 中负责执行构建任务的最基本单元，一台物理机可以启动多个 Agent。
+**Agent 名词解释**：Agent 是 flow.ci 中负责执行构建任务的最基本单元，一台物理机可以启动多个 Agent。
 
 ### <a name="agent_add">1、新建 Agent</a>
 

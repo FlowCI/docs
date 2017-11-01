@@ -12,7 +12,7 @@ Flow.ci 是由 [ fir.im ](http://fir.im) 团队推出的 *开源免费持续集�
 
 Flow.ci 的设计目标是通过简单易用的 CI 产品，加强公司产品迭代，提升产品功能满意度和可用性，快速持续交付高质量软件。
 
-### > Flow.ci 具备如下核心特性：
+### > flow.ci 具备如下核心特性：
 
 - 界面化配置，简单易用
 - 集成能力（ Docker、FASTLANE、Slack、钉钉 ）
@@ -21,13 +21,13 @@ Flow.ci 的设计目标是通过简单易用的 CI 产品，加强公司产品�
 - 高可用
 - 数据统计分析能力（ 构建数据全掌握，方便项目管理 ）
 
-### > Flow.ci 安装部署
+### > flow.ci 安装部署
 
 获取你所需要的 [安装包（Mac，Ubuntu）](./)，并阅读 [安装部署文档](./)。
 
 ### > 运行你的第一个构建（ Build ）
 
-在 Flow.ci 中 [创建第一个 Flow](./quick_iosBuild.md) 并开始构建！
+在 flow.ci 中 [创建第一个 flow](./quick_iosBuild.md) 并开始构建！
 
 <br/><br/><br/>
 
