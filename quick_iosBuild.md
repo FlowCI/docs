@@ -11,7 +11,7 @@
 
 * 安装 Fastlane
 
- - 目前 Flow.ci 尚处于 Beta 版本，没有完全集成 Fastlane，需要用户手动在 Agent 机器上安装 Fastlane，参见：https://docs.fastlane.tools/getting-started/ios/setup/
+ - 目前 flow.ci 尚处于 Beta 版本，没有完全集成 Fastlane，需要用户手动在 Agent 机器上安装 Fastlane，参见：https://docs.fastlane.tools/getting-started/ios/setup/
 
 * 导入证书
 
@@ -21,7 +21,7 @@
 
  - 在根目录下添加 .flow.yml 文件。
 
- - 对于新创建的项目，Flow.ci 会在根目录下自动查找 .flow.yml 项目配置文件，根据配置文件中定义的步骤，自动生成工作流。
+ - 对于新创建的项目，flow.ci 会在根目录下自动查找 .flow.yml 项目配置文件，根据配置文件中定义的步骤，自动生成工作流。
 
 如何编写 yml 配置文件请参见：[iOS 模板](./yml_ios.md)
 
@@ -29,7 +29,7 @@
 
 <img src="https://images-cdn.shimo.im/GuKjruYMv3k84gRu/iosbuild_1.jpg" style="zoom:30%">
 
-环境准备完成后，打开 Flow.ci Web，点击创建 Flow  按钮（图1）打开 “创建 Flow” 界面，填写 Flow 名称后进入 “配置 Git 仓库”，如 <图2>。
+环境准备完成后，打开 flow.ci Web，点击创建 flow  按钮（图1）打开 “创建 flow” 界面，填写 flow 名称后进入 “配置 Git 仓库”，如 <图2>。
 
 图2
 
@@ -37,9 +37,9 @@
 
 这里我们选择 “SSH” 方式连接 Git 仓库并且输入项目 “Git 仓库地址” 。
 
-Flow.ci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需要 “手动添加 webhook 地址到你的 Git 仓库”，参见：[ 如何添加 webhook 地址到你的 Git 仓库？](./other_faqs.md#add_webhook)
+flow.ci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需要 “手动添加 webhook 地址到你的 Git 仓库”，参见：[ 如何添加 webhook 地址到你的 Git 仓库？](./other_faqs.md#add_webhook)
 
-添加完成后回到 Flow ci “配置 Git 仓库” 界面，点击 “连接测试” 按钮，测试是否成功连接 Git 仓库。测试成功后，点击 “完成” 按钮，完成 Flow 创建。
+添加完成后回到 flow ci “配置 Git 仓库” 界面，点击 “连接测试” 按钮，测试是否成功连接 Git 仓库。测试成功后，点击 “完成” 按钮，完成 flow 创建。
 
 ### <a name="ios_build_trigger">3、触发构建</a>
 
@@ -47,7 +47,7 @@ Flow.ci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需�
 
 <img src="https://images-cdn.shimo.im/AYFaRGIyccUIbiwv/iosrunbuild.jpg" style="zoom:30%">
 
-创建 Flow 成功后，有两种方式触发项目构建：
+创建 flow 成功后，有两种方式触发项目构建：
 
 * 修改项目任一文件并提交，触发构建
 

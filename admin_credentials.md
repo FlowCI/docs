@@ -5,7 +5,7 @@
 - [ 添加证书 ](#credential_add)
 - [ 查询证书 ](#credential_info)
 
-Flow.ci 目前证书（Credentials
+flow.ci 目前证书（Credentials
 ）类型有两种，一种是仓库授权需要使用的 SSH RSA 证书，另外一种是构建 iOS 项目时使用的 iOS 开发证书（.P12）和描述文件（.mobileprovision）。
 
 ### <a name="credential_add">1、添加证书</a>

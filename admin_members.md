@@ -1,20 +1,20 @@
-# Flow.ci 成员管理
+# flow.ci 成员管理
 
 页面导航：
 
-- [ Flow.ci 角色说明 ](#role_info)
+- [ flow.ci 角色说明 ](#role_info)
 - [ 添加成员 ](#member_add)
 - [ 查询成员信息 ](#member_info)
 - [ 成员角色变更 ](#member_auth)
 - [ 删除成员 ](#member_delete)
 
-### <a name="role_info">1、Flow.ci 角色说明</a>
+### <a name="role_info">1、flow.ci 角色说明</a>
 
-Flow.ci 目前包含两种角色：Admin & User
+flow.ci 目前包含两种角色：Admin & User
 
-Admin  角色拥有 “Flow.ci 控制台管理权限”，同时拥有 User 权限。
+Admin  角色拥有 “flow.ci 控制台管理权限”，同时拥有 User 权限。
 
-User 角色拥有 “新建 Flow 以及 Flow 构建权限”。
+User 角色拥有 “新建 flow 以及 flow 构建权限”。
 
 ### <a name="member_add">2、添加成员</a>
 
@@ -22,7 +22,7 @@ User 角色拥有 “新建 Flow 以及 Flow 构建权限”。
 
 <img src="https://images-cdn.shimo.im/TewNxF46bzANXkfl/memberinfo.jpg" style="zoom:30%">
 
-添加成员默认分配角色为 User，可在创建时给成员进行 Flow 授权，授权后该成员即拥有 Flow 的操控权。
+添加成员默认分配角色为 User，可在创建时给成员进行 flow 授权，授权后该成员即拥有 flow 的操控权。
 
 如勾选 “发送账户详情电子邮件”，添加成员成功后，该成员邮箱会收到一封账户信息邮件，包含用户名 & 初始密码。
 

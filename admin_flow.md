@@ -20,13 +20,13 @@
 
 <img src="https://images-cdn.shimo.im/u9icyGLX1WYRVPw4/flow_members.jpg" style="zoom:30%">
 
-Flow.ci 目前支持较粗粒度的权限控制，后续会细化权限控制系统，实现组权限以及自定义角色功能、支持 LADP，满足大型开发团队需求。
+flow.ci 目前支持较粗粒度的权限控制，后续会细化权限控制系统，实现组权限以及自定义角色功能、支持 LADP，满足大型开发团队需求。
 
-Flow.ci 的权限控制是基于 Flow 的，管理员可以为 Flow 指定一个或多个成员，如 < 图2 > 所示，在 Flow 成员管理界面中，我们为 test 分配了一个成员（ admin ）。
+flow.ci 的权限控制是基于 flow 的，管理员可以为 flow 指定一个或多个成员，如 < 图2 > 所示，在 flow 成员管理界面中，我们为 test 分配了一个成员（ admin ）。
 
 ### <a name="flow_delete">3、删除 Flow</a>
 
-在 Flow 列表中找到你要删除的 Flow，点击删除即可（注意：删除的 Flow 不可恢复）。
+在 flow 列表中找到你要删除的 flow，点击删除即可（注意：删除的 flow 不可恢复）。
 
 
 

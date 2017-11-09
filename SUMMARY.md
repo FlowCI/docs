@@ -1,4 +1,4 @@
-# Flow.ci 中文文档 V1.0
+# flow.ci 中文文档 V1.0
 
 * [ 1. Flow.ci 简介 & 整体架构 ](#)
   - [ Flow.ci 简介 ](./intro_base.md) QH √
@@ -14,12 +14,12 @@
 * [ 5. 最佳实践 ](./) 可举例团队内部使用，一定要跟持续发布 & 发布质量相关
 * [ 6. 其它 ](#) 
   - [ 常见问题 ](./other_faqs.md) WAITING
-  - [ 参与协作 Flow.ci ](./other_cooperate.md) DM
+  - [ 参与协作 flow.ci ](./other_cooperate.md) DM
   - [ CI 与 DevOps 的关系 ](./other_ci_devops.md) WAITING
   - [ 如何找到 Provisioning Profiles & 证书文件 ](./other_p12.md) √
 * [ 7. 管理员文档 ](#) QH
   - [ 简介 ](./admin_base.md) √
-  - [ Flow 管理 ](./admin_flow.md) √
+  - [ flow 管理 ](./admin_flow.md) √
   - [ 用户管理 ](./admin_members.md) √
   - [ 插件管理 ](./admin_plugin.md) X
   - [ Agent 管理 ](./admin_agent.md) √ 差图
