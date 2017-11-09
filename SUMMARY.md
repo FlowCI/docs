@@ -1,14 +1,12 @@
 # flow.ci 中文文档 V1.0
 
-* [ 1. flow.ci 简介 & 整体架构 ](#)
-  - [ flow.ci 简介 ](./intro_base.md) QH √
-  - [ flow.ci 整体架构 ](./intro_framework.md) GY
-* [ 2. 安装 & 部署 ](#) GY
- - [ 获取安装包 ](./cf_package.md)
- - [ 基于 Linux 部署 ](./cf_linux.md) ..
- - [ 基于 Mac OS X 部署 ](./cf_osx.md) ..
- - [ 基于 Docker 部署 ](./cf_docker.md) ..
- - [ 源码打包部署 ](./cf_source.md) ..
+* [ 1. Flow.ci 简介 & 整体架构 ](#)
+  - [ Flow.ci 简介 ](./intro_base.md) QH √
+  - [ Flow.ci 整体架构 ](./intro_framework.md) GY
+* [ 2. 安装 Flow.ci ](#) GY
+ - [ 基于 Linux 的安装 ](./cf_linux.md) ..
+ - [ 基于 Mac OS 的安装 ](./cf_osx.md) ..
+ - [ 基于 Docker 的安装 ](./cf_docker.md) ..
 * [ 3. 快速入门 ](#) 
   - [ iOS 项目构建 ](./quick_iosBuild.md) √
 * [ 4. Yml 配置文件 ](#) GY
