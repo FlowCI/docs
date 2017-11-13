@@ -74,6 +74,6 @@ flow.ci 和大多数的开源项目一样，贡献代码有一定的规范。为
 
 <br/><br/><br/>
 <div id="bom">
-<a href="./other_ci_devops.md">下一节：CI 与 DevOps 的关系 </a>
+<a href="./other_cidevops.md">下一节：CI 与 DevOps 的关系 </a>
 </div>
 <link rel="stylesheet" rev="stylesheet" href="flow.css" type="text/css"/> 

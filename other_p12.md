@@ -25,7 +25,7 @@
 <br/><br/><br/>
 
 <div id="bom">
-<a href="./other_ci_devops.md">上一节：CI 与 DevOps 的关系 </a> |
+<a href="./other_cidevops.md">上一节：CI 与 DevOps 的关系 </a> |
 <a href="./admin_base.md">下一节：管理员文档-简介 </a>
 </div>
 
