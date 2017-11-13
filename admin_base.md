@@ -1,10 +1,10 @@
 # 简介 [ 管理员控制台 ]
 
-flow.ci 管理员控制台用于管理日常构建（ Build ）需要的服务（比如插件）以及相关配置。仅用于管理员登录使用。
+flowci 管理员控制台用于管理日常构建（ Build ）需要的服务（比如插件）以及相关配置。仅用于管理员登录使用。
 
 </br>
 
-### 登录 flow.ci 管理员控制台：
+### 登录 flowci 管理员控制台：
 
 <img src="https://images-cdn.shimo.im/qoU5liDGZac3Dm8v/admin_login.jpg" style="zoom:40%"></img>
 

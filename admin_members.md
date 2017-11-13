@@ -2,17 +2,17 @@
 
 页面导航：
 
-- [ flow.ci 角色说明 ](#role_info)
+- [ flowci 角色说明 ](#role_info)
 - [ 添加成员 ](#member_add)
 - [ 查询成员信息 ](#member_info)
 - [ 成员角色变更 ](#member_auth)
 - [ 删除成员 ](#member_delete)
 
-### <a name="role_info">1、flow.ci 角色说明</a>
+### <a name="role_info">1、flowci 角色说明</a>
 
-flow.ci 目前包含两种角色：Admin & User
+flowci 目前包含两种角色：Admin & User
 
-Admin  角色拥有 “flow.ci 控制台管理权限”，同时拥有 User 权限。
+Admin  角色拥有 “flowci 控制台管理权限”，同时拥有 User 权限。
 
 User 角色拥有 “新建 flow 以及 flow 构建权限”。
 
@@ -44,11 +44,10 @@ User 角色拥有 “新建 flow 以及 flow 构建权限”。
 在成员列表中勾选某个成员，点击删除。
 
 
-
 <br/><br/><br/>
 
 <div id="bom">
-<a href="./admin_flow.md">上一节：Flow 管理 </a> |
+<a href="./admin_flow.md">上一节：flow 管理 </a> |
 <a href="./admin_plugin.md">下一节：插件管理 </a>
 </div>
 

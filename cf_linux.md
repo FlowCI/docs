@@ -14,17 +14,17 @@
 
 ## 在 Debian 或者 Ubuntu 上安装
 
-### 通过源码安装 Flow.ci 后台程序
+### 通过源码安装 flow.ci 后台程序
 
 ##### 安装前的准备
 
 **Java**
 
-Flow.ci 是基于 Java 1.8 版本的应用程序，所以需要在机器上安装 Java 1.8 或以上的版本。如果不确定现有的 Java 版本，可以通过 `java -version` 命令检查当前的 Java 环境。
+flowci 是基于 Java 1.8 版本的应用程序，所以需要在机器上安装 Java 1.8 或以上的版本。如果不确定现有的 Java 版本，可以通过 `java -version` 命令检查当前的 Java 环境。
 
 **Git**
 
-Flow.ci 目前只支持基于 Git 的版本控制系统，所以需要在机器上安装 Git，可以通过 `git --version` 命令检查 Git 是否安装。
+flowci 目前只支持基于 Git 的版本控制系统，所以需要在机器上安装 Git，可以通过 `git --version` 命令检查 Git 是否安装。
 
 **Tomcat**
 
@@ -38,7 +38,7 @@ MySQL 5.6 以上
 
 ##### 获取源码并编译
 
-> 提示: Flow.ci 使用 maven 编译，3.0 以上版本， 可以在命令行中输入 `mvn -v` 检查 maven 是否正确安装。
+> 提示: flowci 使用 maven 编译，3.0 以上版本， 可以在命令行中输入 `mvn -v` 检查 maven 是否正确安装。
 
   通过以下命令，编译所需要的 war / jar 包，结果输出在 ./dist 文件夹下
 
@@ -49,11 +49,11 @@ mvn clean package -DskipTests=true
 ls ./dist
   ```
 
-##### 配置 Flow.ci
+##### 配置 flowci
 
 1. 创建数据库
 
-  Flow.ci 后端需要两个数据库对应不同的服务，可以执行以下语句在 MySQL 中创建所需要的数据库。
+  flow.ci 后端需要两个数据库对应不同的服务，可以执行以下语句在 MySQL 中创建所需要的数据库。
 
   ```sql
   mysql -u user_name -p -e "CREATE DATABASE flow_api_db CHARACTER SET utf8 COLLATE utf8_bin;"
@@ -163,9 +163,9 @@ task.instance.mos.toggle.clean = true
 > 两个服务在 Tomcat 中配置的路径分别为 `flow-api`， `flow-control-center`，则在浏览器中输入 http://yourhost.com/flow-api/index 验证主 API 服务是否启动成功，输入 http://yourhost.com/flow-control-center/index 验证控制中心的服务是否启动成功。
 
 
-### 通过源码安装 Flow.ci web 页面
+### 通过源码安装 flowci web 页面
 
-Flow.ci 采用的为前后端分离的结构，所以需要用户在安装后台服务后，安装 web 界面。
+flowci 采用的为前后端分离的结构，所以需要用户在安装后台服务后，安装 web 界面。
 
 #### 安装前的准备
 
@@ -196,3 +196,13 @@ npm run compile
 
 web 可以部署在任意 http 应用服务器上，如 Nginx, Apache Http Server 等。
 > 提示: web 项目使用 react 构建，需要在部署到 http 应用服务器后，配置服务器的路由，否则会无法刷新页面。如在 Nginx 上，需添加配置 `try_files $uri /index.html;`
+
+
+<br/><br/><br/>
+
+<div id="bom">
+<a href="./intro_framework.md">下一节：flowci 整体架构 </a>
+<a href="./cf_osx.md">下一节：基于 Mac OS 的安装 </a>
+</div>
+
+<link rel="stylesheet" rev="stylesheet" href="flow.css" type="text/css"/> 

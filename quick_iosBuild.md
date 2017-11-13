@@ -3,7 +3,9 @@
 页面导航：
 
 - [ 环境准备 ](#ios_build_envir)
-- [ 创建 Flow ](#ios_create_flow)
+- [ 创建 flow ](#ios_create_flow)
+  - [ 配置 Git 仓库 ](#git_config)
+  - [ 配置 yml 工作流 ](#yml_config)
 - [ 触发构建 ](#ios_build_trigger)
 - [ 获取产物 ](#ios_get_ipa)
 
@@ -17,19 +19,15 @@
 
  - 参见：[如何找到 Provisioning Profiles & 证书文件](./other_p12.md)
 
-* 编写 yml 配置文件并上传到 Git 项目根目录
-
- - 在根目录下添加 .flow.yml 文件。
-
- - 对于新创建的项目，flow.ci 会在根目录下自动查找 .flow.yml 项目配置文件，根据配置文件中定义的步骤，自动生成工作流。
-
-如何编写 yml 配置文件请参见：[iOS 模板](./yml_ios.md)
-
 ### <a name="ios_create_flow">2、创建 Flow</a>
+
+- <a name="git_config">配置 Git 仓库</a>
+
+图1
 
 <img src="https://images-cdn.shimo.im/GuKjruYMv3k84gRu/iosbuild_1.jpg" style="zoom:30%">
 
-环境准备完成后，打开 flow.ci Web，点击创建 flow  按钮（图1）打开 “创建 flow” 界面，填写 flow 名称后进入 “配置 Git 仓库”，如 <图2>。
+环境准备完成后，浏览器进入 flowci web，点击创建 flow  按钮 <图1> 打开 “创建 flow” 界面，填写 flow 名称后进入 “配置 Git 仓库”，如 <图2>。
 
 图2
 
@@ -37,13 +35,19 @@
 
 这里我们选择 “SSH” 方式连接 Git 仓库并且输入项目 “Git 仓库地址” 。
 
-flow.ci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需要 “手动添加 webhook 地址到你的 Git 仓库”，参见：[ 如何添加 webhook 地址到你的 Git 仓库？](./other_faqs.md#add_webhook)
+flowci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需要 “手动添加 webhook 地址到你的 Git 仓库”，参见：[ 如何添加 webhook 地址到你的 Git 仓库？](./other_faqs.md#add_webhook)
 
-添加完成后回到 flow ci “配置 Git 仓库” 界面，点击 “连接测试” 按钮，测试是否成功连接 Git 仓库。测试成功后，点击 “完成” 按钮，完成 flow 创建。
+添加完成后回到 flowci “配置 Git 仓库” 界面，点击 “连接测试” 按钮，测试是否成功连接 Git 仓库。测试成功后，点击 “下一步” ，配置 yml 工作流。
+
+- <a name="yml_config">配置 yml 工作流</a>
+
+在输入框中填写 yml 工作流，完成后，flowci 会自动触发第一次 Build。
+
+如何编写 yml 配置文件请参见：[iOS 模板](./yml_ios.md)
 
 ### <a name="ios_build_trigger">3、触发构建</a>
 
-图 4
+图 3
 
 <img src="https://images-cdn.shimo.im/AYFaRGIyccUIbiwv/iosrunbuild.jpg" style="zoom:30%">
 
@@ -55,22 +59,18 @@ flow.ci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需�
 
 点击打开构建详情，可查看构建日志等信息。
 
-图 5
+图 4
 
 <img src="https://images-cdn.shimo.im/tO03tDIS7MYAY07H/iosbuildlog.jpg" style="zoom:30%">
 
 
 ### <a name="ios_get_ipa">4、获取产物</a>
 
-打开构建日志 “Get_IPA_File” 根据产物输出路径获取产品。
-
+打开构建日志 “Get_Artifacts_File” 根据产物输出路径获取产物。
 
 
 <br/><br/><br/>
-
 <div id="bom">
-<a href="./admin_plugin.md">上一节：插件管理 </a> |
-<a href="./admin_credentials.md">下一节：证书管理 </a>
+<a href="./other_faqs.md">下一节：常见问题 Faq </a>
 </div>
-
 <link rel="stylesheet" rev="stylesheet" href="flow.css" type="text/css"/> 
