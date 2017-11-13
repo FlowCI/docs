@@ -31,7 +31,7 @@ flowci 的设计目标是通过简单易用的 CI 产品，加强公司产品迭
 
 ### > 运行你的第一个构建（ Build ）
 
-在 flowci 中 [创建第一个 Flow](./quick_iosBuild.md) 并开始构建！
+在 flowci 中 [创建第一个 flow](./quick_iosBuild.md) 并开始构建！
 
 <br/><br/><br/>
 
