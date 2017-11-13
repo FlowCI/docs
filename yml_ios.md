@@ -32,3 +32,11 @@
 重命名 YML 配置文件并加入 Git 仓库:
 
 - 修改 `ios.flow.yml` 到 `.flow.yml` 后，添加此文件到 Git 的根目录下后可开始构建。
+
+
+<br/><br/><br/>
+<div id="bom">
+<a href="./quick_flowconfig.md">下一节：flowci 整体架构 </a>
+<a href="#">下一节：最佳实践 </a>
+</div>
+<link rel="stylesheet" rev="stylesheet" href="flow.css" type="text/css"/> 

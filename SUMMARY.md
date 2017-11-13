@@ -12,7 +12,7 @@
   - [ flow 工作流设置 ](./quick_flowconfig.md)
 * [ 4. Yml 配置文件 ](#) 
    - [ iOS 模板 ](./yml_ios.md) 
-* [ 5. 最佳实践 ](./) 
+* [ 5. 最佳实践 ](./best_practice.md) 
 * [ 6. 其它 ](#) 
   - [ 常见问题 ](./other_faqs.md) 
   - [ 参与协作 flow.ci ](./other_cooperate.md) 
