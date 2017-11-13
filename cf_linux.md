@@ -201,7 +201,7 @@ web 可以部署在任意 http 应用服务器上，如 Nginx, Apache Http Serve
 <br/><br/><br/>
 
 <div id="bom">
-<a href="./intro_framework.md">下一节：flowci 整体架构 </a>
+<a href="./intro_framework.md">下一节：flowci 整体架构 </a> | 
 <a href="./cf_osx.md">下一节：基于 Mac OS 的安装 </a>
 </div>
 

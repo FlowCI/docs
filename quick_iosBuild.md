@@ -43,6 +43,8 @@ flowci 触发自动构建需要接收 Git 仓库的 webhook 事件，所以需�
 
 在输入框中填写 yml 工作流，完成后，flowci 会自动触发第一次 Build。
 
+**之后可以在 “工作流设置” 中修改 yml 工作流配置。**
+
 如何编写 yml 配置文件请参见：[iOS 模板](./yml_ios.md)
 
 ### <a name="ios_build_trigger">3、触发构建</a>

@@ -89,7 +89,7 @@ cd docker
 <br/><br/><br/>
 
 <div id="bom">
-<a href="./cf_osx.md">下一节：基于 Mac OS 的安装 </a>
+<a href="./cf_osx.md">下一节：基于 Mac OS 的安装 </a> | 
 <a href="./quick_iosBuild.md">下一节：iOS 项目构建 </a>
 </div>
 

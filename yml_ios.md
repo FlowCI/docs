@@ -36,7 +36,7 @@
 
 <br/><br/><br/>
 <div id="bom">
-<a href="./quick_flowconfig.md">下一节：flowci 整体架构 </a>
+<a href="./quick_flowconfig.md">下一节：flowci 整体架构 </a> | 
 <a href="#">下一节：最佳实践 </a>
 </div>
 <link rel="stylesheet" rev="stylesheet" href="flow.css" type="text/css"/> 
