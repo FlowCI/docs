@@ -2,7 +2,7 @@
 
 <img src="https://images-cdn.shimo.im/fhZ3juoBzzETNGeW/flowci_logo.png" style="zoom:40%">
 
-欢迎使用 flowci 用户文档，本文档主要提供 flowci 主要功能使用说明，对本文档的任何疑问，可以在 [ GitHub Issues ](https://github.com/FlowCI/flow-web) 与我们取得联系，我们会及时响应！该文档还在不断完善中。
+欢迎使用 flowci 用户文档，本文档主要提供 flowci 主要功能使用说明，对本文档的任何疑问，可以在 [ GitHub Issues ](https://github.com/FlowCI/flow-platform/issues) 与我们取得联系，我们会及时响应！该文档还在不断完善中。
 
 # 开始之前
 
