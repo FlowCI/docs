@@ -14,7 +14,7 @@
 
 ## 在 Debian 或者 Ubuntu 上安装
 
-### 通过源码安装 flow.ci 后台程序
+### 通过源码安装 flow.ci 后端程序
 
 ##### 安装前的准备
 
@@ -72,84 +72,26 @@ ls ./dist
 3. 更改及设置配置文件
 
   **app-api.properties**
-
-   ```properties
-   ### JDBC config ###
-   jdbc.url = jdbc:mysql://127.0.0.1:3306/flow_api_db?useSSL=false
-   jdbc.username = db_username
-   jdbc.password = db_password
-   jdbc.pool.size = 50
-   jdbc.commit.auto = false
-   jdbc.connection.timeout = 20000
-
-   ### Hibernate config ###
-   hibernate.show_sql = false
-   hibernate.hbm2ddl.auto = validate
-
-   ### api settings ###
-   api.workspace = ${HOME}/flow-api-data
-   api.zone.default = default
-   api.user.expire = 86400000
-
-   ### domain ###
-   domain.api = http://localhost:8080
-   domain.web = http://localhost:3000
-   domain.cc = http://localhost:8080
-
-   task.job.toggle.execution_timeout = false
-   ## 600s expire job
-   task.job.toggle.execution_create_session_duration = 600
-   ## 1h expire job
-   task.job.toggle.execution_running_duration = 3600
-   ```
+  
+  - `jdbc.url`: 配置 MySQL 数据库地址
+  - `jdbc.username`: 配置 MySQL 的用户名
+  - `jdbc.password`: 配置 MySQL 的密码
+  - `jdbc.pool.size`: 配置连接池数量，推荐 50 以上
+  - `api.workspace`: 配置数据存储目录
+  - `domain.api`: 配置 API 的地址
+  - `domain.web` 配置 Web 端的地址
+  - `domain.cc`: 配置 CC 的地址
    
-   **app-cc.properties**
-   
-  ```properties
-  ### jdbc config ###
-  jdbc.url = jdbc:mysql://127.0.0.1:3306/flow_cc_db?useSSL=false
-  jdbc.username = db_username
-jdbc.password = db_password
-jdbc.pool.size = 50
-jdbc.commit.auto = false
-jdbc.connection.timeout = 20000
-
-  ### hibernate config ###
-hibernate.show_sql = false
-hibernate.hbm2ddl.auto = validate
-
-  ### zookeeper config ###
-zk.server.embedded = true
-zk.host = 127.0.0.1:2181
-zk.timeout = 30
-zk.node.root = flow-agents
-
-  # zone names and cloud provider config, ex: a=xxx;b=xxx;c=xxx
-zk.node.zone = default
-zone.default.agent_session_timeout = 600
-zone.default.default_cmd_timeout = 600
-
-  ### rabbitmq config ###
-mq.host = amqp://localhost:5672
-mq.management.host = http://localhost:15672
-
-  #### cmd queue settings ###
-queue.cmd.retry.enable = false
-queue.cmd.rabbit.enable = false
-queue.cmd.rabbit.name = flow-cmd-queue-default
-queue.cmd.idle_agent.timeout = 30
-queue.cmd.idle_agent.period = 5
-
-  ### agent config ###
-agent.config.ws = ws://localhost:8088
-agent.config.cc = http://localhost:8080
-
-  ### task toggles ###
-task.zone.toggle.keep_idle_agent = false
-task.agent.toggle.session_timeout = true
-task.cmd.toggle.execution_timeout = true
-task.instance.mos.toggle.clean = true
-   ```
+  **app-cc.properties**
+  
+  - `jdbc.url`: 配置 MySQL 数据库地址
+  - `jdbc.username`: 配置 MySQL 的用户名
+  - `jdbc.password`: 配置 MySQL 的密码
+  - `jdbc.pool.size`: 配置连接池数量，推荐 50 以上
+  - `zk.server.embedded`: 是否使用 flow.ci 内嵌的 Zookeeper 服务，true or false
+  - `zk.host`:  Zookeeper 的地址，需要外网访问权限
+  - `agent.config.ws`: 配置 Websocket 的地址，必须以 ws 开头，和 API 中 `domain.api` 的域名一致
+  - `agent.config.cc`: 配置 CC 的 地址，需要和 API 中 `domain.cc` 地址一致
 
   > 根据用户所设置信息，需要修改 API 配置文件中的 MySQL 设置， 以及对应的 domain 地址的设置。更详细的配置文件说明，请参见 <a>配置文件说明</a>
 
