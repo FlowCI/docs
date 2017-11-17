@@ -81,6 +81,9 @@ ls ./dist
   - `domain.api`: 配置 API 的地址
   - `domain.web` 配置 Web 端的地址
   - `domain.cc`: 配置 CC 的地址
+  - `task.job.toggle.execution_timeout`: 是否开启 Job 过期检查
+  - `task.job.toggle.execution_create_session_duration`: 设置创建 Job 时的过期时间(秒)
+  - `task.job.toggle.execution_running_duration`: 设置 Job 运行时的过期时间(秒)
    
   **app-cc.properties**
   
