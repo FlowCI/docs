@@ -7,7 +7,7 @@
 
 在这些地方你可以关注 flow.ci, 获得帮助 或 帮助他人：
 
-- **[Github](https://github.com/FlowCI/)**：如果你有 Bug 反馈、功能需求或者想提交请求，欢迎来 Github 提交 issues 。期待你的 pull requests! 
+- **[GitHub](https://github.com/FlowCI/)**：如果你有 Bug 反馈、功能需求或者想提交请求，欢迎来 GitHub 提交 issues 。期待你的 pull requests! 
 - **实时沟通**：加入 flow.ci 开源 QQ 群(154788427) ，与关注 flow.ci 的开源使用者们相互认识、快速交流；
 - **社交平台**：[flow.ci 微博](http://weibo.com/flowci)；微信公众号(flow_ci)，快速获得 flow.ci 相关资讯和开源故事。 
 
