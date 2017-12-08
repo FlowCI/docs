@@ -44,7 +44,7 @@ flowci 在 Docker Hub 上提供了最新的镜像，用户可以方便的获取�
 	FLOW_API_DOMAIN=yourhost.com FLOW_WEB_DOMAIN=yourhost.com ./start-services.sh
 	```
 	
-修改端口: Docker 启动默认后端为 8080 端口，Web 访问为 3000 端口，如果需要修改相应的端口，则需要编辑 `docker-compose.yml` 文件，如下图：
+修改端口: Docker 启动默认后端为 8080 端口，Web 访问为 3000 端口，如果需要修改相应的端口 ( Agent 访问 API 的端口同时也需要修改)，则需要编辑 `docker-compose.yml` 文件，如下图：
 
 ![change_http_port](images/change_http_port.jpg)
 
@@ -77,6 +77,7 @@ cd docker
 > 
 > - `FLOW_API_DOMAIN`： 为所配置的 API 的域，例如 localhost
 > - `FLOW_TOKEN`:  Agent 启动令牌，如何获取请参见 [ Agent 管理 ](./admin_agent.md)
+> - `PORT`: 如果 API 端口不为 8080 时，需要定义端口号
 
 
 - 以 Docker 方式启动
