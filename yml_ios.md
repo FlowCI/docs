@@ -31,6 +31,8 @@
 
 **fir.im 上传:**
 
+如使用 fir 上传功能，请先在 Agent 上安装 fir 插件：
+
 - 首先在终端运行以下命令安装 fir.sh：
 
   `curl https://raw.githubusercontent.com/FIRHQ/fir-cli/master/fir.sh -o /usr/local/bin/fir`
@@ -41,7 +43,8 @@
 
   `fir login token`
 
-- 在 YML 工作流最后添加 fir 发布脚本，如下：
+
+在 YML 工作流最后添加 fir 发布脚本，如下：
 
   ```yml
   - name: fir_publish
