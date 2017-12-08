@@ -13,7 +13,7 @@
 
 * 安装 Fastlane
 
- - 目前 flow.ci 尚处于 Beta 版本，没有完全集成 Fastlane，需要用户手动在 Agent 机器上安装 Fastlane，参见：https://docs.fastlane.tools/getting-started/ios/setup/
+ - 目前 flow.ci 尚处于 alpha 版本，没有完全集成 fastlane，需要用户手动在 Agent 机器上安装 fastlane，参见：https://docs.fastlane.tools/getting-started/ios/setup/
 
 * 导入证书
 

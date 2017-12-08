@@ -5,8 +5,7 @@
 - [ 添加证书 ](#credential_add)
 - [ 查询证书 ](#credential_info)
 
-flowci 目前证书（Credentials
-）类型有两种，一种是仓库授权需要使用的 SSH RSA 证书，另外一种是构建 iOS 项目时使用的 iOS 开发证书（.P12）和描述文件（.mobileprovision）。
+flow.ci 目前证书（Credentials）类型有两种，一种是仓库授权需要使用的 SSH RSA 证书，另外一种是构建 iOS 项目时使用的 iOS 开发证书（.P12）和描述文件（.mobileprovision）。
 
 ### <a name="credential_add">1、添加证书</a>
 
@@ -15,6 +14,8 @@ flowci 目前证书（Credentials
 在控制台中选择 “添加 Credential” ，证书类型选择 “RSA”，填写证书名称之后即可生成 RSA 证书，在列表中复制证书内容添加到目标机器即可。
 
 - 添加 iOS 证书
+
+**此功能目前不可用，如进行 iOS 构建添加证书，直接将证书拷贝到 Agent 上双击即可**
 
 在控制台中选择 “添加 Credential” ，证书类型选择 “iOS 证书”，上传 iOS 开发证书（.P12）和描述文件（.mobileprovision）即可。
 
