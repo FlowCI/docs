@@ -12,7 +12,7 @@
     * [ iOS 项目构建 ](./quick_iosBuild.md)
     * [ 触发条件设置 ](./quick_trigger.md)
 * [ 4. YML 配置文件 ](#)
-    * [YML 介绍](./yml_intro.md)
+    * [YML 基础介绍](./yml_intro.md)
     * [ iOS 模板 ](./yml_ios.md)
 * [ 5. 最佳实践 ](./best_practice.md)
 * [ 6. 其它 ](#)
