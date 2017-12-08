@@ -15,7 +15,9 @@ flow.ci 的工作流是通过 YML 配置文件来定义的，可以在创建 flo
 
 ![YML 格式](images/yml_desc.jpg)
 
-## 系统的环境变量
+## 环境变量
+
+#### 可调用的系统环境变量
 
 用户可以调用 flow.ci 系统的环境变量获取相关信息:
 
@@ -44,3 +46,8 @@ flow.ci 的工作流是通过 YML 配置文件来定义的，可以在创建 flo
 - `FLOW_JOB_BUILD_CATEGORY`:  当前任务的触发类型 `SCHEDULER`, `API`, `MANUAL`, `PUSH`, `PR`, `TAG`
 - `FLOW_JOB_AGENT_INFO`: 当前任务所在的 Agent 名称
 - `FLOW_JOB_LAST_STATUS`: 可以通过此环境变量获取上一步的构建结果 `SUCCESS`, `FAILURE`, `STOPPED`, `TIMEOUT`
+
+#### 可配置的系统环境变量
+
+- `FLOW_AGENT_WORKSPACE`: Agent 的工作目录，默认为 `${HOME}` 目录下，可以根据需要来定义，如 `${HOME}/flow-agent-home`
+- `FLOW_ENV_OUTPUT_PREFIX`: 在执行过程中，自定义输出的环境变量是不能够被传递的。例如：在步骤 1 中执行脚本 `export OUTPUT_TEST=xxx`，在步骤 2 中默认是不能引用 `OUTPUT_TEST` 的。用户可以通过设定 `FLOW_ENV_OUTPUT_PREFIX` 来支持环境变量的传递，例如当设置此环境变量的值为 `OUTPUT_` 这时 flow.ci 会传递以 `OUTPUT_` 为开头的所有环境变量，到下一个步骤中（用 `,` 分隔设置多个传递值，如：`OUTPUT_,HELLO_,FLOW_AGENT_WORKSPACE`）
