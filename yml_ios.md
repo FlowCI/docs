@@ -1,8 +1,8 @@
-# iOS 构建模板
+# iOS 项目构建
 
 **模板地址：**
 
-`https://github.com/FlowCI/templates/blob/master/ios.flow.yml`
+`https://github.com/flowci/templates/blob/master/ios.flow.yml`
 
 此模板使用 fastlane 构建 iOS 项目
 
@@ -11,9 +11,9 @@
 在 Agent 所工作的机器上，需要安装：
 
 - fastlane: 具体请参见 <a href="https://docs.fastlane.tools/getting-started/ios/setup/">https://docs.fastlane.tools/getting-started/ios/setup/</a>
-- 证书: 导入 iOS 项目所需要的 `.provisionprofile` 以及 `.p12` 文件
+- 证书: 在 Agent 上，手工导入 iOS 项目所需要的 `.provisionprofile` 以及 `.p12` 文件
 
-调整 flow.yml 配置：
+**调整 YML 配置：**
 
 - 配置 Agent 工作环境:
   
@@ -29,10 +29,33 @@
   - `IOS_EXPORT_METHOD`: iOS 打包方式，可以使用 `app-store, ad-hoc, package, enterprise, development, developer-id`
   - `IOS_IPA_DIR`: iOS IPA 文件输出目录
 
-重命名 YML 配置文件并加入 Git 仓库:
+**fir.im 上传:**
 
-- 修改 `ios.flow.yml` 到 `.flow.yml` 后，添加此文件到 Git 的根目录下后可开始构建。
+- 首先在终端运行以下命令安装 fir.sh：
 
+  `curl https://raw.githubusercontent.com/FIRHQ/fir-cli/master/fir.sh -o /usr/local/bin/fir`
+
+  `chmod +x /usr/local/bin/fir`
+
+- 登录 [fir 账户](https://fir.im/apps)， 获取 token，启动 docker 并在终端执行以下命令（第一次会自动下载 fir-cli 镜像）：
+
+  `fir login token`
+
+- 在 YML 工作流最后添加 fir 发布脚本，如下：
+
+  ```yml
+  - name: fir_publish
+    script: |
+      array=$(find ${IOS_IPA_DIR} -name *.ipa 2>&1)
+      for file in ${array[@]}
+      do
+        fir publish $file
+      done
+  ```
+
+发布效果：
+
+![fir_upload](images/fir_upload.jpg)
 
 <br/><br/><br/>
 <div id="bom">
