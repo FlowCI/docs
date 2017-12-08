@@ -44,6 +44,11 @@ flowci 在 Docker Hub 上提供了最新的镜像，用户可以方便的获取�
 	FLOW_API_DOMAIN=yourhost.com FLOW_WEB_DOMAIN=yourhost.com ./start-services.sh
 	```
 	
+修改端口: Docker 启动默认后端为 8080 端口，Web 访问为 3000 端口，如果需要修改相应的端口，则需要编辑 `docker-compose.yml` 文件，如下图：
+
+![change_http_port](images/change_http_port.jpg)
+
+
 ## 从源代码构建 Docker 镜像并启动
 
 除了从 Docker Hub 直接获取 flowci 的镜像之外，用户也可以通过以下命令，从源代码直接构建 Docker 镜像，
