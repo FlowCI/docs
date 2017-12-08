@@ -19,7 +19,7 @@
 <img src="https://images-cdn.shimo.im/GiCOBE6jGNk0gNoY/ios_p12_3.png" style="zoom:80%">
 
 
-**之后将 P12 证书文件  & Provisioning Profiles 文件双击安装到 Agent 机器上即可。**
+**之后将 P12 证书文件  & Provisioning Profiles 文件双击安装到 Agent 机器上即可**
 
 
 <br/><br/><br/>

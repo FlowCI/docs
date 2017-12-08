@@ -1,18 +1,18 @@
-# flowci 整体架构
+# flow.ci 整体架构
 
-flowci 主要分为三个部分，如下图所示:
+flow.ci 主要分为三个部分，如下图所示:
 
 <img src="https://images-cdn.shimo.im/GoWZdCbi1OwuSdRR/image.png!thumbnail" style="zoom:30%">
 
 **flow Front End:**
 
-flowci 的前端部分，现阶段主要为 web 页面。
+flow.ci 的前端部分，现阶段主要为 web 页面。
 
 > 后期会提供命令行工具，IDE 插件等
 
 **flow API:**
 
-此服务主要提供 flowci 的基础服务，如 flow 管理，job 管理，用户管理等。
+此服务主要提供 flow.ci 的基础服务，如 flow 管理，job 管理，用户管理等。
 
 
 **flow Control Center:**
