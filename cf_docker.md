@@ -82,7 +82,7 @@ cd docker
 
 - 以 Docker 方式启动
  
-  `USER_DOCKER=true ./start-agent.sh $FLOW_API_DOMAIN $FLOW_TOKEN`
+  `USE_DOCKER=true ./start-agent.sh $FLOW_API_DOMAIN $FLOW_TOKEN`
 
 - Java 方式启动
   > 需要准备 Java 1.8 的环境
