@@ -7,3 +7,10 @@ Open source continues integration(CI) server.
 - Open Plugins
 
 - Cloud Native
+
+[Documentation](./v1.0/SUMMARY.md)
+
+[GIF]()
+
+[YML Link]()
+
