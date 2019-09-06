@@ -1,4 +1,4 @@
-## What is flow.ci
+## What is [flow.ci](https://github.com/flowci)
 
 Open source continues integration(CI) server.
 

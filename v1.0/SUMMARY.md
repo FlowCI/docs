@@ -1,12 +1,10 @@
 # Summary
 
-* [ What is flow.ci ](./intro.md)
-
 * [ Install ](#)
-    * [ Docker ](./cf_linux.md)
-    * [ Mac ](./cf_osx.md)
-    * [ Linux ](./cf_docker.md)
-    * [ K8s ](./cf_docker.md)
+    * [ Docker ](./install/docker.md)
+    * [ Mac ](./install/mac.md)
+    * [ Linux ](./install/linux.md)
+    * [ Kubernates ](./install/k8s.md)
 
 * [ Getting Started ](#)
     * [ Create flow (pipeline) ](./quick_iosBuild.md)
