@@ -1,6 +1,6 @@
 # Summary
 
-* [ What is flow.ci ](README.md)
+* [ What is flow.ci ](./intro.md)
 
 * [ Install ](#)
     * [ Docker ](./cf_linux.md)
