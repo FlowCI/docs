@@ -2,9 +2,6 @@
 
 * [ Install ](#)
     * [ Docker ](./install/docker.md)
-    * [ Mac ](./install/mac.md)
-    * [ Linux ](./install/linux.md)
-    * [ Kubernates ](./install/k8s.md)
 
 * [ Getting Started ](#)
     * [ Create flow (pipeline) ](./quick_iosBuild.md)
