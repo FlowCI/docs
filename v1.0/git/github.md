@@ -36,3 +36,22 @@ The webhook used for receive git notification such as push, tag, pull request an
     ![events](./img/github_select_events.png)
 
 ## Deploy Key
+
+- Create SSH-RSA
+
+- Copy to GitHub
+  - Single repo
+  - All repos
+
+
+## Test
+
+- Webhook:
+
+  The green check box will be shown after 'webhook' field if the flow receive the 'ping' request after GitHub webhook created.
+
+- Deploy Key:
+  
+  Test the access right from flow settings by click 'test' button, the green will be shown if everything correct.
+
+![github_test](./img/github_test_config.gif)
