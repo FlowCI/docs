@@ -1,6 +1,6 @@
 # Setup GitHub
 
-## Webhook
+## - Webhook
 
 The webhook used for receive git notification such as push, tag, pull request and so on.
 
@@ -35,16 +35,38 @@ The webhook used for receive git notification such as push, tag, pull request an
 
     ![events](./img/github_select_events.png)
 
-## Deploy Key
+## - Deploy Key
 
-- Create SSH-RSA
+1. Create SSH-RSA
+  
+   You can create a new or add an existing ssh-rsa to gain git repo access right. 
 
-- Copy to GitHub
+  - Given a name: name used for identify which ssh-rsa will be applied in the flow
+    
+
+  - Create or paste existing 
+
+2. Set variable from YAML
+
+   `FLOWCI_CREDENTIAL_SSH_RSA` to control which ssh-rsa applied in the flow, for example named key as `flow-test-key`, then add this var into your YAML file as following:
+
+   ```yaml
+    
+    envs:
+      FLOWCI_CREDENTIAL_SSH_RSA: "flow-test-key"
+
+    steps:
+      script: |
+        echo hello
+    
+   ```
+
+3. Copy to GitHub
   - Single repo
   - All repos
 
 
-## Test
+## - Verify Settings
 
 - Webhook:
 
