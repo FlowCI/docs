@@ -39,28 +39,25 @@ The webhook used for receive git notification such as push, tag, pull request an
 
 1. Create SSH-RSA
   
-   You can create a new or add an existing ssh-rsa to gain git repo access right. 
+   You can create a new or add an existing ssh-rsa to gain git repo access right.
 
   - Given a name: name used for identify which ssh-rsa will be applied in the flow
-    
+
   - Generate new or peast existing public and private key
 
   ![](./img/create_ssh-rsa_credential.png)
-
 
 2. Set variable from YAML
 
    `FLOWCI_CREDENTIAL_SSH_RSA` to control which ssh-rsa applied in the flow, for example named key as `flow-test-key`, then add this var into your YAML file as following:
 
    ```yaml
-    
     envs:
       FLOWCI_CREDENTIAL_SSH_RSA: "flow-test-key"
 
     steps:
       script: |
         echo hello
-    
    ```
 
 3. GitHub setup
