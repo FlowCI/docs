@@ -34,8 +34,19 @@ Steps to create flow
 
 ## Setup YAML
 
-By default, flow.ci will create a sample yaml after the flow created, of course you could change it from UI.
+By default, flow.ci will create a sample yaml after the flow created, or you can start with simple [templates](https://github.com/FlowCI/templates).
 
 For more detail of YAML configuration please go to [YAML Configuration]() chapter
 
 ## Start build
+
+- Manually
+
+  Click `Run` button from flow page (the commit informaiton will be missing)
+
+- Trigger (if webhook setup correctly)
+  - Push
+  - Tag
+  - Pull Request
+
+  ![](../img/trigger_from_github.gif)
