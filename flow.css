@@ -1,2 +1,0 @@
-/* 保持章节导航自动定位在页面左下角 */
-#bom { position:fixed; left:50px; bottom:20px; _position:absolute; _top:expression(document.documentElement.clientHeight + document.documentElement.scrollTop - this.offsetHeight); }
