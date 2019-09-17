@@ -1,31 +1,56 @@
 # YAML Reference
 
-- `env`
+- `env`: (optional)
+	
+	```yaml
+	envs:
+		FIRST_ENV: "first var"
+		SECOND_ENV: "hello world"
+	```
 
-- `filter`
+- `filter`: (optional) 
 
-  - `branches`
+  - `branches`: (optional) 
+  - `tags`: (optional) 
+	
+	```yaml
+	envs:
+		FIRST_ENV: "first var"
+		SECOND_ENV: "hello world"
 
-  - `tags`
+	filter:
+		branches:
+			- "develop"
+			- "master"
+			- "feature/*"
+		tags:
+			- "*"
+	```	
 
-- `selector`
-
+- `selector`: (optional)
 	- `tags`
 
-- `cron`
+	```yaml
+	selector:
+  	  tags:
+    	- ios
+    	- local
+	```
+
+- `cron`: (optional)
 
 - `steps`
 
-  - `name`
+  - `name`: (optional)
 
-  - `allow_failure`
+  - `allow_failure`: (optional)
   
-  - `envs`
+  - `envs`: (optional)
 
-  - `before`
+  - `before`: (optional)
 	
   - `script`
 
-  - `tail`
+  - `tail`: (optional)
 
-  - `exports`
+  - `exports`: (optional)
