@@ -8,7 +8,7 @@ Open source continues integration(CI) server.
 * [ Getting Started ](./v1.0/start/index.md)
 
 * [ YML Configuration ](#)
-    * [ Reference ](./yml_intro.md)
+    * [ Reference ](./v1.0/yml/reference.md)
     * [ Templates ](./yml_ios.md)
         * [ hello world ](https://github.com/FlowCI/templates/blob/master/helloworld.yaml) 
         * [ java ](https://github.com/FlowCI/templates/blob/master/java.yaml) 
