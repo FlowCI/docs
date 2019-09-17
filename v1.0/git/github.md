@@ -43,8 +43,10 @@ The webhook used for receive git notification such as push, tag, pull request an
 
   - Given a name: name used for identify which ssh-rsa will be applied in the flow
     
+  - Generate new or peast existing public and private key
 
-  - Create or paste existing 
+  ![](./img/create_ssh-rsa_credential.png)
+
 
 2. Set variable from YAML
 
@@ -61,9 +63,11 @@ The webhook used for receive git notification such as push, tag, pull request an
     
    ```
 
-3. Copy to GitHub
-  - Single repo
-  - All repos
+3. GitHub setup
+
+    Copy `public key` and add deploy key to Github from repo `Settings > Deploy key` for single repo access. Github not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access.
+
+    ![](./img/github_setup_deploy_key.png)
 
 
 ## - Verify Settings

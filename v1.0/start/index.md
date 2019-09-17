@@ -1,8 +1,8 @@
 # Getting Started
 
-## Create flow (pipeline)
+## Create a flow (pipeline)
 
-Here the flow almost means pipeline in CI area, but we think flow.ci should be more than CI.
+![](./img/create_flow_with_git_test.gif)
 
 Steps to create flow
 
@@ -10,25 +10,27 @@ Steps to create flow
   - Click 'create flow' from left panel
   - Type a name for flow
   - The flow will be created directly without Git setup
-
-  ![create_flow](https://github.com/FlowCI/files/blob/master/imgs/create_flow_with_name_only.gif?raw=true)
   
 - Git Setup (optional)
   
-  > Optional step, it can be done from YML configuraiton
+  > Optional step, it can be done from YML configuraiton after flow created
 
-  - Git URL
+  - Config Git URL
 
-    Fill in repo remote url copied from git, support both `git@:` and `https://`
+    - `webhook`: url used for receive git events (push, tag, pull request), please using the url shown on 'Webhook' field.
+    
+    - `git url`: fill in repo remote url copied from git, support both `git@:` and `https://`
   
-  - Setup webhook
+  - Config Git Access
 
-    The webhook used for receive git events (push, tag, pull request), please using the url shown on 'Webhook' field.
+    Generate new or use an existing ssh-rsa key. 
 
-    - How to on [GitHub](../git/github.md)
+    - How to setup for [GitHub](../git/github.md)
 
-  - SSH-RSA key
-  - Test connection
+  - Test Git Connection
+
+    Click 'test' button to test git repo access right, or click 'finish' to create flow without test.
+
 
 ## Setup YAML
 
