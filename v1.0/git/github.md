@@ -62,7 +62,7 @@ The webhook used for receive git notification such as push, tag, pull request an
 
 3. GitHub setup
 
-    Copy `public key` and add deploy key to Github from repo `Settings > Deploy key` for single repo access. Github not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access.
+    Copy `public key` and add deploy key to Github from repo `Settings > Deploy key` for single repo access. Github not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access: [adding new ssh key to your github account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
 
     ![](./img/github_setup_deploy_key.png)
 
