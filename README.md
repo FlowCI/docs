@@ -3,7 +3,7 @@
 Open source continues integration(CI) server.
 
 * [Install](#)
-  * [Docker](./v1.0/install/docker.md)
+  * [Docker](https://github.com/FlowCI/docker)
 
 * [Getting Started](./v1.0/start/index.md)
 
