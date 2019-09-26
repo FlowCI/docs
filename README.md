@@ -2,8 +2,13 @@
 
 Open source continues integration(CI) server.
 
+<<<<<<< Updated upstream
 * [ Install ](#)
     * [ Docker ](./v1.0/install/docker.md)
+=======
+* [Install](#)
+  * [Docker](https://github.com/FlowCI/docker)
+>>>>>>> Stashed changes
 
 * [ Getting Started ](./v1.0/start/index.md)
 
