@@ -1,26 +1,22 @@
 # What is [flow.ci](https://github.com/flowci)
 
-Open source continues integration(CI) server.
+A open-ource continues integration server that makes CI/CD more easier.
 
-* [Install](#)
-  * [Docker](https://github.com/FlowCI/docker)
+* Getting Started
+  * Install
+    * [Docker](https://github.com/FlowCI/docker)
+  * [First Build](./v1.0/start/index.md)
 
-* [Getting Started](./v1.0/start/index.md)
-
-* [YML Configuration](#)
-
+* YAML
   * [Reference](./v1.0/yml/reference.md)
-  * [Templates](#)
-    * [ hello world ](https://github.com/FlowCI/templates/blob/master/helloworld.yaml)
-    * [ java ](https://github.com/FlowCI/templates/blob/master/java.yaml)
 
-* [Git Setup](#)
+* Git Setup
   * [Github](./v1.0/git/github.md)
+  * [Gitlab](./v1.0/git/gitlab.md)
+  * [Gogs](./v1.0/git/gogs.md)
 
-<!-- * [ User ](#) -->
+* Plugins
 
-<!-- * [ Agent ](#) -->
+* Agents
 
-<!-- * [ Credential ](#) -->
-
-<!-- * [ Plugin ](#) -->
+* Credential
