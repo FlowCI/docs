@@ -2,8 +2,6 @@
 
 ## 1. Create a flow (pipeline)
 
-Steps to create flow
-
 - Give a name
   - Click 'create flow' from left panel
   - Input name of flow
@@ -27,7 +25,7 @@ Steps to create flow
 
     Click 'test' button to test git repo access right, or click 'finish' to create flow without test.
 
-  - ![](./img/create_flow_with_git_test.gif)
+    ![](./img/create_flow_with_git_test.gif)
 
 
 ## 2. Setup YAML

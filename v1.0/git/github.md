@@ -1,6 +1,6 @@
-# Setup GitHub
+# GitHub Configuration
 
-## - Webhook
+## Setup Webhook
 
 The webhook used for receive git notification such as push, tag, pull request and so on.
 
@@ -35,39 +35,47 @@ The webhook used for receive git notification such as push, tag, pull request an
 
     ![events](./img/github_select_events.png)
 
-## - Deploy Key
+## Setup Deploy Key
 
 1. Create SSH-RSA
   
-   You can create a new or add an existing ssh-rsa to gain git repo access right.
+   Create a new ssh-rsa or add an existing to gain git repo access right.
 
-  - Given a name: name used for identify which ssh-rsa will be applied in the flow
+    - Given a name: name used for identify which ssh-rsa will be applied in the flow
+    - Generate new or peast existing public and private key
 
-  - Generate new or peast existing public and private key
+    ![how to create ssh-rsa credential](./img/create_ssh-rsa_credential.png)
 
-  ![](./img/create_ssh-rsa_credential.png)
+2. GitHub setup
 
-2. Set variable from YAML
+    Copy `public key` and add deploy key to Github repo `Settings > Deploy key` for single repo access. Github not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access: [adding new ssh key to your github account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
 
-   `FLOWCI_CREDENTIAL_SSH_RSA` to control which ssh-rsa applied in the flow, for example named key as `flow-test-key`, then add this var into your YAML file as following:
+    ![github_setup_deploy_key](./img/github_setup_deploy_key.png)
+
+3. YAML setup
+
+   `FLOWCI_GIT_CREDENTIAL` is used for [git clone plugin](https://github.com/gy2006/flowci-plugin-gitclone). Example:
 
    ```yaml
     envs:
-      FLOWCI_CREDENTIAL_SSH_RSA: "flow-test-key"
+      FLOWCI_GIT_CREDENTIAL: "key-for-test-repo"
 
     steps:
-      script: |
-        echo hello
+    - name: clone
+      plugin: 'gitclone'
+   ```
+  
+    or
+
+   ```yaml
+    steps:
+    - name: clone
+      envs:
+        FLOWCI_GIT_CREDENTIAL: "key-for-test-repo"
+      plugin: 'gitclone'
    ```
 
-3. GitHub setup
-
-    Copy `public key` and add deploy key to Github from repo `Settings > Deploy key` for single repo access. Github not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access: [adding new ssh key to your github account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
-
-    ![](./img/github_setup_deploy_key.png)
-
-
-## - Verify Settings
+## - Verify Git Settings
 
 - Webhook:
 
