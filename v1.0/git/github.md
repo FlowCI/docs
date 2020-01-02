@@ -75,7 +75,7 @@ The webhook used for receive git notification such as push, tag, pull request an
       plugin: 'gitclone'
    ```
 
-## - Verify Git Settings
+## Verify Git Settings
 
 - Webhook:
 
