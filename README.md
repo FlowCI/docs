@@ -8,7 +8,8 @@ A open-ource continues integration server that makes CI/CD more easier.
   * [First Build](./v1.0/start/index.md)
 
 * YAML
-  * [Reference](./v1.0/yml/reference.md)
+  * [Reference](./v1.0/yml/reference_v1.md)
+  * [Templates](https://github.com/FlowCI/templates)
 
 * Git Setup
   * [Github](./v1.0/git/github.md)

@@ -32,7 +32,7 @@
 
 flow.ci will create a sample yaml after the flow created by default, or try with simple [templates](https://github.com/FlowCI/templates).
 
-For more detail of YAML configuration please go to [YAML Configuration]() chapter
+For more detail, goto [YAML Configuration](../yml/reference_v1.md) chapter
 
 ## 3. Setup Agent
 
