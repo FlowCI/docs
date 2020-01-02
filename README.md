@@ -19,5 +19,7 @@ A open-ource continues integration server that makes CI/CD more easier.
 * Plugins
 
 * Agents
+  * [Manual Setup](./v1.0/agents/manual.md)
+  * Auto Scaling Setup
 
 * Credential
