@@ -11,7 +11,7 @@ A open-ource continues integration server that makes CI/CD more easier.
   * [Reference](./v1.0/yml/reference_v1.md)
   * [Templates](https://github.com/FlowCI/templates)
 
-* Git Setup
+* Link to Git
   * [Github](./v1.0/git/github.md)
   * [Gitlab](./v1.0/git/gitlab.md)
   * [Gogs](./v1.0/git/gogs.md)

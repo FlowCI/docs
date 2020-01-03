@@ -1,5 +1,22 @@
 # GitLab Configuration
 
+## Setup Deploy Key
+
+1. Create SSH-RSA
+  
+    Create a new ssh-rsa or add an existing to gain git repo access right.
+
+    - Specify a name: to identify which ssh-rsa will be applied
+    - Generate new or peast existing public and private key
+
+    ![how to create ssh-rsa credential](./img/create_ssh-rsa_credential.png)
+
+2. GitLab setup
+
+    Copy `public key`, add it to GitLab repo `Settings > Deploy key` for single repo access. GitLab not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access
+
+    ![gitlab_setup_deploy_key](./img/gitlab_setup_deploy_key.png)
+
 ## Setup Webhook
 
 The webhook used for receive git notification such as push, tag, pull request and so on.
@@ -30,7 +47,10 @@ The webhook used for receive git notification such as push, tag, pull request an
   
   ![events](./img/gitlab_setup_webhook.png)
 
+## Verify GitLab Settings
 
-## Setup Deploy Key
+- Deploy Key:
+  
+  Test the access right from flow settings by click 'test' button, the green will be shown if everything correct.
 
-## Verify Git Settings
+  ![gitlab_test](./img/gitlab_test_config.gif)
