@@ -19,14 +19,13 @@
   
   - Config Git Access
 
-    Generate new or use an existing ssh-rsa key: [GitHub](../git/github.md), [GitLab](../git/github.md), [Gogs](../git/github.md)
+    Generate new or use an existing ssh-rsa key, which allow read-only or read-write (if enabled) access to your repository: [GitHub](../git/github.md), [GitLab](../git/github.md), [Gogs](../git/github.md)
 
   - Test Git Connection
 
     Click 'test' button to test git repo access right, or click 'finish' to create flow without test.
 
     ![](./img/create_flow_with_git_test.gif)
-
 
 ## 2. Setup YAML
 
