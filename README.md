@@ -22,3 +22,5 @@ A open-ource continues integration server that makes CI/CD more easier.
   * Auto Scaling Setup
 
 * Credential
+  * [SSH-RSA](./v1.0/credential/ssh-rsa.md)
+  * [Auth (username and password)](./v1.0/credential/auth.md)
