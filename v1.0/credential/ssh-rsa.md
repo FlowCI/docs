@@ -17,7 +17,7 @@ Click `Settings` -> `Credentails` -> `+`
 
 ## Configuration
 
-Some of the plugins need credential to gain access, for example `git-clone` plugin, it requires a ssh-rsa credential to clone the git repo, it's pretty easy to use the credential, just needs to input credential name.
+Some of the plugins need credential to gain access. For example, `git-clone` plugin, it requires a ssh-rsa credential to clone the git repo, it's pretty easy to use the credential, just needs to input credential name.
 
 ```yml
 envs:
