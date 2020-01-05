@@ -23,7 +23,7 @@ trigger:
 
 ## `selector`
 
-Find out matched idle agent to run flow job by tags, or any idle agent if the tag not defined
+Find out matched agents to run flow job by tags, or any idle agent if the tag not defined
 
 ```yaml
 selector:
