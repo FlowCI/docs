@@ -1,19 +1,15 @@
-# Getting Started
+# First Build
 
-## Create a flow (pipeline)
-
-![](./img/create_flow_with_git_test.gif)
-
-Steps to create flow
+## 1. Create a flow (pipeline)
 
 - Give a name
   - Click 'create flow' from left panel
-  - Type a name for flow
+  - Input name of flow
   - The flow will be created directly without Git setup
   
 - Git Setup (optional)
   
-  > Optional step, it can be done from YML configuraiton after flow created
+  > Optional step, it can be done from YAML configuration after flow created
 
   - Config Git URL
 
@@ -23,30 +19,38 @@ Steps to create flow
   
   - Config Git Access
 
-    Generate new or use an existing ssh-rsa key. 
-
-    - How to setup for [GitHub](../git/github.md)
+    Generate new or use an existing ssh-rsa key, which allow read-only or read-write (if enabled) access to your repository: [GitHub](../git/github.md), [GitLab](../git/github.md), [Gogs](../git/github.md)
 
   - Test Git Connection
 
     Click 'test' button to test git repo access right, or click 'finish' to create flow without test.
 
+    ![](./img/create_flow_with_git_test.gif)
 
-## Setup YAML
+## 2. Setup YAML
 
-By default, flow.ci will create a sample yaml after the flow created, or you can start with simple [templates](https://github.com/FlowCI/templates).
+flow.ci will create a sample yaml after the flow created by default, or try with simple [templates](https://github.com/FlowCI/templates).
 
-For more detail of YAML configuration please go to [YAML Configuration]() chapter
+For more detail, goto [YAML Configuration](../yml/reference_v1.md) chapter
 
-## Start build
+## 3. Setup Agent
+
+Agent is the application to run flow jobs
+
+- Click `Settings` -> `Agents` -> `+` to add agent, [guide for more detail](../agents/manual)
+- Copy the token
+- [Start agent from docker](https://github.com/FlowCI/docker/blob/master/README.md)
+
+## 4. Start build
 
 - Manually
 
-  Click `Run` button from flow page (the commit informaiton will be missing)
+  Click `Run` button from flow page
 
 - Trigger (if webhook setup correctly)
   - Push
   - Tag
   - Pull Request
 
-  ![](../img/trigger_from_github.gif)
+## Demo
+  ![](../img/demo.gif)
