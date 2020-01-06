@@ -1,6 +1,6 @@
 # What is [flow.ci](https://github.com/flowci)
 
-A open-source continues integration server that makes CI/CD more easier.
+A open-source continues integration server that makes CI/CD easier.
 
 * Getting Started
   * Install
