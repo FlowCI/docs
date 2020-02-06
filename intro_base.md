@@ -19,25 +19,25 @@
   
   - Config Git Access
 
-    Generate new or use an existing ssh-rsa key, which allow read-only or read-write (if enabled) access to your repository: [GitHub](../git/github.md), [GitLab](../git/github.md), [Gogs](../git/github.md)
+    Generate new or use an existing ssh-rsa key, which allow read-only or read-write (if enabled) access to your repository: [GitHub](./v1.0/git/github.md), [GitLab](./v1.0/git/github.md), [Gogs](./v1.0/git/github.md)
 
   - Test Git Connection
 
     Click 'test' button to test git repo access right, or click 'finish' to create flow without test.
 
-    ![](./img/create_flow_with_git_test.gif)
+    ![](./v1.0/start/img/create_flow_with_git_test.gif)
 
 ## 2. Setup YAML
 
 flow.ci will create a sample yaml after the flow created by default, or try with simple [templates](https://github.com/FlowCI/templates).
 
-For more detail, goto [YAML Configuration](../yml/reference_v1.md) chapter
+For more detail, goto [YAML Configuration](./v1.0/yml/reference_v1.md) chapter
 
 ## 3. Setup Agent
 
 Agent is the application to run flow jobs
 
-- Click `Settings` -> `Agents` -> `+` to add agent, [guide for more detail](../agents/manual)
+- Click `Settings` -> `Agents` -> `+` to add agent, [guide for more detail](./v1.0/agents/manual.md)
 - Copy the token
 - [Start agent from docker](https://github.com/FlowCI/docker/blob/master/README.md)
 
@@ -53,4 +53,4 @@ Agent is the application to run flow jobs
   - Pull Request
 
 ## Demo
-  ![](../img/demo.gif)
+  ![](./v1.0/img/demo.gif)
