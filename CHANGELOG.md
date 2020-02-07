@@ -5,6 +5,14 @@
   * 支持 Agent 资源 (CPU, Memory) 显示
   * 优化 Job 页面
   * Bug fix
+  
+- v0.19.42 2019-12-06
+  * Support flow job statistic view 
+  * Support GitLab & Gogs webhook
+  * Enable to show HTML report from plugin (Jacoco, Junit)
+  * Enable to show Agent resource detail (CPU, Memory)
+  * Optimize job detail page
+  * Bug fix
 
 - v0.1.4-alpha 2017-12-29
   * 支持 Web 定义工作流
