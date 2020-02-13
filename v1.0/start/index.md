@@ -35,11 +35,7 @@ For more detail, goto [YAML Configuration](../yml/reference_v1.md) chapter
 
 ## 3. Setup Agent
 
-Agent is the application to run flow jobs
-
-- Click `Settings` -> `Agents` -> `+` to add agent, [guide for more detail](../agents/manual)
-- Copy the token
-- [Start agent from docker](https://github.com/FlowCI/docker/blob/master/README.md)
+flow.ci will automatic setup agent if docker has been installed on your host. Of course you can [setup agent by manually](../agents/manual.md)
 
 ## 4. Start build
 
