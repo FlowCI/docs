@@ -29,7 +29,7 @@ Agent is the application to run flow jobs, you have to create an Agent before jo
 
 ## 2. Start Agent
 
-The most easiest way is start agent from [flow-docker](https://github.com/flowci/docker) repo by run `start-agent.sh {host} {token}`
+The most easiest way is start agent from [flow-docker](https://github.com/flowci/docker) repo by run `./agent.sh` script.
 
 Or from the following script, and replace the value of `FLOWCI_SERVER_URL` and `FLOWCI_AGENT_TOKEN`
 
