@@ -1,7 +1,7 @@
 - v0.20.09 2020-02-13
   * Job 详情页面支持图形显示，优化了 Log 终端的格式
   * 支持 Agent 通过 docker socket 的方式弹性伸缩
-  * 支持 Agent 通过 ssh host 的方式弹性
+  * 支持 Agent 通过 ssh host 的方式弹性伸缩
 
 - v0.20.09 2020-02-13
   * Optimize job detail page with step graphic view and log terminal layout
