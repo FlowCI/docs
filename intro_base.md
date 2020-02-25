@@ -37,7 +37,7 @@ cd flow-docker
 
     Click 'test' button to test git repo access right, or click 'finish' to create flow without test.
 
-    ![](./img/create_flow_with_git_test.gif)
+    ![](./v1.0/start/img/create_flow_with_git_test.gif)
 
 ## 3. Setup YAML
 
@@ -61,4 +61,4 @@ flow.ci will automatic setup agent if docker has been installed on your host. Of
   - Pull Request
 
 ## Demo
-  ![](../img/demo.gif)
+  ![](./v1.0/img/demo.gif)
