@@ -1,6 +1,18 @@
-# First Build
+# Getting Started
 
-## 1. Create a flow (pipeline)
+## 1. Install
+
+Install flow.ci just by running the following command
+
+> [Docker](https://docs.docker.com/install/) & [Docker-Compose](https://docs.docker.com/compose/install/) are required
+
+```bash
+git clone https://github.com/FlowCI/docker.git flow-docker
+cd flow-docker
+./server.sh start
+```
+
+## 2. Create a flow
 
 - Give a name
   - Click 'create flow' from left panel
@@ -19,29 +31,25 @@
   
   - Config Git Access
 
-    Generate new or use an existing ssh-rsa key, which allow read-only or read-write (if enabled) access to your repository: [GitHub](./v1.0/git/github.md), [GitLab](./v1.0/git/github.md), [Gogs](./v1.0/git/github.md)
+    Generate new or use an existing ssh-rsa key, which allow read-only or read-write (if enabled) access to your repository: [GitHub](../git/github.md), [GitLab](../git/github.md), [Gogs](../git/github.md)
 
   - Test Git Connection
 
     Click 'test' button to test git repo access right, or click 'finish' to create flow without test.
 
-    ![](./v1.0/start/img/create_flow_with_git_test.gif)
+    ![](./img/create_flow_with_git_test.gif)
 
-## 2. Setup YAML
+## 3. Setup YAML
 
 flow.ci will create a sample yaml after the flow created by default, or try with simple [templates](https://github.com/FlowCI/templates).
 
-For more detail, goto [YAML Configuration](./v1.0/yml/reference_v1.md) chapter
+For more detail, goto [YAML Configuration](../yml/reference_v1.md) chapter
 
-## 3. Setup Agent
+## 4. Setup Agent
 
-Agent is the application to run flow jobs
+flow.ci will automatic setup agent if docker has been installed on your host. Of course you can [setup agent by manually](../agents/manual.md)
 
-- Click `Settings` -> `Agents` -> `+` to add agent, [guide for more detail](./v1.0/agents/manual.md)
-- Copy the token
-- [Start agent from docker](https://github.com/FlowCI/docker/blob/master/README.md)
-
-## 4. Start build
+## 5. Start build
 
 - Manually
 
@@ -53,4 +61,4 @@ Agent is the application to run flow jobs
   - Pull Request
 
 ## Demo
-  ![](./v1.0/img/demo.gif)
+  ![](../img/demo.gif)

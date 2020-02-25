@@ -3,8 +3,6 @@
 A open-source continues integration server that makes CI/CD easier.
 
 * Getting Started
-  * Install
-    * [Docker](https://github.com/FlowCI/docker)
   * [First Build](./v1.0/start/index.md)
 
 * YAML
