@@ -2,7 +2,7 @@
 
 ## 1. Install
 
-Install flow.ci just by running the following command
+Run the following command
 
 > [Docker](https://docs.docker.com/install/) & [Docker-Compose](https://docs.docker.com/compose/install/) are required
 
@@ -11,6 +11,8 @@ git clone https://github.com/FlowCI/docker.git flow-docker
 cd flow-docker
 ./server.sh start
 ```
+
+![](../img/start_server.gif)
 
 ## 2. Create a flow
 
