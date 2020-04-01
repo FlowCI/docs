@@ -1,6 +1,8 @@
-# What is [flow.ci](https://github.com/flowci)
+# flow.ci
 
 A open-source continues integration server that makes CI/CD easier.
+
+![](./v1.0/img/demo.gif)
 
 * Getting Started
   * [First Build](./v1.0/start/index.md)
