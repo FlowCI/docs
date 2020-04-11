@@ -1,3 +1,17 @@
+- v0.20.16 2020-04-12
+  * 支持 Gitee webhook
+  * 可以从 Git 仓库中定义 YAML 配置 (.flowci.yaml)
+  * 可以运行在 Docker 容器中运行 Step 和插件
+  * 实时日志性能改进
+  * BUG fix
+
+- v0.20.16 2020-04-12
+  * Support webhook for Gitee
+  * Enable to load YAML configuration in Git repository (.flowci.yaml)
+  * Enable to execute step and plugin in docker container
+  * Impore performance on logging
+  * BUG fix
+
 - v0.20.09 2020-02-13
   * Job 详情页面支持图形显示，优化了 Log 终端的格式
   * 支持 Agent 通过 docker socket 的方式弹性伸缩
