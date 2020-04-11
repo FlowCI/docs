@@ -29,16 +29,18 @@ Agent is the application to run flow jobs, you have to create an Agent before jo
 
 ## 2. Start Agent
 
-#### Start from docker
-
-The most easiest way is start agent from [flow-docker](https://github.com/flowci/docker) repo by run `start-agent.sh {host} {token}`
+The most easiest way is start agent from [flow-docker](https://github.com/flowci/docker) repo by run `./agent.sh` script.
 
 Or from the following script, and replace the value of `FLOWCI_SERVER_URL` and `FLOWCI_AGENT_TOKEN`
 
 ```bash
+docker volume create pyenv
+docker run --rm -v pyenv:/ws flowci/pyenv:1.0 bash -c "~/init-pyenv-volume.sh"
+
 docker run -it \
 -e FLOWCI_SERVER_URL=http://yourhost:port \
 -e FLOWCI_AGENT_TOKEN=token_copied_from_admin_page \
+-e FLOWCI_AGENT_VOLUMES="name=pyenv,dest=/ci/python,script=init.sh" \
 -v /var/run/docker.sock:/var/run/docker.sock \
 flowci/agent
 ```
