@@ -1,6 +1,6 @@
 # YAML References
 
-## `env`
+## `envs`
 
 ```yaml
 envs:
@@ -42,7 +42,7 @@ cron: "* * * * *"
 
 ## `steps`
 
-### `name`
+#### `name`
 
 Specify a custom step name, rather than a generated default name (ex: step-1)
 
@@ -51,7 +51,7 @@ steps:
 - name: step name
 ```
 
-### `allow_failure`
+#### `allow_failure`
 
 the flow will be failed if something wrong in the script while value is `false`. Ignore the error and mark step status to passed if value is `true`, the default value is `false`.
 
@@ -61,7 +61,7 @@ steps:
   allow_failure: true
 ```
 
-### `envs`
+#### `envs`
 
 define environment variables scoped to individual steps.
 
@@ -73,7 +73,25 @@ steps:
   - MY_ENV: "hello"
 ```
 
-### `script`
+#### `docker`
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+  - MY_ENV: "hello"
+  docker:
+    image: ubuntu:18.04
+    ports: # optional
+    - "8080:8080"
+    - "9090:9090"
+    entrypoint: # optional, default is "/bin/bash"
+    - "/bin/bash"
+    stop_on_finish: 'true' # optional, default is true
+    delete_on_finish: 'ture' # optiaon, default is true
+```
+
+#### `script`
 
 the bash script will be executed.
 
@@ -87,11 +105,11 @@ steps:
     echo $MY_ENV
 ```
 
-### `plugin`
+#### `plugin`
 
 Apply plugin in the step
 
-> the `script` tag not working if `plugin` was defined
+> the `script` tag will be optional, if script specified, it will be executed before plugin
 
 ```yml
 steps:
@@ -101,7 +119,7 @@ steps:
   plugin: 'maven-test' # the plugin name
 ```
 
-### `exports`
+#### `exports`
 
 define environment variables that will passed to job context, and available for flowing steps
 
