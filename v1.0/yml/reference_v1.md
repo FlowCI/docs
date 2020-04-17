@@ -73,7 +73,24 @@ steps:
   - MY_ENV: "hello"
 ```
 
+#### `script`
+
+the bash script will be executed.
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+  - MY_ENV: "hello"
+  script: |
+    echo $MY_ENV
+```
+
 #### `docker`
+
+if `docker` tag applied, the script in `script` will be run within docker
+
 ```yml
 steps:
 - name: step name
@@ -89,18 +106,6 @@ steps:
     - "/bin/bash"
     stop_on_finish: 'true' # optional, default is true
     delete_on_finish: 'ture' # optiaon, default is true
-```
-
-#### `script`
-
-the bash script will be executed.
-
-```yml
-steps:
-- name: step name
-  allow_failure: true
-  envs:
-  - MY_ENV: "hello"
   script: |
     echo $MY_ENV
 ```
