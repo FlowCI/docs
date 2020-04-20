@@ -1,5 +1,27 @@
 # YAML References
 
+* [`envs`](##`envs`)
+* [`trigger`](##`trigger`)
+* [`selector`](##`selector`)
+* [`cron`](##`cron`)
+* [`steps`](##`steps`)
+  * [`name`](####`name`)
+  * [`allow_failure`](####`allow_failure`)
+  * [`envs`](####`envs`)
+  * [`script`](####`script`)
+  * [`docker`](####`docker`)
+    * `image`
+    * `ports`
+    * `entrypoint`
+    * `stop_on_finish`
+    * `delete_on_finish`
+  * [`plugin`](####`plugin`)
+  * [`exports`](####`exports`)
+* [`after`](##`after`)
+
+-----------
+
+
 ## `envs`
 
 ```yaml
@@ -136,4 +158,23 @@ steps:
     export ENV_FOR_NEXT_STEP="hello"
   exports:
   - "ENV_FOR_NEXT_STEP"
+```
+## `after`
+
+`after` is kind of [`steps`](##`steps`) but it will be executed anyway, whatever job is failure or success, it can be imagined as `fainlly` key word from java.
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+  - MY_ENV: "hello"
+  script: |
+    echo $MY_ENV
+
+after:
+- docker:
+    image: 'ubuntu:18.04'
+  script: |
+    echo "run anyway"
 ```
