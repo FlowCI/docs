@@ -21,8 +21,9 @@
 
 -----------
 
-
 ## `envs`
+
+Environment variables that will effected in all steps
 
 ```yaml
 envs:
@@ -31,15 +32,16 @@ envs:
 ```
 
 ## `trigger`
-  
 
+When push your code, open/close pull request, or create a tag, the source control management system automatically sends a webhook to flow.ci which in turn triggers flow execution. Use the trigger section to limit the execution. The flow will be executed anyway if this section not defined.
+  
 ```yaml
 trigger:
-  branches:
+  branch:
     - "develop"
     - "master"
     - "feature/*"
-  tags:
+  tag:
     - "*"
 ```
 
@@ -56,7 +58,7 @@ selector:
 
 ## `cron`
 
-config crontab job for flow
+config crontab exeuction for flow
 
 ```yaml
 cron: "* * * * *"
