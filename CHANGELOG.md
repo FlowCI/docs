@@ -1,16 +1,30 @@
+- v0.20.20 2020-05-14
+  * 支持任务 '重新开始'
+  * 新增 ‘配置’ 功能
+  * YAML 配置中支持 'after' 步骤
+  * 添加了 npm 模板
+  * 重要 BUG 修复
+
+- v0.20.20 2020-05-14
+  * Support 'rerun' for job
+  * New configuration feature
+  * Introduce a YAML section 'after'
+  * Introduce an 'npm' build template
+  * Important bugfix
+
 - v0.20.16 2020-04-12
   * 支持 Gitee webhook
   * 可以从 Git 仓库中定义 YAML 配置 (.flowci.yaml)
   * 可以运行在 Docker 容器中运行 Step 和插件
   * 实时日志性能改进
-  * BUG fix
+  * Bugfix
 
 - v0.20.16 2020-04-12
   * Support webhook for Gitee
   * Enable to load YAML configuration in Git repository (.flowci.yaml)
   * Enable to execute step and plugin in docker container
   * Impore performance on logging
-  * BUG fix
+  * Bugfix
 
 - v0.20.09 2020-02-13
   * Job 详情页面支持图形显示，优化了 Log 终端的格式
