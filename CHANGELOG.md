@@ -1,14 +1,12 @@
 - v0.20.20 2020-05-14
   * 支持任务 '重新开始'
   * 新增 ‘配置’ 功能
-  * YAML 配置中支持 'after' 步骤
   * 添加了 npm 模板
   * 重要 BUG 修复
 
 - v0.20.20 2020-05-14
   * Support 'rerun' for job
   * New configuration feature
-  * Introduce a YAML section 'after'
   * Introduce an 'npm' build template
   * Important bugfix
 
