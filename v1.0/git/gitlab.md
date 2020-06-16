@@ -6,8 +6,14 @@
   
     Create a new ssh-rsa or add an existing to gain git repo access right.
 
-    - Specify a name: to identify which ssh-rsa will be applied
+    - Specify a name: to identify which ssh-rsa will be applied, for example: `key-for-test-repo`
     - Generate new or peast existing public and private key
+    - setup the name to `FLOWCI_GIT_CREDENTIAL`, for example in yaml config:
+
+      ```yaml
+      envs:
+        FLOWCI_GIT_CREDENTIAL: key-for-test-repo
+      ```
 
     ![how to create ssh-rsa credential](./img/create_ssh-rsa_credential.png)
 
