@@ -1,3 +1,21 @@
+- v0.20.26 2020-06-20
+  * 支持在运行中的 Step 使用 Terminal 调试
+  * 新增 'notification' YAML 配置通知插件
+  * 新增 'token' 类型的 Secret
+  * 可以在 Flow 设置页面配置 Job 过期时间
+  * 支持显示 SSH RSA 公钥的 MD5 指纹
+  * 新增 Sonarqube 插件
+  * BUG 修复
+
+- v0.20.26 2020-06-20
+  * Support TTY on running step to debug
+  * Introduce 'notification' YAML section to config flow notification task
+  * Introduce 'token' secret type
+  * Enable to config job timeout in flow settings
+  * Support MD5 fingerprint on SSH RSA public key
+  * New Sonarqube plugin
+  * Important bugfix
+
 - v0.20.20 2020-05-14
   * 支持任务 '重新开始'
   * 新增 ‘配置’ 功能
