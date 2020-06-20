@@ -2,17 +2,17 @@
 
 Open-source CI/CD server that makes DevOps easier.
 
-- Getting started within a minute
+- :tada: Getting started within a minute
 
-- Simple YAML configuration and templates
+- :ghost: Simple YAML configuration and templates
 
-- Elastic Agents to speed up build
+- :rocket: Elastic Agents to speed up build
 
-- Online TTY to debug your job in time
+- :shell: Online TTY to debug your job in time
 
-- Flexible plugins
+- :electric_plug: Flexible plugins
 
-- Run steps on any docker images or native os
+- :computer: Run steps on any docker images or native os
 
 ## Quick Start
 
