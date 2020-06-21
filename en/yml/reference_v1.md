@@ -12,6 +12,7 @@
   * [`docker`](####`docker`)
     * `image`
     * `ports`
+    * `user`
     * `entrypoint`
     * `stop_on_finish`
     * `delete_on_finish`
@@ -125,6 +126,7 @@ steps:
     ports: # optional
     - "8080:8080"
     - "9090:9090"
+    user: admin # optiona, default is root
     entrypoint: # optional, default is "/bin/bash"
     - "/bin/bash"
     stop_on_finish: 'true' # optional, default is true

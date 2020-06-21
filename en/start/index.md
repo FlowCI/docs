@@ -1,4 +1,4 @@
-# Getting Started
+  # Getting Started
 
 ## 1. Install
 
@@ -12,7 +12,7 @@ cd flow-docker
 ./server.sh start
 ```
 
-![](../img/start_server.gif)
+![](../../src/start_server.gif)
 
 ## 2. Create a flow
 
@@ -63,4 +63,4 @@ flow.ci will automatic setup agent if docker has been installed on your host. Of
   - Pull Request
 
 ## Demo
-  ![](../img/demo.gif)
+  ![](../../src/demo.gif)
