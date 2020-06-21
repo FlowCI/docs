@@ -21,7 +21,7 @@
 
 -----------
 
-## `envs`
+## envs
 
 Environment variables that will effected in all steps
 
@@ -31,7 +31,7 @@ envs:
   SECOND_ENV: "hello world"
 ```
 
-## `trigger`
+## trigger
 
 When push your code, open/close pull request, or create a tag, the source control management system automatically sends a webhook to flow.ci which in turn triggers flow execution. Use the trigger section to limit the execution. The flow will be executed anyway if this section not defined.
   
@@ -45,7 +45,7 @@ trigger:
     - "*"
 ```
 
-## `selector`
+## selector
 
 Find out matched agents to run flow job by label, or any idle agents if the tag not defined
 
@@ -56,7 +56,7 @@ selector:
     - local
 ```
 
-## `cron`
+## cron
 
 config crontab exeuction for flow
 
@@ -64,9 +64,9 @@ config crontab exeuction for flow
 cron: "* * * * *"
 ```
 
-## `steps`
+## steps
 
-#### `name`
+#### name
 
 Specify a custom step name, rather than a generated default name (ex: step-1)
 
@@ -75,7 +75,7 @@ steps:
 - name: step name
 ```
 
-#### `allow_failure`
+#### allow_failure
 
 the flow will be failed if something wrong in the script while value is `false`. Ignore the error and mark step status to passed if value is `true`, the default value is `false`.
 
@@ -85,7 +85,7 @@ steps:
   allow_failure: true
 ```
 
-#### `envs`
+#### envs
 
 define environment variables scoped to individual steps.
 
@@ -97,7 +97,7 @@ steps:
   - MY_ENV: "hello"
 ```
 
-#### `script`
+#### script
 
 the bash script will be executed.
 
@@ -111,7 +111,7 @@ steps:
     echo $MY_ENV
 ```
 
-#### `docker`
+#### docker
 
 if `docker` tag applied, the script in `script` will be run within docker
 
@@ -135,7 +135,7 @@ steps:
     echo $MY_ENV
 ```
 
-#### `plugin`
+#### plugin
 
 Apply plugin in the step
 
@@ -149,7 +149,7 @@ steps:
   plugin: 'maven-test' # the plugin name
 ```
 
-#### `exports`
+#### exports
 
 define environment variables that will passed to job context, and available for flowing steps
 
