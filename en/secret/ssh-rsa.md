@@ -1,10 +1,10 @@
-# SSH-RSA credential
+# SSH-RSA Secret
 
-## Create a ssh-rsa credential
+## Create a SSH-RSA Secret
 
-Click `Settings` -> `Credentails` -> `+`
+Click `Settings` -> `Secret` -> `+`
 
-1. Enter a credential name
+1. Enter a secret name
 2. Select `SSH_RSA` in category field
 3. new ssh-rsa key pair
 
@@ -15,9 +15,9 @@ Click `Settings` -> `Credentails` -> `+`
 
 ![create ssh rsa](./img/ssh_rsa_create.png)
 
-## Configuration
+## How to use it
 
-Some of the plugins need credential to gain access. For example, `git-clone` plugin, it requires a ssh-rsa credential to clone the git repo, it's pretty easy to use the credential, just needs to input credential name.
+Some of the plugins need secret to gain access. For example `git-clone` plugin, it requires a ssh-rsa secret to clone the git repo, it's pretty easy to use the secret by type the secret name your created.
 
 ```yml
 envs:
@@ -28,6 +28,6 @@ envs:
 steps:
 - name: clone
   envs:
-    FLOWCI_GIT_CREDENTIAL: "ssh-credential-test"
+    FLOWCI_GIT_CREDENTIAL: "rsa-test"
   plugin: 'gitclone'
 ```
