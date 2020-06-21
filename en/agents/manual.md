@@ -69,7 +69,3 @@ start from binary
 #### example ####
 # ./bin/flow-agent-x-linux -u http://172.10.20.1:8080 -t 44793491-03ac-4a3c-8c59-1f09b7c9d0e3
 ```
-
-
-
-

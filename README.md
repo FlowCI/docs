@@ -14,6 +14,8 @@ Open-source CI/CD server that makes DevOps easier.
 
 - Run steps on any docker images or native os &nbsp; :computer:
 
+## [Document](./en/index.md) | [中文文档](./zh/index.md)
+
 ## Quick Start
 
 > [Docker](https://docs.docker.com/install/) & [Docker-Compose](https://docs.docker.com/compose/install/) are required
@@ -24,6 +26,4 @@ cd flow-docker
 ./server.sh start
 ```
 
-## [Document](./en/index.md) | [中文文档](./zh/index.md)
-
-![](./v1.0/img/demo.gif)
+![](./src/demo.gif)
