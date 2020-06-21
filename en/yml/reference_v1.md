@@ -1,23 +1,23 @@
 # YAML References
 
-* [`envs`](##`envs`)
-* [`trigger`](##`trigger`)
-* [`selector`](##`selector`)
-* [`cron`](##`cron`)
-* [`steps`](##`steps`)
-  * [`name`](####`name`)
-  * [`allow_failure`](####`allow_failure`)
-  * [`envs`](####`envs`)
-  * [`script`](####`script`)
-  * [`docker`](####`docker`)
+* [`envs`](##envs)
+* [`trigger`](##trigger)
+* [`selector`](##selector)
+* [`cron`](##cron)
+* [`steps`](##steps)
+  * [`name`](####name)
+  * [`allow_failure`](####allow_failure)
+  * [`envs`](####envs)
+  * [`script`](####script)
+  * [`docker`](####docker)
     * `image`
     * `ports`
     * `user`
     * `entrypoint`
     * `stop_on_finish`
     * `delete_on_finish`
-  * [`plugin`](####`plugin`)
-  * [`exports`](####`exports`)
+  * [`plugin`](####plugin)
+  * [`exports`](####exports)
 
 -----------
 
