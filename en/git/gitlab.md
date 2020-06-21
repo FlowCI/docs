@@ -6,20 +6,14 @@
   
     Create a new ssh-rsa or add an existing to gain git repo access right.
 
-    - Specify a name: to identify which ssh-rsa will be applied, for example: `key-for-test-repo`
+    - Specify a name: to identify which ssh-rsa will be applied, for example: `rsa-test`
     - Generate new or peast existing public and private key
-    - setup the name to `FLOWCI_GIT_CREDENTIAL`, for example in yaml config:
 
-      ```yaml
-      envs:
-        FLOWCI_GIT_CREDENTIAL: key-for-test-repo
-      ```
-
-    ![how to create ssh-rsa credential](./img/create_ssh-rsa_credential.png)
+    ![how to create ssh-rsa secret](../secret/img/ssh_rsa_create.png)
 
 2. GitLab setup
 
-    Copy `public key`, add it to GitLab repo `Settings > Deploy key` for single repo access. GitLab not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access
+    Copy `public key` from admin page, open GitLab repo web and add it from `Settings > Repository -> Deploy Keys` for single repo access. GitLab not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access
 
     ![gitlab_setup_deploy_key](./img/gitlab_setup_deploy_key.png)
 

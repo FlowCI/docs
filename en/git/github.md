@@ -6,30 +6,24 @@
   
    Create a new ssh-rsa or add an existing to gain git repo access right.
 
-    - Specify a name: to identify which ssh-rsa will be applied, for example: `key-for-test-repo`
+    - Specify a name: to identify which ssh-rsa will be applied, for example: `rsa-test`
     - Generate new or peast existing public and private key
-    - setup the name to `FLOWCI_GIT_CREDENTIAL`, for example in yaml config:
 
-      ```yaml
-      envs:
-        FLOWCI_GIT_CREDENTIAL: key-for-test-repo
-      ```
-
-    ![how to create ssh-rsa credential](./img/create_ssh-rsa_credential.png)
+    ![how to create ssh-rsa secret](../secret/img/ssh_rsa_create.png)
 
 2. GitHub setup
 
-    Copy `public key`, add it to GitHub repo `Settings > Deploy key` for single repo access. GitHub not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access: [adding new ssh key to your GitHub account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
+    Copy `public key` from admin page, open GitHub repo web and add it from `Settings > Deploy key` for single repo access. GitHub not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access: [adding new ssh key to your GitHub account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
 
     ![github_setup_deploy_key](./img/github_setup_deploy_key.png)
 
-3. YAML Config
+3. Add to YAML
 
-   `FLOWCI_GIT_CREDENTIAL` is used for [git clone plugin](https://github.com/gy2006/flowci-plugin-gitclone). Example:
+   `FLOWCI_GIT_CREDENTIAL` is used for [git clone plugin](https://github.com/flowci-plugins/gitclone). Example:
 
    ```yaml
     envs:
-      FLOWCI_GIT_CREDENTIAL: "key-for-test-repo"
+      FLOWCI_GIT_CREDENTIAL: "rsa-test"
 
     steps:
     - name: clone
@@ -42,7 +36,7 @@
     steps:
     - name: clone
       envs:
-        FLOWCI_GIT_CREDENTIAL: "key-for-test-repo"
+        FLOWCI_GIT_CREDENTIAL: "rsa-test"
       plugin: 'gitclone'
    ```
 
