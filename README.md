@@ -16,6 +16,8 @@ Open-source CI/CD server that makes DevOps easier.
 
 ## [Document](./en/index.md) | [中文文档(正在进行中..)](./zh/index.md)
 
+## [Templates (maven, npm, golang..)](./en/index.md)
+
 ## Quick Start
 
 > [Docker](https://docs.docker.com/install/) & [Docker-Compose](https://docs.docker.com/compose/install/) are required
