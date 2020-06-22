@@ -12,6 +12,7 @@
   * [Github](./git/github.md)
   * [Gitlab](./git/gitlab.md)
   * [Gogs](./git/gogs.md)
+  * [Gitee](./git/gitee.md)
 
 * Agents
   * [Manual Setup](./agents/manual.md)

@@ -27,13 +27,7 @@ The webhook used for receive git notification such as push, tag, pull request an
 
    ![webhook settings](./img/github_select_webhook_url.png)
 
-2. Open webhook from GitLab settings
-    
-   from `Settings` -> `Integrations`
-
-   ![webhook settings](./img/gitlab_open_webhook_setting.png)
-
-3. Setup webhook
+2. Setup webhook
 
 - URL
   

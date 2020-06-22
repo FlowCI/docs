@@ -1,4 +1,4 @@
-# GitHub Configuration
+# Gitee Configuration
 
 ## Setup Deploy Key
 
@@ -11,11 +11,11 @@
 
     ![how to create ssh-rsa secret](../secret/img/ssh_rsa_create.png)
 
-2. GitHub setup
+2. Gitee setup
 
-    Copy `public key` from admin page, open GitHub repo web and add it from `Settings > Deploy key` for single repo access. GitHub not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access: [adding new ssh key to your GitHub account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
+    Copy `public key` from admin page, open Gitee repo web and add it from `Settings > Deploy keys -> Add key` for single repo access. Gitee not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access.
 
-    ![github_setup_deploy_key](./img/github_setup_deploy_key.png)
+    ![github_setup_deploy_key](./img/gitee_setup_deploy_key.png)
 
 3. Add to YAML
 
@@ -52,33 +52,26 @@ The webhook used for receive git notification such as push, tag, pull request an
 
 2. Setup webhook
 
-    - Payload URL
+  - Payload URL
 
-      Paste webhook url copied from flow settings (step 1)
+    Paste webhook url copied from flow settings (step 1)
 
-      > If using `ngrok`, please replace wehbook url by ngrok, ex: `http://172.20.10.4/webhooks/spring-sample` to `http://7e9ea9dc.ngrok.io/webhooks/spring-sample`
+    > If using `ngrok`, please replace wehbook url by ngrok, ex: `http://172.20.10.4/webhooks/spring-sample` to `http://7e9ea9dc.ngrok.io/webhooks/spring-sample`
 
-    - Content type
+  - Select events
 
-      Select content type to `application/json`
+    Check events `Push`, `Tag Push` and `Pull Request`
 
-    ![payload and content](./img/github_setup_payload_and_content.png)
+    ![events](./img/gitee_setup_webhook.png)
 
-3. Select events
-
-    - Select `Let me select individual events`
-    - Check events `push` and `pull request`
-
-    ![events](./img/github_select_events.png)
-
-## Verify GitHub Settings
+## Verify Gitee Settings
 
 - Webhook:
 
-  The green check box will be shown after 'webhook' field if the flow receive the 'ping' request after GitHub webhook created.
+  The green check box will be shown on 'webhook' field if the flow receive the 'ping' request by click 'Test' button on Gitee webhook page.
 
 - Deploy Key:
   
   Test the access right from flow settings by click 'test' button, the green will be shown if everything correct.
 
-  ![github_test](./img/github_test_config.gif)
+  ![gitlab_test](./img/gitee_test_config.gif)
