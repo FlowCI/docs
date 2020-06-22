@@ -23,3 +23,7 @@
 * Secret
   * [SSH-RSA](./secret/ssh-rsa.md)
   * [Auth (username and password)](./secret/auth.md)
+
+* Config
+  * [SMTP](./config/smtp.md)
+  * [Text](./config/text.md)
