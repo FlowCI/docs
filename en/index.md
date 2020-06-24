@@ -8,7 +8,7 @@
   * [Plugins](./yml/plugins.md)
   * [Templates](https://github.com/FlowCI/templates)
 
-* Link to Git
+* [Link to Git](./git/index.md)
   * [Github](./git/github.md)
   * [Gitlab](./git/gitlab.md)
   * [Gogs](./git/gogs.md)
