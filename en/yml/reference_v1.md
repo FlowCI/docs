@@ -3,6 +3,17 @@
 * [`envs`](#envs)
 * [`trigger`](#trigger)
 * [`selector`](#selector)
+* [`docker` / `dockers`](#docker/dockers)
+  * `image`
+  * `ports`
+  * `user`
+  * `entrypoint`
+  * `command`
+  * `environment`
+  * `network_mode`
+  * `is_runtime`
+  * `stop_on_finish`
+  * `delete_on_finish`
 * [`cron`](#cron)
 * [`steps`](#steps)
   * [`name`](#name)
@@ -54,6 +65,64 @@ selector:
   label:
     - ios
     - local
+```
+
+## docker/dockers
+
+if `docker` / `dockers` tag applied, all steps will be run within docker container
+
+### single docker
+
+```yml
+docker:
+  image: ubuntu:18.04
+  ports: # optional
+  - "8080:8080"
+  - "9090:9090"
+  user: root # optiona, default is root
+  entrypoint: # optional, default is "/bin/bash"
+  - "/bin/bash"
+  stop_on_finish: 'true' # optional, default is true
+  delete_on_finish: 'ture' # optiaon, default is true
+
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+  - MY_ENV: "hello"
+  script: |
+    echo $MY_ENV
+```
+
+### multiple docker
+
+```yml
+dockers:
+- image: ubuntu:18.04
+  entrypoint: ["/bin/bash"] # optional, default is /bin/bash for runtime image
+  is_runtime: true # default runtime for steps
+
+- image: mysql:5.6
+  environment: # optional: environment for docker only
+    MYSQL_ROOT_PASSWORD: my_password
+  ports: # optional
+  - "3306:3306"
+  user: root # optiona, default is root
+  entrypoint: [] # optional, default is empty
+  command: [] # optional, default is empty
+  network_mode: "bridge" # optional, default is bridge
+  stop_on_finish: 'true' # optional, default is true
+  delete_on_finish: 'ture' # optiaon, default is true
+
+- image: rabbitmq:3
+
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+  - MY_ENV: "hello"
+  script: |
+    echo $MY_ENV
 ```
 
 ## cron
@@ -111,29 +180,9 @@ steps:
     echo $MY_ENV
 ```
 
-#### docker
+#### docker/docker
 
-if `docker` tag applied, the script in `script` will be run within docker
-
-```yml
-steps:
-- name: step name
-  allow_failure: true
-  envs:
-  - MY_ENV: "hello"
-  docker:
-    image: ubuntu:18.04
-    ports: # optional
-    - "8080:8080"
-    - "9090:9090"
-    user: admin # optiona, default is root
-    entrypoint: # optional, default is "/bin/bash"
-    - "/bin/bash"
-    stop_on_finish: 'true' # optional, default is true
-    delete_on_finish: 'ture' # optiaon, default is true
-  script: |
-    echo $MY_ENV
-```
+higher priority than flow level docker section, for detail please refer to flow level [`docker` / `dockers`](#docker/dockers)
 
 #### plugin
 
