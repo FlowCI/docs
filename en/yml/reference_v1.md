@@ -20,11 +20,15 @@
   * [`allow_failure`](#allow_failure)
   * [`envs`](#envs)
   * [`script`](#script)
-  * [`docker`](#docker)
+  * [`docker` / `dockers`](#docker/dockers)
     * `image`
     * `ports`
     * `user`
     * `entrypoint`
+    * `command`
+    * `environment`
+    * `network_mode`
+    * `is_runtime`
     * `stop_on_finish`
     * `delete_on_finish`
   * [`plugin`](#plugin)

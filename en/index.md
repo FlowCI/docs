@@ -15,6 +15,7 @@
   * [Gitee](./git/gitee.md)
 
 * Agents
+  * [Environment Variables](./agents/vars.md)
   * [Manual Setup](./agents/manual.md)
   * Auto Scaling
     * [Scaling On Host](./agents/ssh_host.md)
