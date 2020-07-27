@@ -14,7 +14,9 @@
   * `is_runtime`
   * `stop_on_finish`
   * `delete_on_finish`
-* [`cron`](#cron)
+* [`notifications`](#notifications)
+  * `plugin`
+  * `envs`
 * [`steps`](#steps)
   * [`name`](#name)
   * [`allow_failure`](#allow_failure)
@@ -129,12 +131,15 @@ steps:
     echo $MY_ENV
 ```
 
-## cron
+## notifications
 
-config crontab exeuction for flow
+It will run plugin with tag `notification` in server side, to send notification when job finished
 
 ```yaml
-cron: "* * * * *"
+notifications:
+  - plugin: 'email-notify'
+    envs:
+      FLOWCI_SMTP_CONFIG: 'test-config'
 ```
 
 ## steps
