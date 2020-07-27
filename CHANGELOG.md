@@ -7,7 +7,6 @@
   * 支持 `android` 秘钥类型，可以配置安卓签名
   * 新增安卓构建模板
 
-
 - v0.20.30 2020-07-27
   * Improvement of UI
   * Improvement of Agent stability
