@@ -1,3 +1,21 @@
+- v0.20.30 2020-07-27
+  * Web 用户界面优化
+  * 提升 Agent 的稳定性
+  * 支持 flow 定时任务
+  * 多容器的支持
+  * 支持工作流级别的 `docker/dockers` YAML
+  * 支持 `android` 秘钥类型，可以配置安卓签名
+  * 新增安卓构建模板
+
+- v0.20.30 2020-07-27
+  * Improvement of UI
+  * Improvement of Agent stability
+  * Support crontab task for flow
+  * Support multiple docker containers
+  * Introduce `docker/dockers` YAML section on flow level
+  * Introduce `android` secret type to config android certificate
+  * New android flow template
+
 - v0.20.26 2020-06-20
   * 支持在运行中的 Step 使用 Terminal 调试
   * 新增 'notification' YAML 配置通知插件
