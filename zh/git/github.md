@@ -1,8 +1,8 @@
-# GitHub Configuration
+# 配置 GitHub
 
-## Setup Deploy Key
+## 访问权限配置
 
-1. Create SSH-RSA
+1. 创建 SSH-RSA 秘钥
   
    Create a new ssh-rsa or add an existing to gain git repo access right.
 
@@ -11,13 +11,7 @@
 
     ![how to create ssh-rsa secret](../secret/img/ssh_rsa_create.png)
 
-2. GitHub setup
-
-    Copy `public key` from admin page, open GitHub repo web and add it from `Settings > Deploy key` for single repo access. GitHub not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access: [adding new ssh key to your GitHub account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
-
-    ![github_setup_deploy_key](./img/github_setup_deploy_key.png)
-
-3. Add to YAML
+2. 配置秘钥到工作流
 
    `FLOWCI_GIT_CREDENTIAL` is used for [git clone plugin](https://github.com/flowci-plugins/gitclone). Example:
 
@@ -29,28 +23,24 @@
     - name: clone
       plugin: 'gitclone'
    ```
-  
-    or
 
-   ```yaml
-    steps:
-    - name: clone
-      envs:
-        FLOWCI_GIT_CREDENTIAL: "rsa-test"
-      plugin: 'gitclone'
-   ```
+3. 在 GitHub 中配置
 
-## Setup Webhook
+    Copy `public key` from admin page, open GitHub repo web and add it from `Settings > Deploy key` for single repo access. GitHub not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access: [adding new ssh key to your GitHub account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
+
+    ![github_setup_deploy_key](./img/github_setup_deploy_key.png)
+
+## 配置 Git 触发事件 (Webhook)
 
 The webhook used for receive git notification such as push, tag, pull request and so on.
 
-1. Copy webhook url from flow settings
+1. 从工作流设置中复制 webhook 链接
     > Hint: Your host must be exposed to internet (public ip or domain), otherwide the GitHub events can not be received.
     > If pulbic ip or domain not availble in your environments, please use the tools like [ngrok](https://ngrok.com/).  
 
    ![webhook settings](./img/github_select_webhook_url.png)
 
-2. Setup webhook
+2. 设置 Github webhook
 
     - Payload URL
 
@@ -64,14 +54,14 @@ The webhook used for receive git notification such as push, tag, pull request an
 
     ![payload and content](./img/github_setup_payload_and_content.png)
 
-3. Select events
+3. 选择触发事件
 
     - Select `Let me select individual events`
     - Check events `push` and `pull request`
 
     ![events](./img/github_select_events.png)
 
-## Verify GitHub Settings
+## 验证 GitHub 配置
 
 - Webhook:
 
