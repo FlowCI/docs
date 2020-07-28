@@ -4,7 +4,7 @@
   * [开始第一次构建](./start/index.md)
 
 * YAML 配置
-  * [参考]](./yml/reference_v1.md)
+  * [参考](./yml/reference_v1.md)
   * [插件](./yml/plugins.md)
   * [模板](https://github.com/FlowCI/templates)
 
@@ -12,6 +12,7 @@
   * [Github](./git/github.md)
   * [Gitlab](./git/gitlab.md)
   * [Gogs](./git/gogs.md)
+  * [Gitee](./git/gitee.md)
 
 * Agents
   * [Manual Setup](./agents/manual.md)

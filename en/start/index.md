@@ -1,4 +1,4 @@
-  # Getting Started
+# Getting Started
 
 ## 1. Install
 
@@ -12,7 +12,7 @@ cd flow-docker
 ./server.sh start
 ```
 
-![](../../src/start_server.gif)
+![cmd](../../src/start_server.gif)
 
 ## 2. Create a flow
 
@@ -28,7 +28,7 @@ cd flow-docker
   - Config Git URL
 
     - `webhook`: url used for receive git events (push, tag, pull request), please using the url shown on 'Webhook' field.
-    
+
     - `git url`: fill in repo remote url copied from git, support both `git@:` and `https://`
   
   - Config Git Access
@@ -39,7 +39,7 @@ cd flow-docker
 
     Click 'test' button to test git repo access right, or click 'finish' to create flow without test.
 
-    ![](./img/create_flow_with_git_test.gif)
+    ![test git connection](./img/create_flow_with_git_test.gif)
 
 ## 3. Setup YAML
 
@@ -63,4 +63,5 @@ flow.ci will automatic setup agent if docker has been installed on your host. Of
   - Pull Request
 
 ## Demo
-  ![](../../src/demo.gif)
+
+  ![demo](../../src/demo.gif)

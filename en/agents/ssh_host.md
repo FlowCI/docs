@@ -6,7 +6,7 @@ Another way to setup agent is config hosts on ci server, and then flow.ci will c
 
 Setup host with ssh credential, ci server could scaling agent on hosts
 
-![](./img/ssh_host_structure.png)
+![ssh host structure](./img/ssh_host_structure.png)
 
 ## 1. Create a host
 
