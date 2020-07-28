@@ -16,10 +16,10 @@
 
 * Agents
   * [Environment Variables](./agents/vars.md)
-  * [Manual Setup](./agents/manual.md)
-  * Auto Scaling
-    * [Scaling On Host](./agents/ssh_host.md)
-    * [Scaling On K8s](./agents/k8s_host.md)
+  * [Setup Manually](./agents/manual.md)
+  * Setup Automatically
+    * [Host via SSH](./agents/ssh_host.md)
+    * [On K8s](./agents/k8s_host.md)
 
 * Secret
   * [SSH-RSA](./secret/ssh-rsa.md)
