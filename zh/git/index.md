@@ -1,44 +1,38 @@
-# Git Configuration
+# 配置 Git
 
-In this section will guide you how to config Git repo in the flow
+## Clone 代码
 
-## Config Git
+flow.ci 通过 [git clone](https://github.com/flowci-plugins/gitclone) 插件来实现 clone 代码.
 
-### There are some variables that will be applied to [git clone](https://github.com/flowci-plugins/gitclone) plugin
+```yaml
+steps:
+- name: clone
+  docker:
+    image: flowci/debian-git ## 也可使用带有 git 命令的其他 image
+  plugin: 'gitclone'
+```
 
-- `FLOWCI_GIT_URL` (required): git http/ssh url, ex: git@github.com:FlowCI/spring-petclinic-sample.git
-- `FLOWCI_GIT_REPO` (required): git repo name
-- `FLOWCI_GIT_BRANCH`: git branch name, default value is `master`
-- `FLOWCI_GIT_COMMIT_ID`: clone from commit id if this variable specified
-- `FLOWCI_GIT_CREDENTIAL`: secret name created from admin page, it will be required if git url is based on ssh
-- `FLOWCI_GITCLONE_TIMEOUT`: timeout for gitclone in seconds, default is `60` seconds
+具体仓库地址，可以通过 YAML 或者 UI 界面的方式定义。如果 URL 为 SSH 协议，则需要创建 `secret`之后，设置 `FLOWCI_GIT_CREDENTIAL` 变量的值为 `secret` 的名称。
 
-### Thoese variables could be added either from YAML or UI, for example
+- YAML 配置
 
-- YAML Configuration
+```yaml
+envs:
+  FLOWCI_GIT_URL: "https://github.com/FlowCI/spring-petclinic-sample.git"
+  # FLOWCI_GIT_CREDENTIAL: your_secret_name, created from secret from Admin Settings -> Secrets -> +
+```
 
-    ```yaml
-    envs:
-        FLOWCI_GIT_URL: "https://github.com/FlowCI/spring-petclinic-sample.git"
-        FLOWCI_GIT_BRANCH: "master"
-        FLOWCI_GIT_REPO: "spring-petclinic"
-        # FLOWCI_GIT_CREDENTIAL: "create a secret from Admin Settings -> Secrets -> +"
-        # FLOWCI_GITCLONE_TIEMOUT: 60
-    ```
+- UI 界面配置
 
-- Flow Variable
+![git vars](./img/git_settings.png)
 
-    ![git vars](./img/git_settings.png)
+## 配置 Git 仓库的访问权限，触发事件
 
-
-
-## How to setup deploy key (permission) and Webhook (event trigger)
-
-flow.ci currenlty supported webhook from:
+不同 Git 仓库的访问权限，和触发事件有所不同，目前 flow.ci 支持的仓库有
 
 - [GitHub](./github.md)
 - [GitLab](./gitlab.md)
 - [Gogs](./gogs.md)
 - [Gitee](./gitee.md)
 
-please click around the links for more detail
+请点击相关 Git 仓库查看详细配置方法
