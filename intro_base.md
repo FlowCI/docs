@@ -29,6 +29,6 @@ Open the link `http://localhost:2015` from web browser after installtion is fini
 Click `Run` button from flow page
 
 > - Job cannot started if the blank template has been selected.
-> - How to config Git repo, please refer to [Link to Git](../git/index.md)
+> - How to config Git repo, please refer to [Link to Git](./en/git/index.md)
 
 ![start](./src/create_flow_and_build.gif)
