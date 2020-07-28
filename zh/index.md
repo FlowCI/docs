@@ -3,16 +3,16 @@
 * 快速开始
   * [开始第一次构建](./start/index.md)
 
-* YAML 配置
-  * [参考](./yml/reference_v1.md)
-  * [插件](./yml/plugins.md)
-  * [模板](https://github.com/FlowCI/templates)
-
 * 与 Git 仓库建立连接
   * [Github](./git/github.md)
   * [Gitlab](./git/gitlab.md)
   * [Gogs](./git/gogs.md)
   * [Gitee](./git/gitee.md)
+
+* YAML 配置
+  * [参考](./yml/reference_v1.md)
+  * [插件](./yml/plugins.md)
+  * [模板](https://github.com/FlowCI/templates)
 
 * Agents
   * [Manual Setup](./agents/manual.md)

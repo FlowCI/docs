@@ -3,16 +3,16 @@
 * Getting Started
   * [First Build](./start/index.md)
 
-* YAML
-  * [Reference](./yml/reference_v1.md)
-  * [Plugins](./yml/plugins.md)
-  * [Templates](https://github.com/FlowCI/templates)
-
 * [Link to Git](./git/index.md)
   * [Github](./git/github.md)
   * [Gitlab](./git/gitlab.md)
   * [Gogs](./git/gogs.md)
   * [Gitee](./git/gitee.md)
+
+* YAML
+  * [Reference](./yml/reference_v1.md)
+  * [Plugins](./yml/plugins.md)
+  * [Templates](https://github.com/FlowCI/templates)
 
 * Agents
   * [Environment Variables](./agents/vars.md)
