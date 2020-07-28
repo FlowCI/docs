@@ -7,6 +7,7 @@ Agent is the application to run jobs, you have to create an Agent before job sta
 ## 1. Create an agent from admin page
 
 * Click `Settings` -> `Agents` -> `+`
+* Select `Manual agent`
 * Specify unique agent name
 * Specify tag (optional)
 
