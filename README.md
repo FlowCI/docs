@@ -1,6 +1,8 @@
 # flow.ci
 
-Open-source CI/CD server that makes DevOps easier.
+[![LICENSE](https://img.shields.io/github/license/pingcap/tidb.svg)](https://github.com/pingcap/tidb/blob/master/LICENSE)
+
+Powerful and user-friendly CI/CD server
 
 - Getting started within a minute &nbsp; :tada:
 
