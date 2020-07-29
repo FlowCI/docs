@@ -1,21 +1,10 @@
 # GitLab Configuration
 
-## Setup Deploy Key
+## Setup Access Permission
 
-1. Create SSH-RSA
-  
-    Create a new ssh-rsa or add an existing to gain git repo access right.
+Copy `public key` from admin page, open GitLab repo web and add it from `Settings > Repository -> Deploy Keys` for single repo access. GitLab not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access
 
-    - Specify a name: to identify which ssh-rsa will be applied, for example: `rsa-test`
-    - Generate new or peast existing public and private key
-
-    ![how to create ssh-rsa secret](../secret/img/ssh_rsa_create.png)
-
-2. GitLab setup
-
-    Copy `public key` from admin page, open GitLab repo web and add it from `Settings > Repository -> Deploy Keys` for single repo access. GitLab not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access
-
-    ![gitlab_setup_deploy_key](./img/gitlab_setup_deploy_key.png)
+![gitlab_setup_deploy_key](../../src/git/gitlab_setup_deploy_key.png)
 
 ## Setup Webhook
 
@@ -25,7 +14,7 @@ The webhook used for receive git notification such as push, tag, pull request an
     > Hint: Your host must be exposed to internet (public ip or domain), otherwide the gitlab events can not be received.
     > If pulbic ip or domain not availble in your environments, please use the tools like [ngrok](https://ngrok.com/).  
 
-   ![webhook settings](./img/github_select_webhook_url.png)
+   ![webhook settings](../../src/git/github_select_webhook_url.png)
 
 2. Setup webhook
 
@@ -39,7 +28,7 @@ The webhook used for receive git notification such as push, tag, pull request an
   
   Check events `Push events`, `Tag push events` and `Merge request events`
   
-  ![events](./img/gitlab_setup_webhook.png)
+  ![events](../../src/git/gitlab_setup_webhook.png)
 
 ## Verify GitLab Settings
 
@@ -47,4 +36,4 @@ The webhook used for receive git notification such as push, tag, pull request an
   
   Test the access right from flow settings by click 'test' button, the green will be shown if everything correct.
 
-  ![gitlab_test](./img/gitlab_test_config.gif)
+  ![gitlab_test](../../src/git/gitlab_test_config.gif)
