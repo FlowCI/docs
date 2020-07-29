@@ -1,40 +1,63 @@
 # Git Configuration
 
-In this section will guide you how to config Git repo in the flow
+## 1. Clone Git Repo
 
-## Config Git
+flow.ci clone git repo by plugin [git clone](https://github.com/flowci-plugins/gitclone)
 
-### There are some variables that will be applied to [git clone](https://github.com/flowci-plugins/gitclone) plugin
+```yaml
+steps:
+- name: clone
+  docker:
+    image: flowci/debian-git ## other images with git command can be applied here as well
+  plugin: 'gitclone'
+```
 
-- `FLOWCI_GIT_URL` (required): git http/ssh url, ex: git@github.com:FlowCI/spring-petclinic-sample.git
-- `FLOWCI_GIT_REPO` (required): git repo name
-- `FLOWCI_GIT_BRANCH`: git branch name, default value is `master`
-- `FLOWCI_GIT_COMMIT_ID`: clone from commit id if this variable specified
-- `FLOWCI_GIT_CREDENTIAL`: secret name created from admin page, it will be required if git url is based on ssh
-- `FLOWCI_GITCLONE_TIMEOUT`: timeout for gitclone in seconds, default is `60` seconds
+You can config git repo url via both YAML and UI. The variable `FLOWCI_GIT_CREDENTIAL` must be defined if git url is based on SSH.
 
-###  Thoese variables could be added either from YAML or UI, for example:
+- YAML configuration
 
-- YAML Configuration
+  ```yaml
+  envs:
+    FLOWCI_GIT_URL: "https://github.com/FlowCI/spring-petclinic-sample.git"
+    # FLOWCI_GIT_CREDENTIAL: your_secret_name, created from secret from Admin Settings -> Secrets -> +
+  ```
 
-    ```yaml
+- Web UI configuration
+
+  ![git vars](../../src/git/git_settings.png)
+
+## 2.Access Permission
+
+The SSH-RSA `secret` is required if git url is ssh based, for example `git@github.com:FlowCI/docs.git`
+
+1. Create SSH-RSA secret
+
+   - Go to `Settings -> Secret -> +` from Admin page
+   - Input a secret name, for example `ras-test`
+   - Select `SSH key` category
+   - Click `create a new` ssh key pair or paste exsiting public and private key
+   - Save
+
+    ![how to create ssh-rsa secret](../../src/secret/create_ssh_key.gif)
+
+2. Config secret in the flow
+
+   `FLOWCI_GIT_CREDENTIAL` variable is applied for git access permisison in [Git clone plugin](https://github.com/flowci-plugins/gitclone), the value is secret name. For example:
+
+   ```yaml
     envs:
-        FLOWCI_GIT_URL: "https://github.com/FlowCI/spring-petclinic-sample.git"
-        FLOWCI_GIT_BRANCH: "master"
-        FLOWCI_GIT_REPO: "spring-petclinic"
-        # FLOWCI_GIT_CREDENTIAL: "create a secret from Admin Settings -> Secrets -> +"
-        # FLOWCI_GITCLONE_TIEMOUT: 60
-    ```
+      FLOWCI_GIT_CREDENTIAL: "rsa-test"
 
-- Flow Variable
+    steps:
+    - name: clone
+      docker:
+        image: flowci/debian-git
+      plugin: 'gitclone'
+   ```
 
-    ![git vars](./img/git_settings.png)
+## 3. Config permission and event triger on Git repo
 
-
-
-## How to setup deploy key (permission) and Webhook (event trigger)
-
-flow.ci currenlty supported webhook from:
+flow.ci currenlty supported git repo are:
 
 - [GitHub](./github.md)
 - [GitLab](./gitlab.md)
