@@ -14,7 +14,7 @@ Open-source CI/CD server that makes DevOps easier.
 
 - Run steps either on any docker images or native os &nbsp; :computer:
 
-## [Document](./en/index.md) | [中文文档(正在进行中..)](./zh/index.md)
+## [Document](./en/index.md) | [中文文档](./zh/index.md)
 
 ## [Templates (maven, npm, golang..)](./en/index.md)
 
