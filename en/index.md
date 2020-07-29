@@ -24,6 +24,8 @@
 * Secret
   * [SSH-RSA](./secret/ssh-rsa.md)
   * [Auth (username and password)](./secret/auth.md)
+  * [Token](./secret/token.md)
+  * [Android Sign](./secret/android_sign.md)
 
 * Config
   * [SMTP](./config/smtp.md)

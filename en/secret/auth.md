@@ -4,11 +4,10 @@ Auth Secret repersent username and password pair.
 
 ## Create an Auth Secret
 
-Click `Settings` -> `Secret` -> `+`
+1. Click `Settings` -> `Secret` -> `+`
+2. Enter a secret name
+3. Select `AUTH` in category field
+4. Type username and password
+5. save
 
-1. Enter a secret name
-2. Select `AUTH` in category field
-3. Type username and password
-4. save
-
-![create ssh rsa](./img/auth_create.png)
+![create auth](../../src/secret/create_auth_pair.gif)

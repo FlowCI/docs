@@ -1,14 +1,11 @@
-# Auth (username & password) Secret
+# 用户名密码秘钥
 
-Auth Secret repersent username and password pair.
+## 创建用户名密码秘钥
 
-## Create an Auth Secret
+1. 点击 `Settings` -> `Secret` -> `+`
+2. 输入一个名称
+3. Select `AUTH` in category field
+4. 输入用户名，密码
+5. 保存
 
-Click `Settings` -> `Secret` -> `+`
-
-1. Enter a secret name
-2. Select `AUTH` in category field
-3. Type username and password
-4. save
-
-![create ssh rsa](./img/auth_create.png)
+![create auth](../../src/secret/create_auth_pair.gif)

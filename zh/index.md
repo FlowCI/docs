@@ -21,7 +21,8 @@
     * [配置 SSH 主机](./agents/ssh_host.md)
     * [配置 K8s](./agents/k8s_host.md)
 
-
 * Secret
   * [SSH-RSA](./secret/ssh-rsa.md)
-  * [Auth (username and password)](./secret/auth.md)
+  * [用户名密码验证](./secret/auth.md)
+  * [Token](./secret/token.md)
+  * [安卓签名](./secret/android_sign.md)
