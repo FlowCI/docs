@@ -2,11 +2,7 @@
 
 Another way to setup agent is config hosts on ci server, and then flow.ci will create and manage agent by docker on the host via ssh automatically.
 
-## Introduction
-
-Setup host with ssh credential, ci server could scaling agent on hosts
-
-![ssh host structure](./img/ssh_host_structure.png)
+![ssh host structure](../../src/agents/ssh_host_structure.png)
 
 ## 1. Create a host
 
@@ -26,9 +22,9 @@ Setup host with ssh credential, ci server could scaling agent on hosts
     ```
 
 * Fill in host detail
-  * Secret: to gain access permission in the host, you have to create `ssh key` secret, and copy the public key to `.ssh/authorized_keys` in the host
+  * Secret: to gain access permission in the host (you have to create `ssh key` secret, and copy the public key to `.ssh/authorized_keys` in the host)
 
-  * User: host username
+  * User: username for ssh login
 
   * IP: host ip address
 
@@ -38,7 +34,7 @@ Setup host with ssh credential, ci server could scaling agent on hosts
 
     The host will be shown on the list
 
-![how to create host](./img/create_host.gif)
+![how to create host](../../src/agents/create_host.gif)
 
 ## 2. Setup the host
 
@@ -48,4 +44,4 @@ Setup host with ssh credential, ci server could scaling agent on hosts
 
 * Test connection
 
-![test host](./img/test_host.gif)
+  ![test host](../../src/agents/test_host.gif)

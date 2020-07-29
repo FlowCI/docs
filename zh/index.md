@@ -15,10 +15,12 @@
   * [模板](https://github.com/FlowCI/templates)
 
 * Agents
-  * [Manual Setup](./agents/manual.md)
-  * Auto Scaling
-    * [Scaling On Host](./agents/ssh_host.md)
-    * [Scaling On K8s](./agents/k8s_host.md)
+  * [默认的环境变量](./agents/vars.md)
+  * [手动配置](./agents/manual.md)
+  * 自动配置
+    * [配置 SSH 主机](./agents/ssh_host.md)
+    * [配置 K8s](./agents/k8s_host.md)
+
 
 * Secret
   * [SSH-RSA](./secret/ssh-rsa.md)
