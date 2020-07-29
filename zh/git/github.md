@@ -19,22 +19,22 @@
 
    ![webhook settings](../../src/git/github_select_webhook_url.png)
 
-2. 设置 Github webhook
+2. 设置 GitHub webhook
 
-   - Payload URL: 粘贴 webhook 链接
+- Payload URL: 粘贴 webhook 链接
 
-     > 如果使用 `ngrok`, 请手动替换地址的第一部分, 例如: `http://172.20.10.4/webhooks/spring-sample` to `http://7e9ea9dc.ngrok.io/webhooks/spring-sample`
+  > 如果使用 `ngrok`, 请手动替换地址的第一部分, 例如: `http://172.20.10.4/webhooks/spring-sample` to `http://7e9ea9dc.ngrok.io/webhooks/spring-sample`
 
-   - Content type: `application/json`
+- Content type: `application/json`
 
-   ![payload and content](../../src/git/github_setup_payload_and_content.png)
+  ![payload and content](../../src/git/github_setup_payload_and_content.png)
 
-3. 选择触发事件
+- 选择触发事件
 
-    - 选择 `Let me select individual events`
-    - 选择 `push` and `pull request`
+  - 选择 `Let me select individual events`
+  - 选择 `push` and `pull request`
 
-    ![events](../../src/git/github_select_events.png)
+  ![events](../../src/git/github_select_events.png)
 
 ## 验证 GitHub 配置
 

@@ -3,7 +3,7 @@
 * 快速开始
   * [开始第一次构建](./start/index.md)
 
-* 与 Git 仓库建立连接
+* [与 Git 仓库建立连接](./git/index.md)
   * [Github](./git/github.md)
   * [Gitlab](./git/gitlab.md)
   * [Gogs](./git/gogs.md)
