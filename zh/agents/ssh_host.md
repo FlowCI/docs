@@ -1,51 +1,45 @@
-# Auto Setup Agent - SSH HOST
+# 自动配置 Agent - SSH 主机
 
-Another way to setup agent is config hosts on ci server, and then flow.ci will create and manage agent by docker on the host via ssh automatically.
+配置 SSH 主机后，flow.ci 会自动通过 SSH 的方式创建并管理 Docker Agent。
 
-## Introduction
+![ssh host structure](../../src/agents/ssh_host_structure.png)
 
-Setup host with ssh credential, ci server could scaling agent on hosts
+## 1. 从管理员界面创建 SSH 主机
 
-![ssh host structure](./img/ssh_host_structure.png)
+* 创建 `Settings` -> `Agents` -> `+`
+* 选择 `Host with auth agent`
+* 输入一个名称
+* 输入标签 (可选)
 
-## 1. Create a host
+  Agent 标签用于 YAML `selector` 配置，可以让工作流运行在指定的 Agent 中。例如在 Agent 中配置了 `ios` 标签，并且在 YAML 中定义了如下的 `selector`， 则该工作流只会运行在带有 `ios` 标签的 Agent 中.
 
-* Click `Settings` -> `Agents` -> `+`
-* Select `Host with auth agent`
-* Specify unique host name
-* Specify tag (optional)
+  ```yaml
+  selector:
+    label:
+      - ios
+  ```
 
-    Agent tag is used for flow which has `selector` configuration in YAML, that means the flow job runs only on the agent with matched tags.
+* 填入 SSH 信息
+  * Secret: 选择一个 SSH key 类型的秘钥（请先创建一个 `ssh key` 类型的秘钥，之后拷贝公钥到主机的 `.ssh/authorized_keys` 中已获得访问权限）
 
-    For example, if YAML specified `selector` like the following, so that job will runs only on Agents with tag `ios`.
+  * User: SSH 登录的用户名
 
-    ```yaml
-    selector:
-      label:
-        - ios
-    ```
+  * IP: 主机的 IP 地址
 
-* Fill in host detail
-  * Secret: to gain access permission in the host, you have to create `ssh key` secret, and copy the public key to `.ssh/authorized_keys` in the host
+  * Max Pool Size: 最大可运行 Docker Agent 的数量
 
-  * User: host username
+* 点击 `Save`
 
-  * IP: host ip address
+  创建的 SSH 主机将会显示在列表中
 
-  * Max Pool Size: max docker agents will be run in the host
+![how to create host](../../src/agents/create_host.gif)
 
-* Click `Save`
+## 2. 配置 SSH 主机的环境
 
-    The host will be shown on the list
+* 拷贝公钥到主机中的 `.ssh/authorzied_keys` 目录，已获得访问权限
 
-![how to create host](./img/create_host.gif)
+* 在主机中运行 [初始化脚本](https://github.com/FlowCI/docker-install/blob/master/host-init.sh)，配置 Docker Agent 的运行环境
 
-## 2. Setup the host
+* 测试连接
 
-* Copy public key into `.ssh/authorzied_keys`
-
-* Run [init script](https://github.com/FlowCI/docker-install/blob/master/host-init.sh) in the host, to steup required docker environment
-
-* Test connection
-
-![test host](./img/test_host.gif)
+  ![test host](../../src/agents/test_host.gif)

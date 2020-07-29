@@ -26,9 +26,9 @@ Setup host with ssh credential, ci server could scaling agent on hosts
     ```
 
 * Fill in host detail
-  * Secret: to gain access permission in the host, you have to create `ssh key` secret, and copy the public key to `.ssh/authorized_keys` in the host
+  * Secret: to gain access permission in the host (you have to create `ssh key` secret, and copy the public key to `.ssh/authorized_keys` in the host)
 
-  * User: host username
+  * User: username for ssh login
 
   * IP: host ip address
 
@@ -48,4 +48,4 @@ Setup host with ssh credential, ci server could scaling agent on hosts
 
 * Test connection
 
-![test host](./img/test_host.gif)
+  ![test host](./img/test_host.gif)
