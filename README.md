@@ -16,7 +16,7 @@ Powerful and user-friendly CI/CD server
 
 - Run steps either on any docker images or native os &nbsp; :computer:
 
-## [Document](./en/index.md) | [中文文档](./zh/index.md)
+## [Document](./en/index.md) | [中文文档](./cn/index.md)
 
 ## [Templates (maven, npm, golang..)](./en/index.md)
 
