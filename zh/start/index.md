@@ -12,7 +12,7 @@ cd flow-docker
 ./server.sh start
 ```
 
-等待完成后，可通过浏览器访问 `http://localhost:2015`, 使用默认的用户名 `admin@flow.ci` 和密码 `example` 登录.
+等待完成后，可通过浏览器访问 `http://localhost:2015`.
 
 ![cmd](../../src/start_server.gif)
 

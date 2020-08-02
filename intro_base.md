@@ -12,7 +12,7 @@ cd flow-docker
 ./server.sh start
 ```
 
-Open the link `http://localhost:2015` from web browser after installtion is finished, and login in with default username `admin@flow.ci` and password `example`.
+Open the link `http://localhost:2015` from web browser after installtion is finished.
 
 ![cmd](./src/start_server.gif)
 
