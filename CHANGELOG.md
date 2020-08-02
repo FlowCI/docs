@@ -1,3 +1,15 @@
+- v0.20.32 2020-08-03
+  * Web 用户界面优化
+  * 可编辑 SSH 主机的端口
+  * Web页面设置默认用户
+  * 支持 `condition` YAML，可使用 Groovy 脚本来定义 Step 是否运行
+
+- v0.20.32 2020-08-03
+  * Improvement of UI
+  * Enable to edit the port number on SSH host
+  * Default user can be created from web
+  * Support condition in the YAML to setup step start condition in Groovy
+
 - v0.20.30 2020-07-27
   * Web 用户界面优化
   * 提升 Agent 的稳定性
