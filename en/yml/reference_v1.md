@@ -19,6 +19,7 @@
   * `envs`
 * [`steps`](#steps)
   * [`name`](#name)
+  * [`condition`](#condition)
   * [`allow_failure`](#allow_failure)
   * [`envs`](#envs)
   * [`script`](#script)
@@ -95,7 +96,7 @@ steps:
 - name: step name
   allow_failure: true
   envs:
-  - MY_ENV: "hello"
+    MY_ENV: "hello"
   script: |
     echo $MY_ENV
 ```
@@ -126,7 +127,7 @@ steps:
 - name: step name
   allow_failure: true
   envs:
-  - MY_ENV: "hello"
+    MY_ENV: "hello"
   script: |
     echo $MY_ENV
 ```
@@ -137,9 +138,9 @@ It will run plugin with tag `notification` in server side, to send notification 
 
 ```yaml
 notifications:
-  - plugin: 'email-notify'
-    envs:
-      FLOWCI_SMTP_CONFIG: 'test-config'
+- plugin: 'email-notify'
+  envs:
+    FLOWCI_SMTP_CONFIG: 'test-config'
 ```
 
 ## steps
@@ -151,6 +152,20 @@ Specify a custom step name, rather than a generated default name (ex: step-1)
 ```yml
 steps:
 - name: step name
+```
+
+#### condition
+
+The Groovy script return boolean value to define the step can be run or not
+
+```yml
+steps:
+- name: step name
+  envs:
+    my_var: "hello"
+  conditon: |
+    ## groovy script that return boolean value
+    return "$my_var" == "hello";
 ```
 
 #### allow_failure
@@ -172,7 +187,7 @@ steps:
 - name: step name
   allow_failure: true
   envs:
-  - MY_ENV: "hello"
+    MY_ENV: "hello"
 ```
 
 #### script
@@ -184,7 +199,7 @@ steps:
 - name: step name
   allow_failure: true
   envs:
-  - MY_ENV: "hello"
+    MY_ENV: "hello"
   script: |
     echo $MY_ENV
 ```
@@ -203,7 +218,7 @@ Apply plugin in the step
 steps:
 - name: run unit test
   envs:
-    - ENV_FOR_PLUGIN: "xxx"
+    ENV_FOR_PLUGIN: "xxx"
   plugin: 'maven-test' # the plugin name
 ```
 

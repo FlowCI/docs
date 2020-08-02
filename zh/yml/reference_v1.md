@@ -19,6 +19,7 @@
   * `envs`
 * [`steps`](#steps)
   * [`name`](#name)
+  * [`condition`](#condition)
   * [`allow_failure`](#allow_failure)
   * [`envs`](#envs)
   * [`script`](#script)
@@ -95,7 +96,7 @@ steps:
 - name: step name
   allow_failure: true
   envs:
-  - MY_ENV: "hello"
+    MY_ENV: "hello"
   script: |
     echo $MY_ENV
 ```
@@ -128,7 +129,7 @@ steps:
 - name: step name
   allow_failure: true
   envs:
-  - MY_ENV: "hello"
+    MY_ENV: "hello"
   script: |
     echo $MY_ENV
 ```
@@ -155,6 +156,20 @@ steps:
 - name: step name
 ```
 
+#### condition
+
+可以定义一个返回值为布尔的 Groovy 脚本，确定该 Step 可否运行
+
+```yml
+steps:
+- name: step name
+  envs:
+    my_var: "hello"
+  conditon: |
+    ## groovy script that return boolean value
+    return "$my_var" == "hello";
+```
+
 #### allow_failure
 
 允许失败，如果该值为 `true`，则表示 Step 失败后可继续运行后面的 Step。默认值为 `false`
@@ -174,7 +189,7 @@ steps:
 - name: step name
   allow_failure: true
   envs:
-  - MY_ENV: "hello"
+   MY_ENV: "hello"
 ```
 
 #### script
@@ -186,7 +201,7 @@ steps:
 - name: step name
   allow_failure: true
   envs:
-  - MY_ENV: "hello"
+    MY_ENV: "hello"
   script: |
     echo $MY_ENV
 ```
@@ -205,7 +220,7 @@ Step 级别的设置（优先级高于工作流级别），具体配置请参考
 steps:
 - name: run unit test
   envs:
-    - ENV_FOR_PLUGIN: "xxx"
+    ENV_FOR_PLUGIN: "xxx"
   plugin: 'maven-test' # the plugin name
 ```
 
