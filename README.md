@@ -18,7 +18,7 @@ Powerful and user-friendly CI/CD server
 
 ## [Document](./en/index.md) | [中文文档](./cn/index.md)
 
-## [Templates (maven, npm, golang..)](./en/index.md)
+## [Templates (maven, npm, golang, ruby, android..)](./en/index.md)
 
 ## Quick Start
 
