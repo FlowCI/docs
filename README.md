@@ -1,13 +1,15 @@
 <h3 align="center">
   <a href="https://flowci.github.io">
-    <img src="https://github.com/FlowCI/docs/raw/master/src/flow.ci.png" alt="fastlane Logo" width="150">
+    <img src="https://github.com/FlowCI/docs/raw/master/src/icon.png" alt="fastlane Logo" width="100">
   </a>
 </h3>
 
-<h4 align="center">flow.ci is a powerful and user-friendly CI/CD server</h4>
+<h3 align="center">A powerful and user-friendly CI/CD server</h3>
 
-[![LICENSE](https://img.shields.io/github/license/pingcap/tidb.svg)](https://github.com/pingcap/tidb/blob/master/LICENSE)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/flowci/flow-core-x)
+<p align="center">
+    <a href="https://github.com/FlowCI/docs/blob/master/LICENSE"><img src="https://img.shields.io/github/license/flowci/flow-core-x"></a>
+    <a href="https://github.com/FlowCI/flow-core-x/releases/"><img src="https://img.shields.io/github/v/release/flowci/flow-core-x"></a>
+</p>
 
 ## Key Features
 
