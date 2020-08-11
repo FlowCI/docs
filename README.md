@@ -1,20 +1,24 @@
-# flow.ci
+
+# [flow.ci](https://flowci.github.io)
 
 [![LICENSE](https://img.shields.io/github/license/pingcap/tidb.svg)](https://github.com/pingcap/tidb/blob/master/LICENSE)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/flowci/flow-core-x)
 
 Powerful and user-friendly CI/CD server
 
-- Getting started within a minute &nbsp; :tada:
+## Key Features
 
-- Simple YAML configuration and templates &nbsp; :ghost:
+- Zero configuration, can be getting started within a minute
 
-- Elastic Agents to speed up build &nbsp; :rocket:
+- Simple YAML configuration and templates
 
-- Online TTY to debug your job in time &nbsp; :shell:
+- Elastic Agents to speed up build
 
-- Flexible plugins &nbsp; :electric_plug:
+- Online TTY to debug your job in time
 
-- Run steps either on any docker images or native os &nbsp; :computer:
+- Flexible plugins
+
+- Run steps either on any docker images or native os
 
 ## [Document](./en/index.md) | [中文文档](./cn/index.md)
 
