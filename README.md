@@ -1,9 +1,13 @@
-# [flow.ci](https://flowci.github.io)
+<h3 align="center">
+  <a href="https://flowci.github.io">
+    <img src="https://github.com/FlowCI/docs/raw/master/src/flow.ci.png" alt="fastlane Logo" width="150">
+  </a>
+</h3>
+
+<h4 align="center">flow.ci is a powerful and user-friendly CI/CD server</h4>
 
 [![LICENSE](https://img.shields.io/github/license/pingcap/tidb.svg)](https://github.com/pingcap/tidb/blob/master/LICENSE)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/flowci/flow-core-x)
-
-Powerful and user-friendly CI/CD server
 
 ## Key Features
 
@@ -11,7 +15,7 @@ Powerful and user-friendly CI/CD server
 
 - Simple YAML configuration and templates
 
-- Elastic Agents to speed up build
+- Elastic agents to speed up build
 
 - Online TTY to debug your job in time
 
@@ -19,11 +23,15 @@ Powerful and user-friendly CI/CD server
 
 - Run steps either on any docker images or native os
 
-## [Document](./en/index.md) | [中文文档](./cn/index.md)
+## Document
 
-## [Templates (maven, npm, golang, ruby, android..)](./en/index.md)
+[English](https://github.com/FlowCI/docs/tree/master/en/index.md) | [中文文档](https://github.com/FlowCI/docs/tree/master/cn/index.md)
 
-## Quick Start
+## Templates
+
+[maven, npm, golang, ruby, android and more](https://github.com/FlowCI/templates)
+
+## Installation
 
 > [Docker](https://docs.docker.com/install/) & [Docker-Compose](https://docs.docker.com/compose/install/) are required
 
@@ -33,4 +41,8 @@ cd flow-docker
 ./server.sh start
 ```
 
-![](./src/demo.gif)
+## Preview
+
+![demo](https://github.com/FlowCI/docs/raw/master/src/demo.gif)
+
+![tty](https://github.com/FlowCI/docs/raw/master/src/step_tty.gif)
