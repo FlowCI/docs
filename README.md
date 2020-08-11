@@ -29,6 +29,8 @@
 
 [English](https://github.com/FlowCI/docs/tree/master/en/index.md) | [中文文档](https://github.com/FlowCI/docs/tree/master/cn/index.md)
 
+Need Help? submit issue from [here](https://github.com/FlowCI/docs/issues)
+
 ## Templates
 
 [maven, npm, golang, ruby, android and more](https://github.com/FlowCI/templates)
