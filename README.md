@@ -17,6 +17,8 @@
 
 - Simple YAML configuration and templates
 
+- Scaleable on server-side to improve availability
+
 - Elastic agents to speed up build
 
 - Online TTY to debug your job in time
