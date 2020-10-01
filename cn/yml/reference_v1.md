@@ -10,7 +10,7 @@
   * `entrypoint`
   * `command`
   * `environment`
-  * `network_mode`
+  * `network`
   * `is_runtime`
   * `stop_on_finish`
   * `delete_on_finish`
@@ -30,7 +30,7 @@
     * `entrypoint`
     * `command`
     * `environment`
-    * `network_mode`
+    * `network`
     * `is_runtime`
     * `stop_on_finish`
     * `delete_on_finish`

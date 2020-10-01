@@ -10,7 +10,7 @@
   * `entrypoint`
   * `command`
   * `environment`
-  * `network_mode`
+  * `network`
   * `is_runtime`
   * `stop_on_finish`
   * `delete_on_finish`
@@ -30,7 +30,7 @@
     * `entrypoint`
     * `command`
     * `environment`
-    * `network_mode`
+    * `network`
     * `is_runtime`
     * `stop_on_finish`
     * `delete_on_finish`
@@ -78,6 +78,8 @@ selector:
 
 if `docker` / `dockers` tag applied, all steps will be run within docker container
 
+> the default network is `flow-ci-agent-default`
+
 ### single docker
 
 ```yml
@@ -117,7 +119,7 @@ dockers:
   user: root # optiona, default is root
   entrypoint: [] # optional, default is empty
   command: [] # optional, default is empty
-  network_mode: "bridge" # optional, default is bridge
+  network: "flow-ci-agent-default" # optional, default is flow-ci-agent-default
   stop_on_finish: 'true' # optional, default is true
   delete_on_finish: 'ture' # optiaon, default is true
 
