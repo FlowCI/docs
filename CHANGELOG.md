@@ -1,16 +1,16 @@
 - v0.20.40 2020-10-01
   * 支持 k8s 中运行, 并动态扩展 Agent
   * PHP 构建模板
-  * 支持定义子任务(sub steps)
+  * 支持定义子任务(sub-steps)
   * 新增管理员功能 - 系统配置
   * BUG 修复
 
 - v0.20.40 2020-10-01
   * Support dynamic agents in a Kubernetes cluster.
   * PHP template
-  * Support sub steps in a step
-  * New system configuration in admin panel
-  * Bug fix
+  * Support sub-steps in a step
+  * New system configuration in the admin panel
+  * Bugfix
 
 - v0.20.32 2020-08-03
   * Web 用户界面优化
