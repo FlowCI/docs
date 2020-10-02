@@ -30,7 +30,9 @@
 
 - `FLOWCI_AGENT_IP_{interface name}`: interface name for example: en0, en1
 
-## Docker Container
+## Docker Container (if step with docker section)
+
+- `FLOWCI_AGENT_DOCKER_NETWORK`: current docker network name
 
 - `CONTAINER_ID_{container index}`: container index start from 0
 

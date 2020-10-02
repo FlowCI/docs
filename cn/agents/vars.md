@@ -30,7 +30,9 @@
 
 - `FLOWCI_AGENT_IP_{interface name}`: interface name for example: en0, en1
 
-## Docker 容器相关
+## Docker 容器相关 (当 step 中定义了 docker 内容时有效)
+
+- `FLOWCI_AGENT_DOCKER_NETWORK`: 当前 Docker network 名称
 
 - `CONTAINER_ID_{container index}`: container index start from 0
 
