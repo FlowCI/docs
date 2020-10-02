@@ -5,6 +5,7 @@
 * [`selector`](#selector)
 * [`docker` / `dockers`](#docker/dockers)
   * `image`
+  * `name`
   * `ports`
   * `user`
   * `entrypoint`
@@ -25,6 +26,7 @@
   * [`script`](#script)
   * [`docker` / `dockers`](#docker/dockers)
     * `image`
+    * `name`
     * `ports`
     * `user`
     * `entrypoint`
@@ -85,6 +87,7 @@ if `docker` / `dockers` tag applied, all steps will be run within docker contain
 ```yml
 docker:
   image: ubuntu:18.04
+  name: your_container_name # optional
   ports: # optional
   - "8080:8080"
   - "9090:9090"

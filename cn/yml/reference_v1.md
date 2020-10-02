@@ -5,6 +5,7 @@
 * [`selector`](#selector)
 * [`docker` / `dockers`](#docker/dockers)
   * `image`
+  * `name`
   * `ports`
   * `user`
   * `entrypoint`
@@ -25,6 +26,7 @@
   * [`script`](#script)
   * [`docker` / `dockers`](#docker/dockers)
     * `image`
+    * `name`
     * `ports`
     * `user`
     * `entrypoint`
@@ -83,6 +85,7 @@ selector:
 ```yml
 docker:
   image: ubuntu:18.04 # 必填项
+  name: your_container_name # 可选，容器名称
   ports: # 可选
   - "8080:8080"
   - "9090:9090"
