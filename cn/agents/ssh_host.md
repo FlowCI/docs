@@ -1,4 +1,4 @@
-# 自动配置 Agent - SSH 主机
+# 动态 Agent - SSH 主机
 
 配置 SSH 主机后，flow.ci 会自动通过 SSH 的方式创建并管理 Docker Agent。
 
@@ -7,7 +7,7 @@
 ## 1. 从管理员界面创建 SSH 主机
 
 * 创建 `Settings` -> `Agents` -> `+`
-* 选择 `Host with auth agent`
+* 选择 `Dynamic agent`
 * 输入一个名称
 * 输入标签 (可选)
 

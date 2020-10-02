@@ -7,7 +7,7 @@ Another way to setup agent is config hosts on ci server, and then flow.ci will c
 ## 1. Create a host
 
 * Click `Settings` -> `Agents` -> `+`
-* Select `Host with auth agent`
+* Select `Dynamic agent`
 * Specify unique host name
 * Specify tag (optional)
 
