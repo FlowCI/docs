@@ -1,4 +1,4 @@
-# Auto Setup Agent - SSH HOST
+# Dynamic Agent - SSH HOST
 
 Another way to setup agent is config hosts on ci server, and then flow.ci will create and manage agent by docker on the host via ssh automatically.
 

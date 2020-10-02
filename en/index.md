@@ -17,9 +17,9 @@
 * Agents
   * [Environment Variables](./agents/vars.md)
   * [Setup Manually](./agents/manual.md)
-  * Setup Automatically
+  * Dynamic Agents
     * [Host via SSH](./agents/ssh_host.md)
-    * [On K8s](./agents/k8s_host.md)
+    * [In K8s Cluster](./agents/k8s_host.md)
 
 * Secret
   * [SSH-RSA](./secret/ssh-rsa.md)
