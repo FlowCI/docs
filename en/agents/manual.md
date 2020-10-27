@@ -1,6 +1,6 @@
-# Manual Agent in Linux
+# Manual Agent
 
-Agent is the application to run jobs, you have to create an Agent before job started.
+Agent is the application to run jobs, you have to create an Agent and start it before job started.
 
 > if installed from [docker-install](https://github.com/FlowCI/docker-install.git) repo, there are default dynamic Agent configuread locally, which means you can start build without agent setup.
 
