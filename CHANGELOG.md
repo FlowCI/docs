@@ -1,3 +1,21 @@
+- v0.20.45 2020-10-29
+  * Agent 支持 Windows 环境
+  * 支持 `bash` `pwsh`， 在任务中可自定义 Bash 或 PowerShell
+  * 支持 `retry`, 可设置任务重试次数
+  * 支持 `timeout`, 可以设置任务过期时间
+  * 支持工作流级别的 condition，可以通过 Groovy 脚本自定义工作流启动规则
+  * 新增 .Net Core 项目模板
+  * BUG 修复
+
+- v0.20.45 2020-10-29
+  * Support Agent in Windows
+  * Introduce `bash` `pwsh` in step level to define Bash and/or Powershell script
+  * Introduce `retry` to defined retry times
+  * Introduce `timeout` to defined timeout in seconds
+  * Introduce `condition` in flow level to customize flow start condition with Groovy script
+  * New template for .Net Core project
+  * Bugfix
+
 - v0.20.40 2020-10-01
   * 支持 k8s 中运行, 并动态扩展 Agent
   * PHP 构建模板
