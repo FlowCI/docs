@@ -11,23 +11,33 @@
     <a href="https://github.com/FlowCI/flow-core-x/releases/"><img src="https://img.shields.io/github/v/release/flowci/flow-core-x"></a>
 </p>
 
-# Key Features
+## Key Features
 
-- Zero configuration, can be getting started within a minute
+- __High Availability__
 
-- Simple YAML configuration and templates
+    flow.ci is designed to work in the cloud -- public, private, or hybrid, it could be deployed with multiple instances, the configuration/jobs data on the node may not be lost when instance fails.
 
-- Scaleable on server-side to improve availability
+- __Zero Configuration__
 
-- Elastic agents to speed up build
+    flow.ci tries to minimize complexity of any configuration, the server could be started with three command lines. It also provides build templates of many programming languages, a job could be started just using it.
 
-- Online TTY to debug your job in time
+- __Dynamic Agents__
 
-- Flexible plugins
+    flow.ci could scale agent automatically either on k8s cluster or linux host
 
-- Run steps either on any docker images or native os
+- __Online Debugging__
+    
+    flow.ci supports online TTY terminal so that you could find out the problems in the running job from runtime terminal.
 
-# Quick start
+- __Flexible Plugins__
+
+    Using plugins on flow.ci is quite simple, you just need type plugin name in the step. Developing plugin is also quite easy, you could using any language on your own plugin development. 
+
+- __Flexible Runtime__ 
+  
+    Each step or step group can be ran either on any docker images or native os.
+
+## Quick start
 
 > [Docker](https://docs.docker.com/install/) & [Docker-Compose](https://docs.docker.com/compose/install/) are required
 
@@ -37,23 +47,23 @@ cd flow-docker
 ./server.sh start
 ```
 
-# Documentation
+## Documentation
 
-- [English](https://github.com/FlowCI/docs/tree/master/en/index.md) 
-- [简体中文](https://github.com/FlowCI/docs/tree/master/cn/index.md)
++ [English](https://github.com/FlowCI/docs/tree/master/en/index.md) 
++ [简体中文](https://github.com/FlowCI/docs/tree/master/cn/index.md)
 
 Need Help? submit issue from [here](https://github.com/FlowCI/docs/issues)
 
 
-# Templates
+## Templates
 
 [maven, npm, golang, ruby, android and more](https://github.com/FlowCI/templates)
 
-# Architecture
+## Architecture
 
 
 
-# Preview
+## Preview
 
 ![demo](https://github.com/FlowCI/docs/raw/master/src/demo.gif)
 
