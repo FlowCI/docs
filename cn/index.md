@@ -35,11 +35,15 @@ flow.ci 是开源的 CI/CD 工具，让用户在更轻松，友好的环境下�
   * [模板](https://github.com/FlowCI/templates)
 
 * Agents
-  * [默认的环境变量](./agents/vars.md)
-  * [手动配置](./agents/manual.md)
+  * 手动配置
+    * [Linux](./agents/manual.md)
+    * [MacOS](./agents/manual.md)
+    * [Windows](./agents/manual.md)
+    * [Docker](./agents/manual.md)
   * 自动配置
     * [配置 SSH 主机](./agents/ssh_host.md)
     * [配置 K8s](./agents/k8s_host.md)
+  * [默认的环境变量](./agents/vars.md)
 
 * Secret
   * [SSH-RSA](./secret/ssh-rsa.md)

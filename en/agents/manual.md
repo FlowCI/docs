@@ -29,11 +29,13 @@ Agent is the application to run jobs, you have to create an Agent and start it b
 
 ## Start Agent
 
-Set flow.ci server url and token copied from admin page as arguments, the latest agent version can be found from [here](https://github.com/FlowCI/flow-agent-x/releases)
+The latest agent version can be found from [here](https://github.com/FlowCI/flow-agent-x/releases)
+
+Start agent require the flowing arguments:
 
 > `<ci_server_url>`: the flow.ci server url. ex: http://192.168.0.104:8080
 >
-> `<agent_token>`: the agent token copied from admin page
+> `<agent_token>`: the token copied from admin page
 
 ### Docker
 
@@ -52,7 +54,7 @@ flowci/agent
 
 ### Linux
 
-Copy the following to bash terminal
+Replace `<ci_server_url>` & `<agent_token>` and run the following Bash in terminal
 
 ```bash
 wget https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.45/flow-agent-x-linux
@@ -62,7 +64,7 @@ chmod +x flow-agent-x-linux
 
 ### MacOS
 
-Copy the following to bash terminal
+Replace `<ci_server_url>` & `<agent_token>` and run the following Bash in terminal
 
 ```bash
 wget https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.45/flow-agent-x-mac
@@ -72,7 +74,7 @@ chmod +x flow-agent-x-mac
 
 ### Windows (x64)
 
-Copy the following to powershell terminal
+Replace `<ci_server_url>` & `<agent_token>` and run the following PowerShell in terminal
 
 ```powershell
 Invoke-WebRequest https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.45/flow-agent-x-win -OutFile flow-agent-x-win.exe
