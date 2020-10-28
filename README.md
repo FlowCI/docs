@@ -13,7 +13,7 @@
 
 ## What is flow.ci?
 
-flow.ci is an open-source CI/CD automation server that designed for reducing the complexity of configuration. It supports high availability, multiple building environment, and scalability with dynamic agents.
+flow.ci is an open-source CI/CD automation server that designed for reducing the complexity and increaing user experience. It supports high availability, multiple building environment, and scalability with dynamic agents.
 
 - __High Availability__
 
