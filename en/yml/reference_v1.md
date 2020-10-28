@@ -1,7 +1,7 @@
 # YAML References
 
 * [`envs`](#envs)
-* [`trigger`](#trigger)
+* [`condition`](#condition)
 * [`selector`](#selector)
 * [`docker` / `dockers`](#docker/dockers)
   * `image`
@@ -22,8 +22,11 @@
   * [`name`](#name)
   * [`condition`](#condition)
   * [`allow_failure`](#allow_failure)
+  * [`retry`](#retry)
+  * [`timeout`](#timeout)
   * [`envs`](#envs)
-  * [`script`](#script)
+  * [`bash`](#bash)
+  * [`pwsh`](#pwsh)
   * [`docker` / `dockers`](#docker/dockers)
     * `image`
     * `name`
@@ -51,18 +54,17 @@ envs:
   SECOND_ENV: "hello world"
 ```
 
-## trigger
+## condition
 
-When push your code, open/close pull request, or create a tag, the source control management system automatically sends a webhook to flow.ci which in turn triggers flow execution. Use the trigger section to limit the execution. The flow will be executed anyway if this section not defined.
+The Groovy script return boolean value to define the flow starting condition, the list of environment variables in [here (Git section only)](../agents/vars.md).
+
+> The conditon will be ignored while start a job from manual
   
+for example: the following defined the flow can be started when branch is `master` from github.
+
 ```yaml
-trigger:
-  branch:
-    - "develop"
-    - "master"
-    - "feature/*"
-  tag:
-    - "*"
+condition: |
+  return FLOWCI_GIT_BRANCH == "master" && FLOWCI_GIT_SOURCE == "GITHUB"
 ```
 
 ## selector
@@ -183,6 +185,34 @@ steps:
   allow_failure: true
 ```
 
+#### retry
+
+define number of times to retry the step when it's fail
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  retry: 5
+  bash:
+    echo "start"
+    fail_here.
+```
+
+#### timeout
+
+define step timeout in seconds
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  timeout: 3600
+  bash:
+    echo "start"
+    sleep 1000
+```
+
 #### envs
 
 define environment variables scoped to individual steps.
@@ -195,9 +225,9 @@ steps:
     MY_ENV: "hello"
 ```
 
-#### script
+#### bash
 
-the bash script will be executed.
+the Bash script will be executed.
 
 ```yml
 steps:
@@ -205,8 +235,22 @@ steps:
   allow_failure: true
   envs:
     MY_ENV: "hello"
-  script: |
+  bash: |
     echo $MY_ENV
+```
+
+#### pwsh
+
+the PowerShell script will be executed under Windows Agent
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+    MY_ENV: "hello"
+  pwsh: |
+    echo $Env:MY_ENV
 ```
 
 #### docker/docker

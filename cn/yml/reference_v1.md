@@ -1,7 +1,7 @@
 # YAML 参考
 
 * [`envs`](#envs)
-* [`trigger`](#trigger)
+* [`condition`](#condition)
 * [`selector`](#selector)
 * [`docker` / `dockers`](#docker/dockers)
   * `image`
@@ -22,8 +22,11 @@
   * [`name`](#name)
   * [`condition`](#condition)
   * [`allow_failure`](#allow_failure)
+  * [`retry`](#retry)
+  * [`timeout`](#timeout)
   * [`envs`](#envs)
-  * [`script`](#script)
+  * [`bash`](#bash)
+  * [`pwsh`](#pwsh)
   * [`docker` / `dockers`](#docker/dockers)
     * `image`
     * `name`
@@ -51,18 +54,17 @@ envs:
   SECOND_ENV: "hello world"
 ```
 
-## trigger
+## condition
 
-当 Git 仓库推送 Push，Tag，或者 Pull Request 等事件时，可以根据 `branch` 或者 `tag` 来觉得是否执行工作流。
+Groovy 脚本定义工作流启动的条件，在脚本中可用的环境变量在[这里 (仅在 Git 章节中)](../agents/vars.md)。
+
+> 手动启动时该定义无效。
   
+例如以下代码，定义了工作流只能在 分支为 `master` 并且才 GitHub 推送时才会启动
+
 ```yaml
-trigger:
-  branch:
-    - "develop"
-    - "master"
-    - "feature/*"
-  tag:
-    - "*"
+condition: |
+  return FLOWCI_GIT_BRANCH == "master" && FLOWCI_GIT_SOURCE == "GITHUB"
 ```
 
 ## selector
@@ -183,6 +185,35 @@ steps:
   allow_failure: true
 ```
 
+
+#### retry
+
+定义当任务失败时，重试的次数。
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  retry: 5
+  bash:
+    echo "start"
+    fail_here.
+```
+
+#### timeout
+
+定义任务的过期时间，单位为秒。
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  timeout: 3600
+  bash:
+    echo "start"
+    sleep 1000
+```
+
 #### envs
 
 Step 级别的环境变量 （优先级高于工作流级别）
@@ -195,9 +226,9 @@ steps:
    MY_ENV: "hello"
 ```
 
-#### script
+#### bash
 
-要执行的 bash 脚本
+要执行的 Bash 脚本
 
 ```yml
 steps:
@@ -207,6 +238,20 @@ steps:
     MY_ENV: "hello"
   script: |
     echo $MY_ENV
+```
+
+#### pwsh
+
+定义需要执行的 PowerShell 脚本，仅在 Windows Agent 中运行
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+    MY_ENV: "hello"
+  pwsh: |
+    echo $Env:MY_ENV
 ```
 
 #### docker/dockers
