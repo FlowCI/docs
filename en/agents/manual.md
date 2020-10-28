@@ -1,10 +1,10 @@
-# Manual Setup Agent
+# Manual Agent
 
-Agent is the application to run jobs, you have to create an Agent before job started.
+Agent is the application to run jobs, you have to create an Agent and start it before job started.
 
-> if installed from [docker-install](https://github.com/FlowCI/docker-install.git) repo, there are default setup locally, which means you can start build without agent setup.
+> if installed from [docker-install](https://github.com/FlowCI/docker-install.git) repo, there are default dynamic Agent configuread locally, which means you can start build without agent setup.
 
-## 1. Create an agent from admin page
+## Create an Agent from admin page
 
 * Click `Settings` -> `Agents` -> `+`
 * Select `Manual agent`
@@ -27,7 +27,15 @@ Agent is the application to run jobs, you have to create an Agent before job sta
 
 ![how to create agent](../../src/agents/create_agent.gif)
 
-## 2. Start Agent
+## Start Agent
+
+The latest agent version can be found from [here](https://github.com/FlowCI/flow-agent-x/releases)
+
+Start agent require the flowing arguments:
+
+> `<ci_server_url>`: the flow.ci server url. ex: http://192.168.0.104:8080
+>
+> `<agent_token>`: the token copied from admin page
 
 ### Docker
 
@@ -36,25 +44,40 @@ The most easiest way is start agent from [docker-install](https://github.com/flo
 Or start from the following script, and replace the value of `FLOWCI_SERVER_URL` and `FLOWCI_AGENT_TOKEN`
 
 ```bash
-docker volume create pyenv
-docker run --rm -v pyenv:/ws flowci/pyenv:1.0 bash -c "~/init-pyenv-volume.sh"
-
 docker run -it \
--e FLOWCI_SERVER_URL=<http://yourhost:port> \
--e FLOWCI_AGENT_TOKEN=<token_copied_from_admin_page> \
--e FLOWCI_AGENT_VOLUMES="name=pyenv,dest=/ci/python,script=init.sh" \
+-e FLOWCI_SERVER_URL=<ci_server_url> \
+-e FLOWCI_AGENT_TOKEN=<agent_token> \
+-e FLOWCI_AGENT_VOLUMES="name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv:1.3,init=init-pyenv-volume.sh" \
 -v /var/run/docker.sock:/var/run/docker.sock \
 flowci/agent
 ```
 
-### Binary
+### Linux
+
+Replace `<ci_server_url>` & `<agent_token>` and run the following Bash in terminal
 
 ```bash
-# wget https://github.com/FlowCI/flow-agent-x/releases/download/<version>/flow-agent-x-<os>
-
-wget https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.30/flow-agent-x-linux
+wget https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.45/flow-agent-x-linux
 chmod +x flow-agent-x-linux
-./flow-agent-x-linux -u <ci_server_url> -t <agent_token>
-
-# ex: ./flow-agent-x-linux -u http://172.10.20.1:8080 -t 44793491-03ac-4a3c-8c59-1f09b7c9d0e3
+./flow-agent-x-linux -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv:1.3,init=init-pyenv-volume.sh
 ```
+
+### MacOS
+
+Replace `<ci_server_url>` & `<agent_token>` and run the following Bash in terminal
+
+```bash
+wget https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.45/flow-agent-x-mac
+chmod +x flow-agent-x-mac
+./flow-agent-x-mac -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv:1.3,init=init-pyenv-volume.sh
+```
+
+### Windows (x64)
+
+Replace `<ci_server_url>` & `<agent_token>` and run the following PowerShell in terminal
+
+```powershell
+Invoke-WebRequest https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.45/flow-agent-x-win -OutFile flow-agent-x-win.exe
+.\flow-agent-x-linux -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv:1.3,init=init-pyenv-volume.sh
+```
+

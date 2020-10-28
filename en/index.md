@@ -15,11 +15,15 @@
   * [Templates](https://github.com/FlowCI/templates)
 
 * Agents
-  * [Environment Variables](./agents/vars.md)
-  * [Setup Manually](./agents/manual.md)
+  * Manual Agents
+    * [Linux](./agents/manual.md)
+    * [MacOS](./agents/manual.md)
+    * [Windows](./agents/manual.md)
+    * [Docker](./agents/manual.md)
   * Dynamic Agents
     * [Host via SSH](./agents/ssh_host.md)
     * [In K8s Cluster](./agents/k8s_host.md)
+  * [Environment Variables](./agents/vars.md)
 
 * Secret
   * [SSH-RSA](./secret/ssh-rsa.md)
