@@ -11,31 +11,33 @@
     <a href="https://github.com/FlowCI/flow-core-x/releases/"><img src="https://img.shields.io/github/v/release/flowci/flow-core-x"></a>
 </p>
 
-## Key Features
+## What is flow.ci?
+
+flow.ci is an open-source CI/CD automation server that designed for reducing the complexity of configuration. It supports high availability, multiple building environment, and scalability with dynamic agents.
 
 - __High Availability__
 
-    flow.ci is designed to work in the cloud -- public, private, or hybrid, it could be deployed with multiple instances, the configuration/jobs data on the node may not be lost when instance fails.
+    flow.ci is designed to work in the cloud -- public, private, or hybrid, it could be deployed with multiple instances, the configuration/jobs data on the node may not be lost when the instance fails.
 
 - __Zero Configuration__
 
-    flow.ci tries to minimize complexity of any configuration, the server could be started with three command lines. It also provides build templates of many programming languages, a job could be started just using it.
+    flow.ci tries to minimize the complexity of any configuration, the server could be started with three command lines. It also provides build templates of many programming languages, a job could be started just using it.
 
 - __Dynamic Agents__
 
-    flow.ci could scale agent automatically either on k8s cluster or linux host
+    flow.ci could scale agent automatically either on K8s cluster or Linux host.
 
 - __Online Debugging__
     
-    flow.ci supports online TTY terminal so that you could find out the problems in the running job from runtime terminal.
+    flow.ci supports the online TTY terminal so that you could find out the problems in the running job from runtime terminal.
 
 - __Flexible Plugins__
 
-    Using plugins on flow.ci is quite simple, you just need type plugin name in the step. Developing plugin is also quite easy, you could using any language on your own plugin development. 
+    Using plugins on flow.ci is quite simple, you just need type the plugin name in the step. Developing a plugin is also quite easy, you could use any language on your own plugin development. 
 
 - __Flexible Runtime__ 
   
-    Each step or step group can be ran either on any docker images or native os.
+    Each step or step group can be run either on any docker images or native os.
 
 ## Quick start
 
