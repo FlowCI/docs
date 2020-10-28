@@ -1,6 +1,6 @@
 <h3 align="center">
   <a href="https://flowci.github.io">
-    <img src="https://github.com/FlowCI/docs/raw/master/src/logo.png" alt="fastlane Logo" width="100">
+    <img src="https://github.com/FlowCI/docs/raw/master/src/logo.png" alt="Logo" width="100">
   </a>
 </h3>
 
