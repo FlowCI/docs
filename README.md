@@ -63,7 +63,7 @@ Need Help? submit issue from [here](https://github.com/FlowCI/docs/issues)
 
 ## Architecture
 
-
+![architecture](https://github.com/FlowCI/docs/raw/master/src/architecture.png)
 
 ## Preview
 
