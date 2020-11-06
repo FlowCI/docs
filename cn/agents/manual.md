@@ -27,7 +27,12 @@
 
 ## 启动 Agent
 
-您可以从 [这里](https://github.com/FlowCI/flow-agent-x/releases) 找到最新的 Agent 版本
+您可以从 [这里](https://github.com/FlowCI/flow-agent-x/releases) 找到最新的 Agent 版本.
+
+> Python 环境:
+>
+> 由于一些插件需要 `flowci` 的 python 包，如果从 `Linux`, `Mac` or `Windows` 启动, 
+> 请安装 `python3` 环境，以及 `pip install python-lib-flow.ci`
 
 
 手动启动 Agent 需要以下两个参数:

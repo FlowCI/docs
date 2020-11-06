@@ -31,6 +31,12 @@ Agent is the application to run jobs, you have to create an Agent and start it b
 
 The latest agent version can be found from [here](https://github.com/FlowCI/flow-agent-x/releases)
 
+> Python environment:
+>
+> Some of plugins require `flowci` python lib.
+>
+> if you start agent from `Linux`, `Mac` or `Windows`, please install `python3` environment and python lib `pip install python-lib-flow.ci`
+
 Start agent require the flowing arguments:
 
 > `<ci_server_url>`: the flow.ci server url. ex: http://192.168.0.104:8080
