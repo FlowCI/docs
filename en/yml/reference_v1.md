@@ -5,6 +5,7 @@
 * [`selector`](#selector)
 * [`docker` / `dockers`](#docker/dockers)
   * `image`
+  * `auth`
   * `name`
   * `ports`
   * `user`
@@ -29,6 +30,7 @@
   * [`pwsh`](#pwsh)
   * [`docker` / `dockers`](#docker/dockers)
     * `image`
+    * `auth`
     * `name`
     * `ports`
     * `user`
@@ -89,6 +91,7 @@ if `docker` / `dockers` tag applied, all steps will be run within docker contain
 ```yml
 docker:
   image: ubuntu:18.04
+  auth: secret_name # optional, should be defined if image from private registry, defined from admin -> create secret -> secret with 'Auth pair' 
   name: your_container_name # optional
   ports: # optional
   - "8080:8080"

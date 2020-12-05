@@ -5,6 +5,7 @@
 * [`selector`](#selector)
 * [`docker` / `dockers`](#docker/dockers)
   * `image`
+  * `auth`
   * `name`
   * `ports`
   * `user`
@@ -29,6 +30,7 @@
   * [`pwsh`](#pwsh)
   * [`docker` / `dockers`](#docker/dockers)
     * `image`
+    * `auth`
     * `name`
     * `ports`
     * `user`
@@ -87,6 +89,7 @@ selector:
 ```yml
 docker:
   image: ubuntu:18.04 # 必填项
+  auth: secret_name # 可选, 如果 docker 镜像为私有，则输入 secret 名称，secret 从管理员 -> 添加 -> secret 类型为 'Auth pair' 
   name: your_container_name # 可选，容器名称
   ports: # 可选
   - "8080:8080"
