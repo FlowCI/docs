@@ -1,3 +1,18 @@
+- v0.21.05 2021-02-10
+  * 支持并行任务
+  * 支持任务缓存
+  * 手动构建支持参数设置
+  * 改进用户界面
+  * BUG 修复
+
+- v0.21.05 2021-02-10
+  * Support parallel build
+  * Support step level cache
+  * Enable to modify parameters on manual build
+  * UI improvement
+  * Bugfix
+
+
 - v0.20.45 2020-10-29
   * Agent 支持 Windows 环境
   * 支持 `bash` `pwsh`， 在任务中可自定义 Bash 或 PowerShell
