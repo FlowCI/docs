@@ -26,6 +26,7 @@
   * [`retry`](#retry)
   * [`timeout`](#timeout)
   * [`envs`](#envs)
+  * [`cache`](#cache)
   * [`bash`](#bash)
   * [`pwsh`](#pwsh)
   * [`docker` / `dockers`](#docker/dockers)
@@ -46,7 +47,7 @@
 
 -----------
 
-## envs
+## __envs__
 
 Environment variables that will effected in all steps
 
@@ -56,7 +57,7 @@ envs:
   SECOND_ENV: "hello world"
 ```
 
-## condition
+## __condition__
 
 The Groovy script return boolean value to define the flow starting condition, the list of environment variables in [here (Git section only)](../agents/vars.md).
 
@@ -69,7 +70,7 @@ condition: |
   return FLOWCI_GIT_BRANCH == "master" && FLOWCI_GIT_SOURCE == "GITHUB"
 ```
 
-## selector
+## __selector__
 
 Find out matched agents to run flow job by label, or any idle agents if the tag not defined
 
@@ -80,7 +81,7 @@ selector:
     - local
 ```
 
-## docker/dockers
+## __docker/dockers__
 
 if `docker` / `dockers` tag applied, all steps will be run within docker container
 
@@ -142,7 +143,7 @@ steps:
     echo $MY_ENV
 ```
 
-## notifications
+## __notifications__
 
 It will run plugin with tag `notification` in server side, to send notification when job finished
 
@@ -153,9 +154,9 @@ notifications:
     FLOWCI_SMTP_CONFIG: 'test-config'
 ```
 
-## steps
+## __steps__
 
-#### name
+#### __name__
 
 Specify a custom step name, rather than a generated default name (ex: step-1)
 
@@ -164,7 +165,7 @@ steps:
 - name: step name
 ```
 
-#### condition
+#### __condition__
 
 The Groovy script return boolean value to define the step can be run or not
 
@@ -178,7 +179,7 @@ steps:
     return "$my_var" == "hello";
 ```
 
-#### allow_failure
+#### __allow_failure__
 
 the flow will be failed if something wrong in the script while value is `false`. Ignore the error and mark step status to passed if value is `true`, the default value is `false`.
 
@@ -188,7 +189,7 @@ steps:
   allow_failure: true
 ```
 
-#### retry
+#### __retry__
 
 define number of times to retry the step when it's fail
 
@@ -202,7 +203,7 @@ steps:
     fail_here.
 ```
 
-#### timeout
+#### __timeout__
 
 define step timeout in seconds
 
@@ -216,7 +217,7 @@ steps:
     sleep 1000
 ```
 
-#### envs
+#### __envs__
 
 define environment variables scoped to individual steps.
 
@@ -228,7 +229,43 @@ steps:
     MY_ENV: "hello"
 ```
 
-#### bash
+#### __cache__
+
+the dir or file that defined in `paths` are relative path under  `FLOWCI_AGENT_JOB_DIR`
+
+```yml
+cache:
+  key: mycache # cache name
+  paths:    
+    - "./"  # to cache everthing under FLOWCI_AGENT_JOB_DIR
+    - "vendor" # to cache vendor dir under FLOWCI_AGENT_JOB_DIR
+```
+
+if the `paths` not defined, it will be read-only cache which means only download the cache by name
+
+```yml
+cache:
+  key: mycache
+```
+
+
+example:
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+    MY_ENV: "hello"
+  bash: |
+    echo 'apply cache'
+  cache:
+    key: mycache
+    paths:
+      - "./${FLOWCI_GIT_REPO}" # it will cache git repo
+```
+
+#### __bash__
 
 the Bash script will be executed.
 
@@ -242,7 +279,7 @@ steps:
     echo $MY_ENV
 ```
 
-#### pwsh
+#### __pwsh__
 
 the PowerShell script will be executed under Windows Agent
 
@@ -256,11 +293,11 @@ steps:
     echo $Env:MY_ENV
 ```
 
-#### docker/docker
+#### __docker/dockers__
 
 higher priority than flow level docker section, for detail please refer to flow level [`docker` / `dockers`](#docker/dockers)
 
-#### plugin
+#### __plugin__
 
 Apply plugin in the step
 
@@ -274,7 +311,7 @@ steps:
   plugin: 'maven-test' # the plugin name
 ```
 
-#### exports
+#### __exports__
 
 define environment variables that will passed to job context, and available for flowing steps
 
