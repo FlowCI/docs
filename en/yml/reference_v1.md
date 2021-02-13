@@ -198,6 +198,8 @@ steps:
 
 ### parallel step
 
+#### __parallel__
+
 The subflow can be defined under `parallel` keyword, all subflows will be executed in parallel if has engouth agents.
 
 ```yml

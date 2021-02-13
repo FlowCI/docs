@@ -20,29 +20,32 @@
   * `plugin`
   * `envs`
 * [`steps`](#steps)
-  * [`name`](#name)
-  * [`condition`](#condition)
-  * [`allow_failure`](#allow_failure)
-  * [`retry`](#retry)
-  * [`timeout`](#timeout)
-  * [`envs`](#envs)
-  * [`bash`](#bash)
-  * [`pwsh`](#pwsh)
-  * [`docker` / `dockers`](#docker/dockers)
-    * `image`
-    * `auth`
-    * `name`
-    * `ports`
-    * `user`
-    * `entrypoint`
-    * `command`
-    * `environment`
-    * `network`
-    * `is_runtime`
-    * `stop_on_finish`
-    * `delete_on_finish`
-  * [`plugin`](#plugin)
-  * [`exports`](#exports)
+  - parallel step
+    * [`parallel`](#parallel)
+  - regular step
+    * [`name`](#name)
+    * [`condition`](#condition)
+    * [`allow_failure`](#allow_failure)
+    * [`retry`](#retry)
+    * [`timeout`](#timeout)
+    * [`envs`](#envs)
+    * [`bash`](#bash)
+    * [`pwsh`](#pwsh)
+    * [`docker` / `dockers`](#docker/dockers)
+      * `image`
+      * `auth`
+      * `name`
+      * `ports`
+      * `user`
+      * `entrypoint`
+      * `command`
+      * `environment`
+      * `network`
+      * `is_runtime`
+      * `stop_on_finish`
+      * `delete_on_finish`
+    * [`plugin`](#plugin)
+    * [`exports`](#exports)
 
 -----------
 
@@ -154,6 +157,77 @@ notifications:
 ```
 
 ## __steps__
+
+事例:
+
+```yml
+envs:
+  # Git config
+  FLOWCI_GIT_URL: "https://github.com/FlowCI/gin.git"
+
+steps:
+  - name: clone # 普通任务
+    docker:
+      image: flowci/debian-git
+    plugin: 'gitclone'
+    cache:
+      key: repo
+      paths:
+      - "./${FLOWCI_GIT_REPO}"
+
+  - parallel:  # 并行任务
+      lint-flow:
+        steps:
+        - name: lint
+          plugin: 'go-lint'
+          allow_failure: true
+          cache:
+            key: repo
+
+      test-flow:
+        steps:
+        - name: test
+          docker:
+            image: golang:1.12
+          plugin: 'go-test'
+          cache:
+            key: repo
+
+```
+
+### 并行任务
+
+#### __parallel__
+
+并行任务定义在 `parallel` 中，可以定义并行执行的子工作流，其会并行执行在所需要的 Agent 中
+
+```yml
+- parallel: 
+    lint-flow: # 并行任务中子工作流的名称, 例如 'lint-flow'
+      selector: # Agent 选择器，该子工作流会在具有 local 标签的 Agent 中执行
+        label:
+         - local
+      steps:
+      - name: lint # 子工作流的任务
+        plugin: 'go-lint'
+        allow_failure: true
+        cache:
+          key: repo
+
+    test-flow: # 并行任务中子工作流的名称, 例如 'test-flow'
+      selector: # Agent 选择器，该子工作流会在具有 remote 标签的 Agent 中执行
+        label:
+          - remote
+      steps:
+      - name: test # 子工作流的任务
+        docker:
+          image: golang:1.12
+        plugin: 'go-test'
+        cache:
+          key: repo
+```
+
+### 普通任务
 
 #### __name__
 
