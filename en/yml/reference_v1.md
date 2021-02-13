@@ -20,33 +20,37 @@
   * `plugin`
   * `envs`
 * [`steps`](#steps)
-  * [`name`](#name)
-  * [`condition`](#condition)
-  * [`allow_failure`](#allow_failure)
-  * [`retry`](#retry)
-  * [`timeout`](#timeout)
-  * [`envs`](#envs)
-  * [`bash`](#bash)
-  * [`pwsh`](#pwsh)
-  * [`docker` / `dockers`](#docker/dockers)
-    * `image`
-    * `auth`
-    * `name`
-    * `ports`
-    * `user`
-    * `entrypoint`
-    * `command`
-    * `environment`
-    * `network`
-    * `is_runtime`
-    * `stop_on_finish`
-    * `delete_on_finish`
-  * [`plugin`](#plugin)
-  * [`exports`](#exports)
+  - parallel step
+    * [`parallel`](#parallel)
+  - regular step
+    * [`name`](#name)
+    * [`condition`](#condition)
+    * [`allow_failure`](#allow_failure)
+    * [`retry`](#retry)
+    * [`timeout`](#timeout)
+    * [`envs`](#envs)
+    * [`cache`](#cache)
+    * [`bash`](#bash)
+    * [`pwsh`](#pwsh)
+    * [`docker` / `dockers`](#docker/dockers)
+      * `image`
+      * `auth`
+      * `name`
+      * `ports`
+      * `user`
+      * `entrypoint`
+      * `command`
+      * `environment`
+      * `network`
+      * `is_runtime`
+      * `stop_on_finish`
+      * `delete_on_finish`
+    * [`plugin`](#plugin)
+    * [`exports`](#exports)
 
 -----------
 
-## envs
+## __envs__
 
 Environment variables that will effected in all steps
 
@@ -56,7 +60,7 @@ envs:
   SECOND_ENV: "hello world"
 ```
 
-## condition
+## __condition__
 
 The Groovy script return boolean value to define the flow starting condition, the list of environment variables in [here (Git section only)](../agents/vars.md).
 
@@ -69,7 +73,7 @@ condition: |
   return FLOWCI_GIT_BRANCH == "master" && FLOWCI_GIT_SOURCE == "GITHUB"
 ```
 
-## selector
+## __selector__
 
 Find out matched agents to run flow job by label, or any idle agents if the tag not defined
 
@@ -80,7 +84,7 @@ selector:
     - local
 ```
 
-## docker/dockers
+## __docker/dockers__
 
 if `docker` / `dockers` tag applied, all steps will be run within docker container
 
@@ -142,7 +146,7 @@ steps:
     echo $MY_ENV
 ```
 
-## notifications
+## __notifications__
 
 It will run plugin with tag `notification` in server side, to send notification when job finished
 
@@ -153,9 +157,80 @@ notifications:
     FLOWCI_SMTP_CONFIG: 'test-config'
 ```
 
-## steps
+## __steps__
 
-#### name
+Example
+
+```yml
+envs:
+  # Git config
+  FLOWCI_GIT_URL: "https://github.com/FlowCI/gin.git"
+
+steps:
+  - name: clone # regular step
+    docker:
+      image: flowci/debian-git
+    plugin: 'gitclone'
+    cache:
+      key: repo
+      paths:
+      - "./${FLOWCI_GIT_REPO}"
+
+  - parallel:  # parallel step
+      lint-flow:
+        steps:
+        - name: lint
+          plugin: 'go-lint'
+          allow_failure: true
+          cache:
+            key: repo
+
+      test-flow:
+        steps:
+        - name: test
+          docker:
+            image: golang:1.12
+          plugin: 'go-test'
+          cache:
+            key: repo
+
+```
+
+### parallel step
+
+#### __parallel__
+
+The subflow can be defined under `parallel` keyword, all subflows will be executed in parallel if has engouth agents.
+
+```yml
+- parallel: 
+    lint-flow: # subflow name, ex 'lint-flow'
+      selector: # the subflow will be executed in agent which the tag 'local'
+        label:
+         - local
+      steps:
+      - name: lint # steps in the subflow
+        plugin: 'go-lint'
+        allow_failure: true
+        cache:
+          key: repo
+
+    test-flow: # subflow name, ex 'test-flow'
+      selector: # the subflow will be executed in agent which the tag 'remote'
+        label:
+          - remote
+      steps:
+      - name: test # steps in the subflow
+        docker:
+          image: golang:1.12
+        plugin: 'go-test'
+        cache:
+          key: repo
+```
+
+### regular step
+
+#### __name__
 
 Specify a custom step name, rather than a generated default name (ex: step-1)
 
@@ -164,7 +239,7 @@ steps:
 - name: step name
 ```
 
-#### condition
+#### __condition__
 
 The Groovy script return boolean value to define the step can be run or not
 
@@ -178,7 +253,7 @@ steps:
     return "$my_var" == "hello";
 ```
 
-#### allow_failure
+#### __allow_failure__
 
 the flow will be failed if something wrong in the script while value is `false`. Ignore the error and mark step status to passed if value is `true`, the default value is `false`.
 
@@ -188,7 +263,7 @@ steps:
   allow_failure: true
 ```
 
-#### retry
+#### __retry__
 
 define number of times to retry the step when it's fail
 
@@ -202,7 +277,7 @@ steps:
     fail_here.
 ```
 
-#### timeout
+#### __timeout__
 
 define step timeout in seconds
 
@@ -216,7 +291,7 @@ steps:
     sleep 1000
 ```
 
-#### envs
+#### __envs__
 
 define environment variables scoped to individual steps.
 
@@ -228,7 +303,42 @@ steps:
     MY_ENV: "hello"
 ```
 
-#### bash
+#### __cache__
+
+the dir or file that defined in `paths` are relative path under  `FLOWCI_AGENT_JOB_DIR`
+
+```yml
+cache:
+  key: mycache # cache name
+  paths:    
+    - "./"  # to cache everthing under FLOWCI_AGENT_JOB_DIR
+    - "vendor" # to cache vendor dir under FLOWCI_AGENT_JOB_DIR
+```
+
+if the `paths` not defined, it will be read-only cache which means only download the cache by name
+
+```yml
+cache:
+  key: mycache
+```
+
+example:
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+    MY_ENV: "hello"
+  bash: |
+    echo 'apply cache'
+  cache:
+    key: mycache
+    paths:
+      - "./${FLOWCI_GIT_REPO}" # it will cache git repo
+```
+
+#### __bash__
 
 the Bash script will be executed.
 
@@ -242,7 +352,7 @@ steps:
     echo $MY_ENV
 ```
 
-#### pwsh
+#### __pwsh__
 
 the PowerShell script will be executed under Windows Agent
 
@@ -256,11 +366,11 @@ steps:
     echo $Env:MY_ENV
 ```
 
-#### docker/docker
+#### __docker/dockers__
 
 higher priority than flow level docker section, for detail please refer to flow level [`docker` / `dockers`](#docker/dockers)
 
-#### plugin
+#### __plugin__
 
 Apply plugin in the step
 
@@ -274,7 +384,7 @@ steps:
   plugin: 'maven-test' # the plugin name
 ```
 
-#### exports
+#### __exports__
 
 define environment variables that will passed to job context, and available for flowing steps
 
