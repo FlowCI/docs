@@ -46,7 +46,7 @@
 
 -----------
 
-## envs
+## __envs__
 
 全局环境变量，可以在所有的 Step 中使用
 
@@ -56,7 +56,7 @@ envs:
   SECOND_ENV: "hello world"
 ```
 
-## condition
+## __condition__
 
 Groovy 脚本定义工作流启动的条件，在脚本中可用的环境变量在[这里 (仅在 Git 章节中)](../agents/vars.md)。
 
@@ -69,7 +69,7 @@ condition: |
   return FLOWCI_GIT_BRANCH == "master" && FLOWCI_GIT_SOURCE == "GITHUB"
 ```
 
-## selector
+## __selector__
 
 `selector` 可以根据 Agent 的 Tag 来决定当前工作流运行在哪个 Agent 上运行，如果该配置为空，则当前工作流可以运行在所有的 Agent 上。
 
@@ -80,7 +80,7 @@ selector:
     - local
 ```
 
-## docker/dockers
+## __docker/dockers__
 
 当配置 `docker` 或者 `dockers` 时，说明当前工作流的所有 Step 将运行在容器中。
 
@@ -142,7 +142,7 @@ steps:
     echo $MY_ENV
 ```
 
-## notifications
+## __notifications__
 
 消息通知配置，可以使用消息通知类型的插件，当任务结束后发送通知。
 
@@ -153,9 +153,9 @@ notifications:
       FLOWCI_SMTP_CONFIG: 'test-config'
 ```
 
-## steps
+## __steps__
 
-#### name
+#### __name__
 
 可以自定义 Step 的名称，默认值为 step-1, step-2, step-xx
 
@@ -164,7 +164,7 @@ steps:
 - name: step name
 ```
 
-#### condition
+#### __condition__
 
 可以定义一个返回值为布尔的 Groovy 脚本，确定该 Step 可否运行
 
@@ -178,7 +178,7 @@ steps:
     return "$my_var" == "hello";
 ```
 
-#### allow_failure
+#### __allow_failure__
 
 允许失败，如果该值为 `true`，则表示 Step 失败后可继续运行后面的 Step。默认值为 `false`
 
@@ -189,7 +189,7 @@ steps:
 ```
 
 
-#### retry
+#### __retry__
 
 定义当任务失败时，重试的次数。
 
@@ -203,7 +203,7 @@ steps:
     fail_here.
 ```
 
-#### timeout
+#### __timeout__
 
 定义任务的过期时间，单位为秒。
 
@@ -217,7 +217,7 @@ steps:
     sleep 1000
 ```
 
-#### envs
+#### __envs__
 
 Step 级别的环境变量 （优先级高于工作流级别）
 
@@ -229,7 +229,42 @@ steps:
    MY_ENV: "hello"
 ```
 
-#### bash
+#### __cache__
+
+在 `paths` 中定义的路径为任务路径 `FLOWCI_AGENT_JOB_DIR` 的相对路径
+
+```yml
+cache:
+  key: mycache # 缓存名称
+  paths:    
+    - "./"  # 任务根目录，缓存在任务路径 FLOWCI_AGENT_JOB_DIR 下的所有文件
+    - "vendor" # 缓存任务路径 FLOWCI_AGENT_JOB_DIR 下的 vendor 目录
+```
+
+如果 `paths` 没有定义，此时为只读缓存，只会下载对应的缓存到本地
+
+```yml
+cache:
+  key: mycache
+```
+
+事例:
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+    MY_ENV: "hello"
+  bash: |
+    echo 'apply cache'
+  cache:
+    key: mycache
+    paths:
+      - "./${FLOWCI_GIT_REPO}" # 缓存 git 目录
+```
+
+#### __bash__
 
 要执行的 Bash 脚本
 
@@ -243,7 +278,7 @@ steps:
     echo $MY_ENV
 ```
 
-#### pwsh
+#### __pwsh__
 
 定义需要执行的 PowerShell 脚本，仅在 Windows Agent 中运行
 
@@ -257,11 +292,11 @@ steps:
     echo $Env:MY_ENV
 ```
 
-#### docker/dockers
+#### __docker/dockers__
 
 Step 级别的设置（优先级高于工作流级别），具体配置请参考工作流的 [`docker` / `dockers`](#docker/dockers) 配置
 
-#### plugin
+#### __plugin__
 
 在 Step 中应用插件，
 
@@ -275,7 +310,7 @@ steps:
   plugin: 'maven-test' # the plugin name
 ```
 
-#### exports
+#### __exports__
 
 输出环境变量，所输出的环境变量可以在之后的 Step 中使用。
 
