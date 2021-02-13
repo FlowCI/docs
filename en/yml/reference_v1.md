@@ -20,30 +20,33 @@
   * `plugin`
   * `envs`
 * [`steps`](#steps)
-  * [`name`](#name)
-  * [`condition`](#condition)
-  * [`allow_failure`](#allow_failure)
-  * [`retry`](#retry)
-  * [`timeout`](#timeout)
-  * [`envs`](#envs)
-  * [`cache`](#cache)
-  * [`bash`](#bash)
-  * [`pwsh`](#pwsh)
-  * [`docker` / `dockers`](#docker/dockers)
-    * `image`
-    * `auth`
-    * `name`
-    * `ports`
-    * `user`
-    * `entrypoint`
-    * `command`
-    * `environment`
-    * `network`
-    * `is_runtime`
-    * `stop_on_finish`
-    * `delete_on_finish`
-  * [`plugin`](#plugin)
-  * [`exports`](#exports)
+  - parallel step
+    * [`parallel`](#parallel)
+  - regular step
+    * [`name`](#name)
+    * [`condition`](#condition)
+    * [`allow_failure`](#allow_failure)
+    * [`retry`](#retry)
+    * [`timeout`](#timeout)
+    * [`envs`](#envs)
+    * [`cache`](#cache)
+    * [`bash`](#bash)
+    * [`pwsh`](#pwsh)
+    * [`docker` / `dockers`](#docker/dockers)
+      * `image`
+      * `auth`
+      * `name`
+      * `ports`
+      * `user`
+      * `entrypoint`
+      * `command`
+      * `environment`
+      * `network`
+      * `is_runtime`
+      * `stop_on_finish`
+      * `delete_on_finish`
+    * [`plugin`](#plugin)
+    * [`exports`](#exports)
 
 -----------
 
@@ -156,6 +159,75 @@ notifications:
 
 ## __steps__
 
+Example
+
+```yml
+envs:
+  # Git config
+  FLOWCI_GIT_URL: "https://github.com/FlowCI/gin.git"
+
+steps:
+  - name: clone # regular step
+    docker:
+      image: flowci/debian-git
+    plugin: 'gitclone'
+    cache:
+      key: repo
+      paths:
+      - "./${FLOWCI_GIT_REPO}"
+
+  - parallel:  # parallel step
+      lint-flow:
+        steps:
+        - name: lint
+          plugin: 'go-lint'
+          allow_failure: true
+          cache:
+            key: repo
+
+      test-flow:
+        steps:
+        - name: test
+          docker:
+            image: golang:1.12
+          plugin: 'go-test'
+          cache:
+            key: repo
+
+```
+
+### parallel step
+
+The subflow can be defined under `parallel` keyword, all subflows will be executed in parallel if has engouth agents.
+
+```yml
+- parallel: 
+    lint-flow: # subflow name, ex 'lint-flow'
+      selector: # the subflow will be executed in agent which the tag 'local'
+        label:
+         - local
+      steps:
+      - name: lint # steps in the subflow
+        plugin: 'go-lint'
+        allow_failure: true
+        cache:
+          key: repo
+
+    test-flow: # subflow name, ex 'test-flow'
+      selector: # the subflow will be executed in agent which the tag 'remote'
+        label:
+          - remote
+      steps:
+      - name: test # steps in the subflow
+        docker:
+          image: golang:1.12
+        plugin: 'go-test'
+        cache:
+          key: repo
+```
+
+### regular step
+
 #### __name__
 
 Specify a custom step name, rather than a generated default name (ex: step-1)
@@ -247,7 +319,6 @@ if the `paths` not defined, it will be read-only cache which means only download
 cache:
   key: mycache
 ```
-
 
 example:
 
