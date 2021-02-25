@@ -11,6 +11,12 @@
     <a href="https://github.com/FlowCI/flow-core-x/releases/"><img src="https://img.shields.io/github/v/release/flowci/flow-core-x"></a>
 </p>
 
+<div align="center">
+
+**English | [简体中文](./README-cn.md)**
+
+</div>
+
 ## What is flow.ci?
 
 flow.ci is an open-source CI/CD automation server that designed for reducing the complexity and increasing user experience. It supports high availability, multiple building environment, and scalability with dynamic agents.
@@ -54,7 +60,6 @@ cd flow-docker
 ## Documentation
 
 + [English](https://github.com/FlowCI/docs/tree/master/en/index.md) 
-+ [简体中文](https://github.com/FlowCI/docs/tree/master/cn/index.md)
 
 Need Help? submit issue from [here](https://github.com/FlowCI/docs/issues)
 
