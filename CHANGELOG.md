@@ -1,3 +1,17 @@
+- v0.21.21 2021-05-06
+  * 新增 post step，在任务结束、失败或取消时执行
+  * 可从失败的 step 从新开始任务
+  * 支持从变量中获取 Secret
+  * 改进 Agent 及任务的用户界面
+  * BUG 修复
+
+- v0.21.21 2021-05-06
+  * Support post step that will be executed anyway
+  * Enable to restart the job from failure step
+  * Enable to get secret from the environment variable
+  * UI improvement
+  * Bugfix
+
 - v0.21.05 2021-02-10
   * 支持并行任务
   * 支持任务缓存
