@@ -335,10 +335,8 @@ steps:
 
     echo "--- HOW TO use rsa (SSH) secret ---"
     echo '{secret name}_PUBLIC_KEY'
-    echo '{secret name}_PRIVATE_KEY'
 
     echo "${my_rsa_secret_PUBLIC_KEY}"
-    echo "${my_rsa_secret_PRIVATE_KEY}"
     echo "------------------------------"
 
 ```
