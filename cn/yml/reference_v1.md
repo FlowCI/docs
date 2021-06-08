@@ -20,15 +20,16 @@
   * `plugin`
   * `envs`
 * [`steps`](#steps)
-  - parallel step
+  - 并行任务
     * [`parallel`](#parallel)
-  - regular step
+  - 普通任务
     * [`name`](#name)
     * [`condition`](#condition)
     * [`allow_failure`](#allow_failure)
     * [`retry`](#retry)
     * [`timeout`](#timeout)
     * [`envs`](#envs)
+    * [`secrets`](#secrets)
     * [`bash`](#bash)
     * [`pwsh`](#pwsh)
     * [`docker` / `dockers`](#docker/dockers)
@@ -195,7 +196,7 @@ steps:
 
 ```
 
-### 并行任务
+### __并行任务__
 
 #### __parallel__
 
@@ -227,7 +228,7 @@ steps:
           key: repo
 ```
 
-### 普通任务
+### __普通任务__
 
 #### __name__
 
@@ -301,6 +302,45 @@ steps:
   allow_failure: true
   envs:
    MY_ENV: "hello"
+```
+
+#### __secrets__
+
+引入 `secret` 作为可使用的环境变量
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+    MY_ENV: "hello"
+  secrets:
+    - my_auth_secret
+    - my_token_secret
+    - my_rsa_key
+  bash: |
+    echo "--- HOW TO use auth secret ---"
+    echo '{secret name}_USERNAME'
+    echo "{secret name}_PASSWORD"
+
+    echo "${my_auth_secret_USERNAME}"
+    echo "${my_auth_secret_PASSWORD}"
+    echo "------------------------------"
+
+    echo "--- HOW TO use token secret ---"
+    echo '{secret name}'
+
+    echo "${my_token_secret}"
+    echo "------------------------------"
+
+    echo "--- HOW TO use rsa (SSH) secret ---"
+    echo '{secret name}_PUBLIC_KEY'
+    echo '{secret name}_PRIVATE_KEY'
+
+    echo "${my_rsa_secret_PUBLIC_KEY}"
+    echo "${my_rsa_secret_PRIVATE_KEY}"
+    echo "------------------------------"
+
 ```
 
 #### __cache__

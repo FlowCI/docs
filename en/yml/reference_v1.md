@@ -29,6 +29,7 @@
     * [`retry`](#retry)
     * [`timeout`](#timeout)
     * [`envs`](#envs)
+    * [`secrets`](#secrets)
     * [`cache`](#cache)
     * [`bash`](#bash)
     * [`pwsh`](#pwsh)
@@ -196,7 +197,7 @@ steps:
 
 ```
 
-### parallel step
+### __Parallel Step__
 
 #### __parallel__
 
@@ -228,7 +229,7 @@ The subflow can be defined under `parallel` keyword, all subflows will be execut
           key: repo
 ```
 
-### regular step
+### __Regular Step__
 
 #### __name__
 
@@ -301,6 +302,45 @@ steps:
   allow_failure: true
   envs:
     MY_ENV: "hello"
+```
+
+#### __secrets__
+
+reference created secrets in the step
+
+```yml
+steps:
+- name: step name
+  allow_failure: true
+  envs:
+    MY_ENV: "hello"
+  secrets:
+    - my_auth_secret
+    - my_token_secret
+    - my_rsa_key
+  bash: |
+    echo "--- HOW TO use auth secret ---"
+    echo '{secret name}_USERNAME'
+    echo "{secret name}_PASSWORD"
+
+    echo "${my_auth_secret_USERNAME}"
+    echo "${my_auth_secret_PASSWORD}"
+    echo "------------------------------"
+
+    echo "--- HOW TO use token secret ---"
+    echo '{secret name}'
+
+    echo "${my_token_secret}"
+    echo "------------------------------"
+
+    echo "--- HOW TO use rsa (SSH) secret ---"
+    echo '{secret name}_PUBLIC_KEY'
+    echo '{secret name}_PRIVATE_KEY'
+
+    echo "${my_rsa_secret_PUBLIC_KEY}"
+    echo "${my_rsa_secret_PRIVATE_KEY}"
+    echo "------------------------------"
+
 ```
 
 #### __cache__
