@@ -61,7 +61,7 @@ cd flow-docker
 
 + [English](https://github.com/FlowCI/docs/tree/master/en/index.md) 
 
-Need Help? submit issue from [here](https://github.com/FlowCI/docs/issues)
+Need Help? submit issue from [here](https://github.com/FlowCI/docs/issues) or send email to `flowci@foxmail.com`
 
 
 ## Templates
