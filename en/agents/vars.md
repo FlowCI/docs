@@ -40,7 +40,7 @@
 
 ## Git
 
-- `FLOWCI_GIT_REPO`
+- `FLOWCI_GIT_REPO`: the git repo name, you could access repo by '${FLOWCI_AGENT_JOB_DIR}/${FLOWCI_GIT_REPO}' 
 
 - `FLOWCI_GIT_SOURCE`: `GITHUB` | `GITLAB` | `GOGS` |  `GITEE`
 
