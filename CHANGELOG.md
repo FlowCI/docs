@@ -1,3 +1,15 @@
+- v1.21.33 2021-08-18
+  * 提升产品稳定性
+  * Job 页面优化
+  * 支持从变量中获取 Config 内容
+  * Bugfix
+
+- v1.21.33 2021-08-18
+  * Stability improvement 
+  * Job page improvement
+  * Enable to load config content from the environment variable
+  * Bugfix
+
 - v0.21.21 2021-05-06
   * 新增 post step，在任务结束、失败或取消时执行
   * 可从失败的 step 从新开始任务
