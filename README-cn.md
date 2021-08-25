@@ -4,7 +4,7 @@
   </a>
 </h3>
 
-<h3 align="center">A powerful and user-friendly CI/CD server</h3>
+<h3 align="center">A Simple & Powerful CI/CD Server</h3>
 
 <p align="center">
     <a href="https://github.com/FlowCI/docs/blob/master/LICENSE"><img src="https://img.shields.io/github/license/flowci/flow-core-x"></a>
