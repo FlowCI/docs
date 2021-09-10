@@ -53,7 +53,7 @@ Or start from the following script, and replace the value of `FLOWCI_SERVER_URL`
 docker run -it \
 -e FLOWCI_SERVER_URL=<ci_server_url> \
 -e FLOWCI_AGENT_TOKEN=<agent_token> \
--e FLOWCI_AGENT_VOLUMES="name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv:1.3,init=init-pyenv-volume.sh" \
+-e FLOWCI_AGENT_VOLUMES="name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh" \
 -v /var/run/docker.sock:/var/run/docker.sock \
 flowci/agent
 ```
@@ -65,7 +65,7 @@ Replace `<ci_server_url>` & `<agent_token>` and run the following Bash in termin
 ```bash
 wget https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.45/flow-agent-x-linux
 chmod +x flow-agent-x-linux
-./flow-agent-x-linux -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv:1.3,init=init-pyenv-volume.sh
+./flow-agent-x-linux -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh
 ```
 
 ### MacOS
@@ -75,7 +75,7 @@ Replace `<ci_server_url>` & `<agent_token>` and run the following Bash in termin
 ```bash
 wget https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.45/flow-agent-x-mac
 chmod +x flow-agent-x-mac
-./flow-agent-x-mac -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv:1.3,init=init-pyenv-volume.sh
+./flow-agent-x-mac -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh
 ```
 
 ### Windows (x64)
@@ -84,6 +84,6 @@ Replace `<ci_server_url>` & `<agent_token>` and run the following PowerShell in 
 
 ```powershell
 Invoke-WebRequest https://github.com/FlowCI/flow-agent-x/releases/download/v0.20.45/flow-agent-x-win -OutFile flow-agent-x-win.exe
-.\flow-agent-x-linux -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv:1.3,init=init-pyenv-volume.sh
+.\flow-agent-x-linux -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh
 ```
 
