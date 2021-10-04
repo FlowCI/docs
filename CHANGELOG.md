@@ -1,3 +1,13 @@
+- v1.21.40 2021-10-05
+  * 系统设置中可现实插件信息和同步状态
+  * flow.ci python 包的问题修复
+  * Bugfix
+
+- v1.21.40 2021-10-05
+  * Enable to show plugin and sync status from settings
+  * Bugfix on flow.ci python lib
+  * Bugfix on Agent
+
 - v1.21.33 2021-08-18
   * 提升产品稳定性
   * Job 页面优化
