@@ -1,3 +1,19 @@
+- v1.21.50 2021-12-16
+  * 新增触发器，可配置出发 webhook 及 邮件
+  * 支持显示同一个 Git 事件的相关任务
+  * 优化了模版选择界面
+  * 修复了 Log4j2 安全问题
+  * 升级 flow-core-x 服务到 Java 11
+  * Bugfix
+
+- v1.21.50 2021-12-16
+  * Introduced trigger system
+  * Enable to list related jobs from the same git event
+  * Improved template selection UI
+  * Fix Log4j2 vulnerability issue
+  * Upgrade flow-core-x to Java 11
+  * Bugfix
+
 - v1.21.40 2021-10-05
   * 系统设置中可现实插件信息和同步状态
   * flow.ci python 包的问题修复
