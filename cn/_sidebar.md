@@ -1,2 +1,2 @@
-* [What is flow.ci](/)
-* [Getting Started](./start/index.md)
+* [什么事 flow.ci](/)
+* [快速开始](start/index.md)

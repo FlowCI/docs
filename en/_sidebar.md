@@ -1,2 +1,2 @@
 * [What is flow.ci](/)
-* [Getting Started](./start/index.md)
+* [Getting Started](start/index.md)
