@@ -43,6 +43,6 @@ cd flow-docker
 点击 `运行` 开始任务
 
 > - 如果选择空模板，则需要配置 YAML 后才可以开始任务
-> - 如何配置 Git 仓库，请参考 [Git 仓库配置](../git/index.md)
+> - 如何配置 Git 仓库，请参考 [Git 仓库配置](/cn/git/index.md)
 
 ![start_job](../../images/start_job.gif)
