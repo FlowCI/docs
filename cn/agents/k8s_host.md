@@ -1,8 +1,8 @@
-# 动态 Agent - k8s 集群
+# 可伸缩 Agent: 配置 k8s
 
 配置 k8s 集群后，flow.ci 会自动创建，并管理 Agent Pod
 
-![ssh host structure](../../src/agents/k8s_host_structure.png)
+![ssh host structure](../../images/agents/k8s_host_structure.png)
 
 ## 从管理员界面配置 k8s
 
@@ -30,4 +30,4 @@
 
   创建的 k8s 主机将会显示在列表中
 
-![how to create host](../../src/agents/k8s_host_create.gif)
+![how to create host](../../images/agents/k8s_host_create.gif)

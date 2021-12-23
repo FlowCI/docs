@@ -6,6 +6,10 @@
   * [创建工作流](cn/start/index.md#创建工作流)
   * [开始任务](cn/start/index.md#开始任务)
 
+* 基本概念
+  * 工作流 (flow)
+  * 任务 (job)
+
 * Git 仓库
   * [工作流中配置 Git](cn/git/index.md)
   * [连接 Github](cn/git/github.md)
@@ -13,24 +17,26 @@
   * [连接 Gogs](cn/git/gogs.md)
   * [连接 Gitee](cn/git/gitee.md)
 
-* YAML 配置
-  * [参考](./yml/reference_v1.md)
-  * [插件](./yml/plugins.md)
-  * [模板](https://github.com/FlowCI/templates)
-
 * Agents
-  * 手动配置
-    * [Linux](./agents/manual.md)
-    * [MacOS](./agents/manual.md)
-    * [Windows](./agents/manual.md)
-    * [Docker](./agents/manual.md)
-  * 自动配置
-    * [配置 SSH 主机](./agents/ssh_host.md)
-    * [配置 K8s](./agents/k8s_host.md)
-  * [默认的环境变量](./agents/vars.md)
+  * [手动配置](cn/agents/manual.md)
+  * 弹性伸缩
+    * [配置 SSH 主机](cn/agents/ssh_host.md)
+    * [配置 K8s](cn/agents/k8s_host.md)
+  * [默认的环境变量](cn/agents/vars.md)
 
-* Secret
+* 密钥 (Secret)
   * [SSH-RSA](./secret/ssh-rsa.md)
   * [用户名密码验证](./secret/auth.md)
   * [Token](./secret/token.md)
   * [安卓签名](./secret/android_sign.md)
+
+
+* Config
+
+* Trigger
+
+
+* YAML 配置
+  * [参考](./yml/reference_v1.md)
+  * [插件](./yml/plugins.md)
+  * [模板](https://github.com/FlowCI/templates)

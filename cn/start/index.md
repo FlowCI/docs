@@ -45,4 +45,10 @@ cd flow-docker
 > - 如果选择空模板，则需要配置 YAML 后才可以开始任务
 > - 如何配置 Git 仓库，请参考 [Git 仓库配置](/cn/git/index.md)
 
+从 Docker 安装，会在服务器主机自动创建 Agent，如果添加更多的 Agent，请参考
+  * [手动配置 Agent](cn/agents/manual) 
+  * 弹性伸缩 Agent
+    - [配置 k8s](cn/agents/k8s_host)
+    - [配置 SSH 主机](cn/agents/ssh_host)
+
 ![start_job](../../images/start_job.gif)
