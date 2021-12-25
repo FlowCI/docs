@@ -8,13 +8,21 @@
 
 - `FLOWCI_FLOW_WEBHOOK`
 
-## 任务相关
+## 任务 (Job) 相关
 
 - `FLOWCI_JOB_BUILD_NUM`
 
 - `FLOWCI_JOB_STATUS`
 
 - `FLOWCI_JOB_TRIGGER`
+
+- `FLOWCI_JOB_URL`
+
+- `FLOWCI_JOB_START_AT`
+
+- `FLOWCI_JOB_FINISH_AT`
+
+- `FLOWCI_JOB_DURATION`
 
 ## Agent 相关
 
@@ -46,34 +54,38 @@
 
 - `FLOWCI_GIT_EVENT`: `PUSH` | `TAG` | `PR_OPENED` | `PR_MERGED`
 
-#### Commit
+#### Push / Tag 事件
 
 - `FLOWCI_GIT_BRANCH`
 
 - `FLOWCI_GIT_AUTHOR`
 
-- `FLOWCI_GIT_COMMIT_ID`
+- `FLOWCI_GIT_COMMIT_MESSAGE`: 最后一个 Commit 的描述
 
-- `FLOWCI_GIT_COMMIT_MESSAGE`
+- `FLOWCI_GIT_COMMIT_TOTAL`: 
 
-- `FLOWCI_GIT_COMMIT_TIME`
+- `FLOWCI_GIT_COMMIT_LIST`: commit 列表, base64格式. 例如: `base64([{id:xx, message: xxx, time:xxx, url: xxx, author: {name: xx, email: xx}}, {xxx}, ...])`
 
-- `FLOWCI_GIT_COMMIT_URL`
-
-- `FLOWCI_GIT_COMMIT_NUM`
-
-#### PR
+#### Pull Request 事件
 
 - `FLOWCI_GIT_PR_TITLE`
+
 - `FLOWCI_GIT_PR_MESSAGE`
+
 - `FLOWCI_GIT_PR_URL`
+
 - `FLOWCI_GIT_PR_TIME`
+
 - `FLOWCI_GIT_PR_NUMBER`
 
 - `FLOWCI_GIT_PR_HEAD_REPO_NAME`
+
 - `FLOWCI_GIT_PR_HEAD_REPO_BRANCH`
+
 - `FLOWCI_GIT_PR_HEAD_REPO_COMMIT`
 
 - `FLOWCI_GIT_PR_BASE_REPO_NAME`
+
 - `FLOWCI_GIT_PR_BASE_REPO_BRANCH`
+
 - `FLOWCI_GIT_PR_BASE_REPO_COMMIT`

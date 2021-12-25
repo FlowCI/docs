@@ -25,10 +25,10 @@
   * [默认的环境变量](cn/agents/vars.md)
 
 * 密钥 (Secret)
-  * [SSH-RSA](./secret/ssh-rsa.md)
-  * [用户名密码验证](./secret/auth.md)
-  * [Token](./secret/token.md)
-  * [安卓签名](./secret/android_sign.md)
+  * [SSH-RSA](cn/secret/ssh-rsa.md)
+  * [用户名密码](cn/secret/auth.md)
+  * [Token](cn/secret/token.md)
+  * [安卓签名](cn/secret/android_sign.md)
 
 
 * Config
