@@ -20,7 +20,7 @@
   ```
 
 * 填入 SSH 信息
-  * Secret: 选择一个 SSH key 类型的秘钥（如果没有此类型的密钥，请先创建）
+  * Secret: 选择一个 SSH key 类型的秘钥（如果没有此类型的密钥，请先创建，参考[如何创建 SSH-RSA 密钥](cn/secret/ssh-rsa.md#ssh-rsa-类型的秘钥)）
 
   * User: SSH 登录的用户名
 

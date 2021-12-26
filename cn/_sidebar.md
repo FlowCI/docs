@@ -29,6 +29,7 @@
   * [用户名密码](cn/secret/auth.md)
   * [Token](cn/secret/token.md)
   * [安卓签名](cn/secret/android_sign.md)
+  * [K8s kubeconfig](cn/secret/kubeconfig.md)
 
 
 * Config

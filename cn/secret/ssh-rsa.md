@@ -6,10 +6,8 @@
 2. 输入一个名称
 3. 选择 `SSH Key` 类型
 4. 编辑 SSH 公私钥
-
    - 可以点击 `CREATE NEW SSH KEY` 按钮来创建新的 SSH-RSA 公私钥
    - 或者拷贝已有的公私钥
-
 5. 保存 `Save`
 
 ![create ssh rsa](../../images/secret/create_ssh_key.gif)

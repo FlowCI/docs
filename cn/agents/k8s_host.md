@@ -22,7 +22,7 @@
 * 填入集群信息
   * Namespace: k8s namespace 用于创建 Agent Pod
 
-  * Secret: kube config 秘钥，用于访问和创建 Agent Pod，需要先创建秘钥，之后在这里选择
+  * Secret: kube config 秘钥，用于访问和创建 Agent Pod. (如果没有此类型的密钥，请先创建，参考[如何创建 Kubeconfig 密钥](cn/secret/kubeconfig.md#k8s-kubeconfig-类型的密钥))
 
   * Max Pool Size: 最大可运行 Agent 的数量
 
