@@ -10,6 +10,11 @@
   * 工作流 (flow)
   * 任务 (job)
 
+* YAML 配置
+  * [参考](./yml/reference_v1.md)
+  * [插件](./yml/plugins.md)
+  * [模板](https://github.com/FlowCI/templates)
+
 * Git 仓库
   * [工作流中配置 Git](cn/git/index.md)
   * [连接 Github](cn/git/github.md)
@@ -32,12 +37,10 @@
   * [K8s kubeconfig](cn/secret/kubeconfig.md)
 
 
-* Config
+* 通用配置 (Config)
+  * [SMTP](cn/config/smtp.md)
+  * [任意配置(text)](cn/config/freetext.md)
 
-* Trigger
+* 触发器 (Trigger)
 
-
-* YAML 配置
-  * [参考](./yml/reference_v1.md)
-  * [插件](./yml/plugins.md)
-  * [模板](https://github.com/FlowCI/templates)
+* 插件 (Plugins)

@@ -31,7 +31,7 @@
 
 - 配置 SSH 类型的可伸缩 Agent 中使用，[请参考](cn/agents/ssh_host.md#可伸缩-agent-配置-ssh-主机)
 
-- YAML 中直接获取公私钥
+- 从 `Step` 中获取 `SSH-RSA` 密钥
 
   例如: 创建了一个名为 `my_ssh_key` 的 `SSH-RSA` 类型的密钥，可以在 YAML 配置中，通过 `secrets` 引入
 

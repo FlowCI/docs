@@ -16,7 +16,7 @@
 
 ## 如何使用
 
-- 在 `android-signing` 插件中使用: `SIGN_SECRET` 中填入所对应的 `安卓签名` 类型的密钥名称
+- 在 [android-signing](https://github.com/flowci-plugins/android-signing) 插件中使用: `SIGN_SECRET` 中填入所对应的 `安卓签名` 类型的密钥名称
 
 ```yaml
 - name: sign apk

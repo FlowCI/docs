@@ -12,16 +12,18 @@
 
 ## 如何使用
 
-例如: 创建了一个名为 `my_auth_key` 的 `用户名密码` 类型的密钥，可以在 YAML 配置中，通过 `secrets` 引入
+- 从 `Step` 中获取 `用户名密码` 密钥
 
-```yaml
-steps:
-  - name: get auth demo
-    secrets:
-    - my_auth_key
-    bash: |
-      echo ${my_auth_key_USERNAME}
-      echo ${my_auth_key_PASSWORD}
-```
+  例如: 创建了一个名为 `my_auth_key` 的 `用户名密码` 类型的密钥，可以在 YAML 配置中，通过 `secrets` 引入
+
+  ```yaml
+  steps:
+    - name: get auth demo
+      secrets:
+      - my_auth_key
+      bash: |
+        echo ${my_auth_key_USERNAME}
+        echo ${my_auth_key_PASSWORD}
+  ```
 
 

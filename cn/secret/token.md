@@ -12,12 +12,15 @@
 
 ## 如何使用
 
-例如: 创建了一个名为 `my_token` 的 `Token` 类型的密钥，可以在 YAML 配置中，通过 `secrets` 引入
+- 从 `Step` 中获取 `Token` 密钥
 
-```yaml
-- name: get token demo
+  例如: 创建了一个名为 `my_token` 的 `Token` 类型的密钥，可以在 YAML 配置中，通过 `secrets` 引入
+
+  ```yaml
+  steps:
+  - name: get token demo
     secrets:
     - my_token
     bash: |
       echo ${my_token}
-```
+  ```
