@@ -9,11 +9,7 @@
 * 基本概念
   * 工作流 (flow)
   * 任务 (job)
-
-* YAML 配置
-  * [参考](./yml/reference_v1.md)
-  * [插件](./yml/plugins.md)
-  * [模板](https://github.com/FlowCI/templates)
+  * Agent
 
 * Git 仓库
   * [工作流中配置 Git](cn/git/index.md)
@@ -27,7 +23,6 @@
   * 弹性伸缩
     * [配置 SSH 主机](cn/agents/ssh_host.md)
     * [配置 K8s](cn/agents/k8s_host.md)
-  * [默认的环境变量](cn/agents/vars.md)
 
 * 密钥 (Secret)
   * [SSH-RSA](cn/secret/ssh-rsa.md)
@@ -42,5 +37,12 @@
   * [任意配置(text)](cn/config/freetext.md)
 
 * 触发器 (Trigger)
+  * [任务结束事件](cn/trigger/on_job_finish.md)
+    - [Email 触发器](cn/trigger/on_job_finish.md#配置-email-触发器)
+    - [Webhook 触发器](cn/trigger/on_job_finish.md#配置-email-触发器)
 
 * 插件 (Plugins)
+
+* 参考
+  * [YAML](cn/yml/reference_v1.md)
+  * [环境变量](cn/agents/vars.md)

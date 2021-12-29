@@ -49,4 +49,4 @@
   ![gmail_1](../../images/config/gmail_setting_1.png)
   ![gmail_2](../../images/config/gmail_setting_2.png)
 
-  配置好后，设置触发器，[请参见](cn/trigger/email.md)
+  配置好后，设置邮件触发器，[请参见](cn/trigger/email.md)
