@@ -6,10 +6,16 @@
   * [创建工作流](cn/start/index.md#创建工作流)
   * [开始任务](cn/start/index.md#开始任务)
 
-* 基本概念
-  * 工作流 (flow)
-  * 任务 (job)
-  * Agent
+* 工作流 (flow)
+  * [结构](cn/flow/structure.md)
+
+* 任务 (job)
+  * [开始任务](cn/job/start.md)
+  * [运行条件](cn/job/condition.md)
+  * [运行环境](cn/job/environment.md)
+  * [并行执行](cn/job/parallel.md)
+  * [定时任务](cn/job/schedule.md)
+  * [Web Terminal](cn/job/web_terminal.md)
 
 * Git 仓库
   * [工作流中配置 Git](cn/git/index.md)
@@ -39,7 +45,7 @@
 * 触发器 (Trigger)
   * [任务结束事件](cn/trigger/on_job_finish.md)
     - [Email 触发器](cn/trigger/on_job_finish.md#配置-email-触发器)
-    - [Webhook 触发器](cn/trigger/on_job_finish.md#配置-email-触发器)
+    - [Webhook 触发器](cn/trigger/on_job_finish.md#配置-webhook-触发器)
 
 * 插件 (Plugins)
 
