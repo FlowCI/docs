@@ -15,6 +15,7 @@
   * [运行环境](cn/job/environment.md)
   * [并行执行](cn/job/parallel.md)
   * [定时任务](cn/job/schedule.md)
+  * [缓存](cn/job/cache.md)
   * [Web Terminal](cn/job/web_terminal.md)
 
 * Git 仓库

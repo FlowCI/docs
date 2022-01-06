@@ -7,58 +7,69 @@
 - 执行步骤 (step)
 - 并行步骤 (parallel)
 
-它们之间的关系由下图所示:
+![structure](../../images/flow/structure.png)
 
-![flow structure](../../images/flow/structure.png)
 
-对应的 YAML 配置为:
+### 举个例子
+
+![sample](../../images/flow/sample.png)
+
+
+使用 YAML 配置来表示以上结构:
 
 ```yaml
+
 steps:
-  - name: step 1
+  - name: git clone
     bash: |
-      echo "step 1"
+      echo "run git clone"
 
-  - name: step 2
-    bash: |
-      echo "step 2"
-
-  - steps:
-    - name: step 1_1
-      bash: |
-        echo "step 1.1"
-
-    - name: step 1_2
-      bash: |
-        echo "step 1.2"
+  - name: steps for build
+    docker:
+      image: "my build image"
+    steps:
+      - name: build_a
+        bash: |
+          echo "run build step a"
+      - name: build_b
+        bash: |
+          echo "run build step b"
   
-  - steps:
-    - name: step 2_1
-      bash: |
-        echo "step 2.1"
+  - parallel:
+      java_8_test:
+        docker:
+          image: "java 8 image"
+        steps:
+          - name: test a
+            bash: |
+              echo "run test a for java 8"
+          - name: test b
+            bash: |
+              echo "run test b for java 8"
 
-    - name: step 2_2
-      bash: |
-        echo "step 2.2"
+      java_11_test:
+        docker:
+          image: "java 11 image"
+        steps:
+          - name: test a
+            bash: |
+              echo "run test a for java 11"
+          - name: test b
+            bash: |
+              echo "run test b for java 11"
+
 
   - parallel:
-      p_flow_A:
+      deploy_to_a:
         steps:
-          - name: step A_1
+          - name: deploy
             bash: |
-              echo "step A.1 from parallel flow A"
+              echo "deploy to environment a"
 
-          - name: step A_2
-            bash: |
-              echo "step A.2 from parallel flow A"
-        
-      p_flow_B:
+      deploy_to_b:
         steps:
-          - name: step B_1
+          - name: deploy
             bash: |
-                echo "step B.1 from parallel flow B"
+              echo "deploy to environment b"
 
-          - name: step B_2
-            bash: |
-                echo "step B.2 from parallel flow B"
 ```
