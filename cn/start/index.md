@@ -14,7 +14,8 @@ cd flow-docker
 
 等待完成后，可通过浏览器访问 `http://localhost:2015`.
 
->  默认端口：服务端 `8080`，前端 `2015`。可以从 `server.sh` 及 `server.yml` 配置文件中修改
+> - 默认端口：服务端 `8080`，前端 `2015`。可以从 `server.sh` 及 `server.yml` 配置文件中修改
+> - 默认IP地址: `./server.sh start` 命令会自动检测 IP 地址，如果没有找到对应的 IP 地址，可以使用 `./server.sh -h your_ip start` 来启动
 
 ![start_server](../../images/start_server.gif)
 
@@ -47,10 +48,6 @@ cd flow-docker
 
 ![start_job](../../images/start_job.gif)
 
-从 Docker 安装，会在服务器主机自动创建 Agent，如果添加更多的 Agent，请参考
-  * [手动配置 Agent](cn/agents/manual) 
-  * 弹性伸缩 Agent
-    - [配置 k8s](cn/agents/k8s_host)
-    - [配置 SSH 主机](cn/agents/ssh_host
+从 Docker 安装，会在服务器主机自动创建 Agent， 如果添加更多的 Agent，请[参考 Agent 章节](cn/agents/index.md)
 
 任务结束后，会触发 `OnJobFinish` 事件，如果需要邮件及其他类型的通知，[请参见](cn/trigger/on_job_finish.md)

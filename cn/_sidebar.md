@@ -10,7 +10,7 @@
   * [结构](cn/flow/structure.md)
 
 * 任务 (job)
-  * [开始任务](cn/job/start.md)
+  * [开始](cn/job/start.md)
   * [运行条件](cn/job/condition.md)
   * [运行环境](cn/job/environment.md)
   * [并行执行](cn/job/parallel.md)
@@ -25,7 +25,8 @@
   * [连接 Gogs](cn/git/gogs.md)
   * [连接 Gitee](cn/git/gitee.md)
 
-* Agents
+* Agent
+  * [什么是 Agent](cn/agents/index.md)
   * [手动配置](cn/agents/manual.md)
   * 弹性伸缩
     * [配置 SSH 主机](cn/agents/ssh_host.md)

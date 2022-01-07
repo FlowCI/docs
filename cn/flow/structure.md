@@ -73,3 +73,5 @@ steps:
               echo "deploy to environment b"
 
 ```
+
+更详细的 YAML 配置，请查看 [YAML 配置参考](/cn/yml/reference_v1)
