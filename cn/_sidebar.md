@@ -11,11 +11,12 @@
 
 * 任务 (job)
   * [开始](cn/job/start.md)
+  * [工作区](cn/job/workspace.md)
   * [运行条件](cn/job/condition.md)
   * [通过 Docker 配置运行环境](cn/job/docker.md)
   * [并行执行](cn/job/parallel.md)
-  * [定时任务](cn/job/schedule.md)
   * [缓存](cn/job/cache.md)
+  * [定时任务](cn/job/schedule.md)
   * [Web Terminal](cn/job/web_terminal.md)
 
 * Git 仓库
