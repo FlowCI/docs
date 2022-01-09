@@ -20,11 +20,11 @@ cd flow-docker
 ![start_server](../../images/start_server.gif)
 
 
-## 配置服务器URL
+## 配置 URL
 
 确定服务端及前端的 URL 正确并可访问，已确保 flow.ci 正常工作。
 
-可以在 `Settings` -> `System` 中配置:
+可以在 `Settings -> System` `(http://{页面地址}/#/settings/system}` 中配置:
 
 ![config_url](../../images/config_server_url.png)
 
@@ -44,10 +44,11 @@ cd flow-docker
 点击 `运行` 开始任务
 
 > - 如果选择空模板，则需要配置 YAML 后才可以开始任务
-> - 如何配置 Git 仓库，请参考 [Git 仓库配置](/cn/git/index.md))
 
 ![start_job](../../images/start_job.gif)
 
-从 Docker 安装，会在服务器主机自动创建 Agent， 如果添加更多的 Agent，请[参考 Agent 章节](cn/agents/index.md)
+- Git: 如何配置 Git 仓库，请参考 [Git 仓库配置](/cn/git/index.md)
 
-任务结束后，会触发 `OnJobFinish` 事件，如果需要邮件及其他类型的通知，[请参见](cn/trigger/on_job_finish.md)
+- Agent: 从 Docker 安装，会在服务器主机自动创建 Agent， 如果添加更多的 Agent，请[参考 Agent 章节](cn/agents/index.md)
+
+- 触发器(Trigger): 任务结束后，会触发 `OnJobFinish` 事件，如果需要邮件及其他类型的通知，[请参见](cn/trigger/on_job_finish.md)

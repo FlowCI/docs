@@ -2,7 +2,7 @@
 
 * 快速开始
   * [安装](cn/start/index.md#安装)
-  * [配置服务器 URL](cn/start/index.md#配置服务器URL)
+  * [配置 URL](cn/start/index.md#配置服务器URL)
   * [创建工作流](cn/start/index.md#创建工作流)
   * [开始任务](cn/start/index.md#开始任务)
 
@@ -28,7 +28,7 @@
 
 * Agent
   * [什么是 Agent](cn/agents/index.md)
-  * [手动配置](cn/agents/manual.md)
+  * [添加 Agent](cn/agents/manual.md)
   * 弹性伸缩
     * [配置 SSH 主机](cn/agents/ssh_host.md)
     * [配置 K8s](cn/agents/k8s_host.md)
