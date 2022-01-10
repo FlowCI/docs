@@ -1,21 +1,21 @@
-# 并行执行
+# Parallel
 
-并行执行可以大幅提升任务的运行效率。
+Running steps parallelly could speed up the performance of the job.
 
-YAML 中可以通过 `parallel` 来配置并行执行, 在 `parallel` 节点下，可配置多个并行工作流。
+The multiple flows are supported in the `parallel`.
 
-当并行执行时，需要多个空闲 Agent。如果当前环境只有一个空闲的 Agent，即使配置了 `parallel` 也会顺序执行。
+Multiple idle Agents are required for parallel steps, the steps will run sequentially if only ONE idle agent available.
 
 ```yaml
 steps:
 - parallel:
-    flow_1: ## 定义并行执行的工作流名称
+    flow_1: ## parallel flow name
       steps:
       - name: step_1
         bash: |
           echo "step 1 from flow 1"
             
-    flow_2: ## 定义并行执行的工作流名称
+    flow_2: ## parallel flow name
       steps:
       - name: step_1
         bash: |
@@ -25,7 +25,7 @@ steps:
 
 ![parallel](../../images/job/parallel.png)
 
-例如：需要 系统测试 运行在 `java 8` 和 `java 11` 环境下
+Example: to run system test on both `java 8` and `java 11` environment.
 
 ```yaml
 steps:
