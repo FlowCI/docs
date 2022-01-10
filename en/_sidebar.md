@@ -7,7 +7,7 @@
   * [Run](en/start/index.md#run)
 
 * Flow
-  * [Structure](en/flow/structure.md)
+  * [Structure](en/flow/structure.md#flow-structure)
 
 * Job
   * [Start](en/job/start.md)
