@@ -4,13 +4,34 @@
 
 > 此功能需要 Agent 运行环境中安装 docker
 
-## 单个运行环境
+## 配置 Docker image
 
-工作流(flow) 和 执行步骤(step) 中，均支持 `docker` 定义
+工作流(flow) 和 执行步骤(step) 中，均支持 `docker` 定义。
+
+在 YAML 定义了 `docker` 之后，步骤中的 `bash` 脚本会在 Docker 容器中执行。
+
+### 在执行步骤(step) 使用 `docker`
+
+当定义了 `docker.image` 后，步骤即会在 `openjdk:11` 或 `openjdk:8` 中的环境运行
+
+```yaml
+steps:
+- name: step_1
+  docker:
+    image: "openjdk:11"
+  bash: "Run from openjdk 11"
+
+- name: step_2
+  docker:
+   image: "openjdk:8"
+  bash: "Run from openjdk 8"
+```
 
 ### 在工作流(flow) 使用 `docker`
 
-例如: 当定义了 `docker.image` 后，无 `docker` 定义的步骤，根据工作流的定义执行。有 `docker` 定义的步骤，根据步骤中的环境执行
+当在 工作流 范围中定义了 `docker` 后，所有的步骤会使用该 `docker` 配置。
+
+在 步骤 中有 `docker` 定义时，会使用此步骤中的配置。
 
 ```yaml
 docker:
@@ -27,26 +48,7 @@ steps:
 
 ```
 
-### 在执行步骤(step) 使用 `docker`
-
-例如: 当定义了 `docker.image` 后，步骤即会在 `openjdk:11` 或 `openjdk:8` 中的环境运行
-
-```yaml
-steps:
-- name: step_1
-  docker:
-    image: "openjdk:11"
-  bash: "Run from openjdk 11"
-
-- name: step_2
-  docker:
-   image: "openjdk:8"
-  bash: "Run from openjdk 8"
-
-```
-
-
-## 多个运行环境
+## 配置 __多个__ Docker image
 
 步骤中同时需要多个服务时, 比如需要 `redis`, `mongodb` 等，则可通过配置 `dockers` 来实现，同时必须定义 `is_runtime` 来确定脚本的执行环境。
 
