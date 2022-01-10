@@ -1,6 +1,6 @@
 # SSH-RSA Secret
 
-## Create a SSH-RSA Secret from admin page
+## Create
 
 1. Click `Settings` -> `Secret` -> `+`
 2. Enter a secret name
@@ -11,13 +11,11 @@
     - or copy-paste key pair to text box
 5. save
 
-![create ssh rsa](../../src/secret/create_ssh_key.gif)
+![create ssh rsa](../../images/secret/create_ssh_key.gif)
 
-## How to use it
+## How to
 
-- Plugin
-
-  Some of the plugins need secret to gain access. For example `git-clone` plugin, it requires a ssh-rsa secret to clone the git repo, it's pretty easy to use the secret by type the secret name your created.
+- `git-clone` plugin: just need to type the secret name as value for variable `FLOWCI_GIT_CREDENTIAL`
 
   ```yml
   envs:
@@ -32,4 +30,18 @@
     plugin: 'gitclone'
   ```
 
-- [SSH Host](../agents/ssh_host.md)
+- Auto scaling Agent: please refer [SSH Host](en/agents/ssh_host.md#auto-scalling-on-a-host-via-SSH)
+
+- Access `SSH-RSA` secret from script
+
+  It can be accessed from script if the `secrets` has beed defined from step YAML
+  
+  ```yaml
+  steps:
+    - name: get sshrsa demo
+      secrets:
+      - my_ssh_key
+      bash: |
+        echo ${my_ssh_key_PUBLIC_KEY}
+        echo ${my_ssh_key_PRIVATE_KEY}
+  ```

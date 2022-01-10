@@ -14,7 +14,7 @@
 
 ## 如何使用
 
-- `gitclone` 插件中使用: 需要配置 Git 的访问权限，只需要在 YAML 中输入所创建的秘钥名称即可
+- `gitclone` 插件中使用: 只需要在 `FLOWCI_GIT_CREDENTIAL` 变量中输入所创建的秘钥名称即可
 
   ```yaml
   envs:

@@ -16,16 +16,18 @@
 
 ## 如何使用
 
-- 在 [android-signing](https://github.com/flowci-plugins/android-signing) 插件中使用: `SIGN_SECRET` 中填入所对应的 `安卓签名` 类型的密钥名称
+- 在 [android-signing](https://github.com/flowci-plugins/android-signing) 插件中使用: 
 
-```yaml
-- name: sign apk
-  envs:
-    SIGN_FILE_PATTERN: '*-unsigned.apk'
-    SIGN_SECRET: my_android_sign
-  plugin: android-signing
-```
+  在变量 `SIGN_SECRET` 中填入所对应的 `安卓签名` 类型的密钥名称。
 
-如果签名成功，会在此步骤中显示 `'./xx/xx/xx/you_package.apk' signed`，例如：
+  ```yaml
+  - name: sign apk
+    envs:
+      SIGN_FILE_PATTERN: '*-unsigned.apk'
+      SIGN_SECRET: my_android_sign
+    plugin: android-signing
+  ```
 
-![show android signed](../../images/secret/android_signed.png)
+  如果签名成功，会在此步骤中显示 `'./xx/xx/xx/you_package.apk' signed`，例如：
+
+  ![show android signed](../../images/secret/android_signed.png)
