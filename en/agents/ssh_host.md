@@ -1,8 +1,8 @@
-# Dynamic Agent - SSH HOST
+# Auto scalling on a host via SSH
 
 Another way to setup agent is config hosts on ci server, and then flow.ci will create and manage agent by docker on the host via ssh automatically.
 
-![ssh host structure](../../src/agents/ssh_host_structure.png)
+![ssh host structure](../../images/agents/ssh_host_structure.png)
 
 ## 1. Create a host
 
@@ -34,7 +34,7 @@ Another way to setup agent is config hosts on ci server, and then flow.ci will c
 
     The host will be shown on the list
 
-![how to create host](../../src/agents/create_host.gif)
+![how to create host](../../images/agents/create_host.gif)
 
 ## 2. Setup the host
 
@@ -44,4 +44,4 @@ Another way to setup agent is config hosts on ci server, and then flow.ci will c
 
 * Test connection
 
-  ![test host](../../src/agents/test_host.gif)
+  ![test host](../../images/agents/test_host.gif)

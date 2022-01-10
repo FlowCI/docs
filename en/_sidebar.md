@@ -28,10 +28,10 @@
 
 * Agent
   * [What is Agent](en/agents/index.md)
-  * [Create Agent](en/agents/manual.md)
+  * [Add Agent](en/agents/manual.md)
   * Auto Scaling
-    * [Connect to host via SSH](en/agents/ssh_host.md)
-    * [Connect to K8s](en/agents/k8s_host.md)
+    * [Kubernates](en/agents/k8s_host.md)
+    * [SSH Host](en/agents/ssh_host.md)
 
 * Secret
   * [SSH-RSA](en/secret/ssh-rsa.md)

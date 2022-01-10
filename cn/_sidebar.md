@@ -30,8 +30,8 @@
   * [什么是 Agent](cn/agents/index.md)
   * [添加 Agent](cn/agents/manual.md)
   * 弹性伸缩
-    * [配置 SSH 主机](cn/agents/ssh_host.md)
-    * [配置 K8s](cn/agents/k8s_host.md)
+    * [Kubernates](cn/agents/k8s_host.md)
+    * [SSH 主机](cn/agents/ssh_host.md)
 
 * 密钥 (Secret)
   * [SSH-RSA](cn/secret/ssh-rsa.md)

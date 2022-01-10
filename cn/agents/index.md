@@ -2,7 +2,9 @@
 
 Agent 是实际运行任务的地方。
 
-它可以是一个 `可执行程序`、 `Docker`、或者可配置 `k8s`， `ssh 主机` 获得可伸缩的能力。
+它可以是一个 `可执行程序`、 `Docker`
+
+自动伸缩的 Agent 可以配置在 Kubernates or SSH 主机中。
 
 * [手动配置 Agent](cn/agents/manual) 
 
