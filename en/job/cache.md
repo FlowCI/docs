@@ -1,12 +1,12 @@
-# 任务缓存 (cache)
+# Cache
 
-当并行执行时, 任务会运行在不同的 Agent 中。如果这时想访问同一数据，这时就需要配置缓存。
+The job cache is needed when steps run on different Agents and steps want to access the data from previous steps.
 
 ![cache demo](../../images/job/cache_demo.png)
 
-## 如何使用缓存
+## How to use Cache
 
-可以在 步骤 (step) 中使用 `cache`。配置缓存需要使用 `key` 来定义缓存名称，如果该步骤为 写入缓存，则需要配置 `paths` 指定那个路径或文件需要写入。
+The `cache` could be used in a `step`. The `key` is required to define cache name, `paths` is needed to write data.
 
 ```yaml
 steps:
@@ -21,7 +21,7 @@ steps:
 
   - name: clean
     bash: |
-      # 从本地工作区(workspace) 删除该目录, 确保之后的缓存从正确的位置读取
+      # Delete dir from worksapce, to make sure cache is loaded not from locally.
       rm -rf ./my_demo_cache
 
   - parallel:
@@ -47,6 +47,6 @@ steps:
 
 ```
 
-运行结果如下:
+The executed result like:
 
 ![cache_run](../../images/job/cache_run_example.png)
