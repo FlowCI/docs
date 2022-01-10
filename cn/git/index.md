@@ -16,7 +16,7 @@ steps:
 ```
 
 
-## 配置 SSH KEY
+## 配置仓库访问权限
 
 如果 Git 链接为 __SSH__ 协议，例如 `git@github.com:FlowCI/docs.git`, 则需要配置 __SSH-RSA__ 秘钥已获得代码的访问权限.
 

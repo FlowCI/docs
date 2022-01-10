@@ -20,7 +20,7 @@
   * [Web Terminal](en/job/web_terminal.md)
 
 * Git Connection
-  * [Steup Git from flow](en/git/index.md)
+  * [Git setup](en/git/index.md)
   * [Link to Github](en/git/github.md)
   * [Link to Gitlab](en/git/gitlab.md)
   * [Link to Gogs](en/git/gogs.md)

@@ -4,7 +4,7 @@
 
 Copy `public key` from admin page, open Gitee repo web and add it from `Settings > Deploy keys -> Add key` for single repo access. Gitee not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access.
 
-![setup_deploy_key](../../src/git/gitee_setup_deploy_key.png)
+![setup_deploy_key](../../images/git/gitee_setup_deploy_key.png)
 
 ## Setup Webhook
 
@@ -14,7 +14,7 @@ The webhook used for receive git notification such as push, tag, pull request an
     > Hint: Your host must be exposed to internet (public ip or domain), otherwide the GitHub events can not be received.
     > If pulbic ip or domain not availble in your environments, please use the tools like [ngrok](https://ngrok.com/).  
 
-   ![webhook settings](../../src/git/github_select_webhook_url.png)
+   ![webhook settings](../../images/git/select_webhook_url.gif)
 
 2. Setup webhook
 
@@ -28,7 +28,7 @@ The webhook used for receive git notification such as push, tag, pull request an
 
   Check events `Push`, `Tag Push` and `Pull Request`
 
-  ![events](../../src/git/gitee_setup_webhook.png)
+  ![events](../../images/git/gitee_setup_webhook.png)
 
 ## Verify Gitee Settings
 
@@ -40,4 +40,4 @@ The webhook used for receive git notification such as push, tag, pull request an
   
   Test the access right from flow settings by click 'test' button, the green will be shown if everything correct.
 
-  ![gitlab_test](../../src/git/gitee_test_config.gif)
+  ![gitlab_test](../../images/git/gitee_test_config.gif)
