@@ -2,7 +2,7 @@
 
 配置 SSH 主机后，flow.ci 会自动通过 SSH 的方式创建并管理 Docker Agent。
 
-![ssh host structure](../../images/agents/ssh_host_structure.png)
+![ssh host structure](../../_images/agents/ssh_host_structure.png)
 
 ## 1. 从管理员界面创建 SSH 主机
 
@@ -32,7 +32,7 @@
 
   创建的 SSH 主机将会显示在列表中
 
-![how to create host](../../images/agents/create_host.gif)
+![how to create host](../../_images/agents/create_host.gif)
 
 ## 2. 配置 SSH 主机的环境
 
@@ -42,4 +42,4 @@
 
 * 测试连接
 
-  ![test host](../../images/agents/test_host.gif)
+  ![test host](../../_images/agents/test_host.gif)

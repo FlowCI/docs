@@ -14,4 +14,4 @@ steps:
       sleep 10
 ```
 
-![web terminal](../../images/job/terminal.gif)
+![web terminal](../../_images/job/terminal.gif)

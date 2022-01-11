@@ -2,7 +2,7 @@
 
 当并行执行时, 任务会运行在不同的 Agent 中。如果这时想访问同一数据，这时就需要配置缓存。
 
-![cache demo](../../images/job/cache_demo.png)
+![cache demo](../../_images/job/cache_demo.png)
 
 ## 如何使用缓存
 
@@ -49,4 +49,4 @@ steps:
 
 运行结果如下:
 
-![cache_run](../../images/job/cache_run_example.png)
+![cache_run](../../_images/job/cache_run_example.png)

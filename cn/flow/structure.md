@@ -7,12 +7,12 @@
 - 执行步骤 (step)
 - 并行步骤 (parallel)
 
-![structure](../../images/flow/structure.png)
+![structure](../../_images/flow/structure.png)
 
 
 ### 举个例子
 
-![sample](../../images/flow/sample.png)
+![sample](../../_images/flow/sample.png)
 
 
 使用 YAML 配置来表示以上结构:

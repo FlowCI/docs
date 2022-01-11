@@ -19,11 +19,11 @@
    - 输入收件人地址 / 或选择 `To all flow users` 则收件人为所有工作流的用户地址
 6. 保存 `Save`
 
-![create_email_trigger](../../images/trigger/create_job_finish_email.gif)
+![create_email_trigger](../../_images/trigger/create_job_finish_email.gif)
 
 配置成功后，当任务结束时会发送如下邮件:
 
-![email_sample](../../images/trigger/email_sample.png)
+![email_sample](../../_images/trigger/email_sample.png)
 
 
 ## 发送 HTTP 请求
@@ -49,8 +49,8 @@
        ```
 6. 保存 `Save`
 
-![create_webhook_trigger](../../images/trigger/create_job_finish_webhook.gif)
+![create_webhook_trigger](../../_images/trigger/create_job_finish_webhook.gif)
 
 例如: 如果正确配置了 Slack 发送消息的请求，当任务完成后，会发送所对应的消息到 Slack 频道中
 
-![send_webhook_trigger](../../images/trigger/send_job_finish_webhook.gif)
+![send_webhook_trigger](../../_images/trigger/send_job_finish_webhook.gif)

@@ -11,7 +11,7 @@
     - or copy-paste key pair to text box
 5. save
 
-![create ssh rsa](../../images/secret/create_ssh_key.gif)
+![create ssh rsa](../../_images/secret/create_ssh_key.gif)
 
 ## How to
 

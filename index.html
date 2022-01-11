@@ -10,15 +10,25 @@
 </head>
 <body>
   <nav>
-    <a href="#/">EN</a>
-    <a href="#/cn/">中文</a>
+    <a href="#/en/">
+      <img class="emoji" src="https://github.githubassets.com/images/icons/emoji/uk.png" alt="uk">
+      English
+    </a>
+    <a href="#/cn/">
+      <img class="emoji" src="https://github.githubassets.com/images/icons/emoji/cn.png" alt="cn">
+      中文
+    </a>
   </nav>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'flow.ci',
-      repo: 'https://github.com/flowci/docs/',
+      repo: 'https://github.com/flowci/core',
       loadSidebar: true,
+      coverpage: {
+        '/en': '_coverpage.md',
+        '/cn/': '_coverpage.md',
+      },
       alias: {
         '/_sidebar.md': '/en/_sidebar.md'
       }

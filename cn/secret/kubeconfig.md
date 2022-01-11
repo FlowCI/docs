@@ -8,7 +8,7 @@
 4. 拷贝对应的配置到文本框
 5. 保存 `Save`
 
-![create ssh rsa](../../images/secret/create_kubeconfig.gif)
+![create ssh rsa](../../_images/secret/create_kubeconfig.gif)
 
 ## 如何使用
 

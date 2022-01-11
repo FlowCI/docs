@@ -28,7 +28,7 @@ The __SSH-RSA__ `secret` is required if git url is __SSH__ based, for example `g
    - Click `create a new` ssh key pair or paste exsiting public and private key
    - Save
 
-    ![how to create ssh-rsa secret](../../images/secret/create_ssh_key.gif)
+    ![how to create ssh-rsa secret](../../_images/secret/create_ssh_key.gif)
 
 2. Config secret in the flow
 

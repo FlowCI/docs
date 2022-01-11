@@ -13,7 +13,7 @@
    - 选择加密类型 `None`, `SSL` or `TLS`
 5. 保存 `Save`
 
-![create smtp](../../images/config/create_smtp.gif)
+![create smtp](../../_images/config/create_smtp.gif)
 
 ## 如何使用
 
@@ -46,7 +46,7 @@
   此外还需要登陆 Gmail 
   找到 `Security > Less secure app access`
   点击 `Click Turn on access`
-  ![gmail_1](../../images/config/gmail_setting_1.png)
-  ![gmail_2](../../images/config/gmail_setting_2.png)
+  ![gmail_1](../../_images/config/gmail_setting_1.png)
+  ![gmail_2](../../_images/config/gmail_setting_2.png)
 
   配置好后，设置邮件触发器，[请参见](cn/trigger/on_job_finish.md#发送邮件)

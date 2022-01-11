@@ -12,7 +12,7 @@
    - `Key password`
 5. Save
 
-![create android sign](../../images/secret/create_android_sign.gif)
+![create android sign](../../_images/secret/create_android_sign.gif)
 
 ## How to
 
@@ -30,4 +30,4 @@
 
   The output will be like `'./xx/xx/xx/you_package.apk' signed` if apk is signed
 
-  ![show android signed](../../images/secret/android_signed.png)
+  ![show android signed](../../_images/secret/android_signed.png)

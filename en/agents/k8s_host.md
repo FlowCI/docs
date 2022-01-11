@@ -2,7 +2,7 @@
 
 Another way to setup agent is config hosts on ci server, and then flow.ci will create and manage agent by k8s pod automatically.
 
-![ssh host structure](../../images/agents/k8s_host_structure.png)
+![ssh host structure](../../_images/agents/k8s_host_structure.png)
 
 ## Config Cluster
 
@@ -30,4 +30,4 @@ Another way to setup agent is config hosts on ci server, and then flow.ci will c
 
     The host will be shown on the list
 
-![how to create host](../../images/agents/k8s_host_create.gif)
+![how to create host](../../_images/agents/k8s_host_create.gif)

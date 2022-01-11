@@ -19,11 +19,11 @@ A __notification email__ will be sent to related users when job is finished
    - Receiver email / or select `To all flow users` to all users of related flow
 6. Save
 
-![create_email_trigger](../../images/trigger/create_job_finish_email.gif)
+![create_email_trigger](../../_images/trigger/create_job_finish_email.gif)
 
 The notification email will be sent on job is finished
 
-![email_sample](../../images/trigger/email_sample.png)
+![email_sample](../../_images/trigger/email_sample.png)
 
 
 ## Send HTTP request
@@ -49,9 +49,9 @@ A __HTTP request__ will be sent to per-defined URL when job is finished
        ```
 6. Save
 
-![create_webhook_trigger](../../images/trigger/create_job_finish_webhook.gif)
+![create_webhook_trigger](../../_images/trigger/create_job_finish_webhook.gif)
 
 
 Example: send job finish notification to __Slack__ channle.
 
-![send_webhook_trigger](../../images/trigger/send_job_finish_webhook.gif)
+![send_webhook_trigger](../../_images/trigger/send_job_finish_webhook.gif)

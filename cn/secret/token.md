@@ -8,7 +8,7 @@
 4. 输入 token 数据
 5. 保存
 
-![create token](../../images/secret/create_token.gif)
+![create token](../../_images/secret/create_token.gif)
 
 ## 如何使用
 

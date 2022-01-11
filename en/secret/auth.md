@@ -10,7 +10,7 @@ Auth Secret repersent username and password pair.
 4. Type username and password
 5. Save
 
-![create auth](../../images/secret/create_auth_pair.gif)
+![create auth](../../_images/secret/create_auth_pair.gif)
 
 ## How to
 

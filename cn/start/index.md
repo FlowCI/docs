@@ -17,7 +17,7 @@ cd flow-docker
 > - 默认端口：服务端 `8080`，前端 `2015`。可以从 `server.sh` 及 `server.yml` 配置文件中修改
 > - 默认IP地址: `./server.sh start` 命令会自动检测 IP 地址，如果没有找到对应的 IP 地址，可以使用 `./server.sh -h your_ip start` 来启动
 
-![start_server](../../images/start_server.gif)
+![start_server](../../_images/start_server.gif)
 
 
 ## 配置 URL
@@ -26,7 +26,7 @@ cd flow-docker
 
 可以在 `Settings -> System` `(http://{页面地址}/#/settings/system}` 中配置:
 
-![config_url](../../images/config_server_url.png)
+![config_url](../../_images/config_server_url.png)
 
 
 ## 创建工作流
@@ -37,7 +37,7 @@ cd flow-docker
   
 - 选择 YAML 配置模板
 
-![create_flow](../../images/create_flow.gif)
+![create_flow](../../_images/create_flow.gif)
 
 ## 开始任务
 
@@ -45,7 +45,7 @@ cd flow-docker
 
 > - 如果选择空模板，则需要配置 YAML 后才可以开始任务
 
-![start_job](../../images/start_job.gif)
+![start_job](../../_images/start_job.gif)
 
 - Git: 如何配置 Git 仓库，请参考 [Git 仓库配置](/cn/git/index.md)
 

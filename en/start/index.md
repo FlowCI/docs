@@ -17,14 +17,14 @@ Open the link `http://localhost:2015` from web browser after installtion is fini
 > - __Port__: default port for server is `8080`, for web is `2015`. Modify the default ports from `server.sh` 及 `server.yml`
 > - __IP__: It will be auto detected from `./server.sh start`, or set your IP from `./server.sh -h your_ip start` if the address cannot be found.
 
-![cmd](../../images/start_server.gif)
+![cmd](../../_images/start_server.gif)
 
 
 ## Set URL
 
 Check from `Settings -> System` `(http://{your_web_host}/#/settings/system)` to make sure the URL of server and web are correct.
 
-![config_url](../../images/config_server_url.png)
+![config_url](../../_images/config_server_url.png)
 
 ## Create a flow
 
@@ -34,7 +34,7 @@ Check from `Settings -> System` `(http://{your_web_host}/#/settings/system)` to 
   
 - Select YAML template
 
-![create_flow](../../images/create_flow.gif)
+![create_flow](../../_images/create_flow.gif)
 
 
 ## RUN
@@ -43,7 +43,7 @@ Click `Run` button from flow page
 
 > - Job CANNOT start when the blank template has been selected.
 
-![start_job](../../images/start_job.gif)
+![start_job](../../_images/start_job.gif)
 
 
 - Git: How to config Git repo, please refer [Git Connection](en/git/index.md)

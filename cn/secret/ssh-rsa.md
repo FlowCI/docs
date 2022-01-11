@@ -10,7 +10,7 @@
    - 或者拷贝已有的公私钥
 5. 保存 `Save`
 
-![create ssh rsa](../../images/secret/create_ssh_key.gif)
+![create ssh rsa](../../_images/secret/create_ssh_key.gif)
 
 ## 如何使用
 

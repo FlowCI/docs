@@ -8,7 +8,7 @@
 4. 填入配置信息，可以为任意格式
 5. 保存 `Save`
 
-![create smtp](../../images/config/create_text.gif)
+![create smtp](../../_images/config/create_text.gif)
 
 
 ## 如何使用

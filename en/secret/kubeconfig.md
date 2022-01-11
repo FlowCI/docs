@@ -8,7 +8,7 @@
 4. Copy kubeconfig to the text field
 5. Save
 
-![create ssh rsa](../../images/secret/create_kubeconfig.gif)
+![create ssh rsa](../../_images/secret/create_kubeconfig.gif)
 
 ## How to
 

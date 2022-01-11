@@ -8,7 +8,7 @@
 4. Type token data
 5. save
 
-![create token](../../images/secret/create_token.gif)
+![create token](../../_images/secret/create_token.gif)
 
 ## How to
 

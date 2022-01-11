@@ -1,4 +1,3 @@
-* [What is flow.ci](en/)
 
 * Quick Start
   * [Install](en/start/index.md#Install)

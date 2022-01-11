@@ -1,4 +1,3 @@
-* [什么是 flow.ci](cn/)
 
 * 快速开始
   * [安装](cn/start/index.md#安装)

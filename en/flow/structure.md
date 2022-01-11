@@ -7,7 +7,7 @@ The basic elements of flow include:
 - step
 - parallel
 
-![structure](../../images/flow/structure.png)
+![structure](../../_images/flow/structure.png)
 
 ### Let's make an example!
 
@@ -15,7 +15,7 @@ The basic elements of flow include:
 Build the cloned code, run test for both Java 8 and 11, and then deploy to two environments.
 
 
-![sample](../../images/flow/sample.png)
+![sample](../../_images/flow/sample.png)
 
 
 Repersent the above diagram by YAML

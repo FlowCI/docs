@@ -23,7 +23,7 @@ steps:
 
 ```
 
-![parallel](../../images/job/parallel.png)
+![parallel](../../_images/job/parallel.png)
 
 例如：需要 系统测试 运行在 `java 8` 和 `java 11` 环境下
 

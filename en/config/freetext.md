@@ -8,7 +8,7 @@
 4. Type configuration data
 5. Save
 
-![create smtp](../../images/config/create_text.gif)
+![create smtp](../../_images/config/create_text.gif)
 
 
 ## How to

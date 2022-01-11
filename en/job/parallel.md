@@ -23,7 +23,7 @@ steps:
 
 ```
 
-![parallel](../../images/job/parallel.png)
+![parallel](../../_images/job/parallel.png)
 
 Example: to run system test on both `java 8` and `java 11` environment.
 

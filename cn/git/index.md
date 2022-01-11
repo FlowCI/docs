@@ -30,7 +30,7 @@ steps:
 
    > 如果使用已有的 SSH KEY，请复制 公钥 和 私钥
 
-    ![how to create ssh-rsa secret](../../images/secret/create_ssh_key.gif)
+    ![how to create ssh-rsa secret](../../_images/secret/create_ssh_key.gif)
 
 2. 配置秘钥到工作流
 

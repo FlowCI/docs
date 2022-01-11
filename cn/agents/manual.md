@@ -23,7 +23,7 @@
   
   新创建的 Agent 会在列表中显示，可以从列表中拷贝 token
 
-![how to create agent](../../images/agents/create_agent.gif)
+![how to create agent](../../_images/agents/create_agent.gif)
 
 ## 2. 启动 Agent
 

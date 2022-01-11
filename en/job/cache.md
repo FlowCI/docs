@@ -2,7 +2,7 @@
 
 The job cache is needed when steps run on different Agents and steps want to access the data from previous steps.
 
-![cache demo](../../images/job/cache_demo.png)
+![cache demo](../../_images/job/cache_demo.png)
 
 ## How to use Cache
 
@@ -49,4 +49,4 @@ steps:
 
 The executed result like:
 
-![cache_run](../../images/job/cache_run_example.png)
+![cache_run](../../_images/job/cache_run_example.png)

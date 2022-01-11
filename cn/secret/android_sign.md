@@ -12,7 +12,7 @@
    - `Key password`
 5. 保存 `Save`
 
-![create android sign](../../images/secret/create_android_sign.gif)
+![create android sign](../../_images/secret/create_android_sign.gif)
 
 ## 如何使用
 
@@ -30,4 +30,4 @@
 
   如果签名成功，会在此步骤中显示 `'./xx/xx/xx/you_package.apk' signed`，例如：
 
-  ![show android signed](../../images/secret/android_signed.png)
+  ![show android signed](../../_images/secret/android_signed.png)

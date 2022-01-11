@@ -25,7 +25,7 @@ Agent is an application to run real jobs, you have to create an Agent and start 
 
     The created agent will be shown on the list
 
-![how to create agent](../../images/agents/create_agent.gif)
+![how to create agent](../../_images/agents/create_agent.gif)
 
 ## Start an Agent
 

@@ -13,7 +13,7 @@
    - Select encryption type: `None`, `SSL` or `TLS`
 4. Save
 
-![create smtp](../../images/config/create_smtp.gif)
+![create smtp](../../_images/config/create_smtp.gif)
 
 ## How to
 
@@ -50,7 +50,7 @@
   - Find `Security > Less secure app access`
   - Click `Turn on access`
 
-  ![gmail_1](../../images/config/gmail_setting_1.png)
-  ![gmail_2](../../images/config/gmail_setting_2.png)
+  ![gmail_1](../../_images/config/gmail_setting_1.png)
+  ![gmail_2](../../_images/config/gmail_setting_2.png)
 
   About how to setup email trigger, please refer [Email Trigger](en/trigger/on_job_finish.md#send-email)
