@@ -59,16 +59,14 @@ cd flow-docker
 ./server.sh start
 ```
 
-## 文档
-
-+ [简体中文](https://github.com/FlowCI/docs/tree/master/cn/index.md)
+## 帮助
 
 如果需要帮助? 从[这里]提交问题 (https://github.com/FlowCI/docs/issues) 或发送邮件至 `flowci@foxmail.com`
 
 
 ## 构建模板
 
-[maven, npm, golang, ruby, android and more](https://github.com/FlowCI/templates)
+[maven, npm, golang, ruby, android 和更多...](https://github.com/FlowCI/templates)
 
 
 ## 基本架构
@@ -77,4 +75,4 @@ cd flow-docker
 
 ## 预览
 
-![demo](https://github.com/FlowCI/docs/raw/master/src/demo.gif)
+![demo](../_images/demo.gif)
