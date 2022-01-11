@@ -71,8 +71,7 @@ Need Help? submit issue from [here](https://github.com/FlowCI/docs/issues) or se
 
 ## Architecture
 
-![architecture](../_images/architecture.png)
+![architecture](https://github.com/FlowCI/docs/raw/master/_images/architecture.png)
 
 ## Preview
-
-![demo](../_images/demo.gif)
+![demo](https://github.com/FlowCI/docs/raw/master/_images/demo.gif)

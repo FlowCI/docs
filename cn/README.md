@@ -71,8 +71,8 @@ cd flow-docker
 
 ## 基本架构
 
-![architecture](../_images/architecture.png)
+![architecture](https://github.com/FlowCI/docs/raw/master/_images/architecture.png)
 
 ## 预览
 
-![demo](../_images/demo.gif)
+![demo](https://github.com/FlowCI/docs/raw/master/_images/demo.gif)
