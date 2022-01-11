@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+
+  <nav>
+    <a href="#/en/">
+      <img class="emoji" src="https://github.githubassets.com/images/icons/emoji/uk.png" alt="uk">
+      English
+    </a>
+    <a href="#/cn/">
+      <img class="emoji" src="https://github.githubassets.com/images/icons/emoji/cn.png" alt="cn">
+      中文
+    </a>
+  </nav>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'flow.ci',
+      repo: 'https://github.com/flowci/flow-core-x',
+      loadSidebar: true,
+      themeColor: '#5C53C4FF',
+      homepage: '/en/README.md',
+      alias: {
+        '/_sidebar.md': '/en/_sidebar.md'
+      },
+      plugins: [
+        EditOnGithubPlugin.create('https://github.com/flowci/docs/tree/develop/', null, 'Edit on GitHub')
+      ]
+    }
+  </script>
+</body>
+</html>

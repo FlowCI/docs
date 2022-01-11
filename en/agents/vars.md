@@ -1,4 +1,4 @@
-# Default Environment Variables in Agent Runtime
+# Variables which available in Agent
 
 ## Common
 

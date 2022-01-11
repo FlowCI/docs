@@ -1,26 +1,56 @@
 # SMTP Config
 
-SMTP server configuration that can be applied in the plugins
+## Create
 
-## Create a SMTP Config
-
-Click `Settings` -> `Config` -> `+`
-
-1. Enter a config name
+1. Click `Settings` -> `Config` -> `+`
+2. Enter Config name
 2. Select `SMTP` in category field
-3. Type detail settings (server, port, username, password and security setting)
-4. save
+3. Type required data:
+   - `Server`
+   - `Port`
+   - `Username`
+   - `Password`
+   - Select encryption type: `None`, `SSL` or `TLS`
+4. Save
 
-![create ssh rsa](./img/smtp_config.png)
+![create smtp](../../_images/config/create_smtp.gif)
 
-## How to use it
+## How to
 
-Some of the plugins need SMTP configuration to send email, for example [email-notify](https://github.com/flowci-plugins/email-notify) plugin, it requires a SMTP config for sending email report, it's pretty easy to use the config by type the name your typied.
+- Access `SMTP` Config from script
 
-```yml
-notifications:
-  - plugin: 'email-notify'
-    envs:
-      FLOWCI_SMTP_CONFIG: "sendgrid-demo" # SMTP Config name
-      FLOWCI_EMAIL_FROM: "flow.ci.test@gmail.com"
-```
+  It can be accessed from script if the `configs` has beed defined in `step` YAML
+
+  ```yaml
+  steps:
+  - name: smtp config demo
+    configs:
+    - default_smtp
+    bash: |
+      echo ${default_smtp_SERVER}
+      echo ${default_smtp_PORT}
+      echo ${default_smtp_SECURE_TYPE}
+      echo ${default_smtp_AUTH_USERNAME}
+      echo ${default_smtp_AUTH_PASSWORD}
+  ```
+
+- Apply `SMTP` Config in Trigger
+
+  For example, send job notification email with Gmail:
+
+  - `Server`: stmp.gmail.com
+  - `Port`: 587
+  - `Username`: Gmail username
+  - `Password`: Gmail password
+  - Select `TLS`
+
+  Also need to modify Gmail security setting:
+
+  - Login to Gmail
+  - Find `Security > Less secure app access`
+  - Click `Turn on access`
+
+  ![gmail_1](../../_images/config/gmail_setting_1.png)
+  ![gmail_2](../../_images/config/gmail_setting_2.png)
+
+  About how to setup email trigger, please refer [Email Trigger](en/trigger/on_job_finish.md#send-email)

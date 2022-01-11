@@ -1,34 +1,24 @@
-# 配置 Git
+# 工作流中配置 Git
 
-## 1.克隆 Git 仓库
+## 配置工作流
 
 flow.ci 通过 [git clone](https://github.com/flowci-plugins/gitclone) 插件来实现 clone 代码.
 
 ```yaml
+envs:
+  FLOWCI_GIT_URL: "https://github.com/FlowCI/spring-petclinic-sample.git" ## 替换对应的仓库地址, 支持 https 或 ssh
+
 steps:
 - name: clone
   docker:
-    image: flowci/debian-git ## 也可使用带有 git 命令的其他 image
+    image: flowci/debian-git ## 也可使用带有 git 命令的其他 image。如果 Agent 运行环境带有 Git 命令，也可以不使用 docker 定义
   plugin: 'gitclone'
 ```
 
-具体仓库地址，可以通过 YAML 或者 UI 界面的方式定义。如果 URL 为 SSH 协议，请参考下一节 [访问权限](##2.访问权限)
 
-- YAML 配置
+## 配置仓库访问权限
 
-  ```yaml
-  envs:
-    FLOWCI_GIT_URL: "https://github.com/FlowCI/spring-petclinic-sample.git"
-    # FLOWCI_GIT_CREDENTIAL: your_secret_name, created from secret from Admin Settings -> Secrets -> +
-  ```
-
-- UI 界面配置
-
-  ![git vars](../../src/git/git_settings.png)
-
-## 2.访问权限
-
-如果 Git 链接为 SSH 协议，例如 `git@github.com:FlowCI/docs.git`, 则需要配置 SSH-RSA 秘钥已获得代码的访问权限.
+如果 Git 链接为 __SSH__ 协议，例如 `git@github.com:FlowCI/docs.git`, 则需要配置 __SSH-RSA__ 秘钥已获得代码的访问权限.
 
 1. 创建 SSH-RSA 秘钥
 
@@ -38,11 +28,13 @@ steps:
    - 点击生创建新的秘钥，或者 copy 已有的公钥私钥
    - 保存
 
-    ![how to create ssh-rsa secret](../../src/secret/create_ssh_key.gif)
+   > 如果使用已有的 SSH KEY，请复制 公钥 和 私钥
+
+    ![how to create ssh-rsa secret](../../_images/secret/create_ssh_key.gif)
 
 2. 配置秘钥到工作流
 
-   `FLOWCI_GIT_CREDENTIAL` 用于 [Git clone 插件](https://github.com/flowci-plugins/gitclone) 指定用哪个秘钥访问，例如可在 YAML 中设置该变量为秘钥名称。
+   `FLOWCI_GIT_CREDENTIAL` 用于 [Git clone 插件](https://github.com/flowci-plugins/gitclone) 使用哪个秘钥访问，可在 YAML 中设置该变量为秘钥名称。
 
    ```yaml
     envs:
@@ -55,13 +47,13 @@ steps:
       plugin: 'gitclone'
    ```
 
-## 3.Git 仓库中添加访问权限，及触发事件
+## Git 仓库中添加访问权限，及触发事件
 
 不同 Git 仓库的访问权限，和触发事件的配置有略微差异，目前 flow.ci 支持的仓库有
 
-- [GitHub](./github.md)
-- [GitLab](./gitlab.md)
-- [Gogs](./gogs.md)
-- [Gitee](./gitee.md)
+- [GitHub](/cn/git/github.md)
+- [GitLab](/cn/git/gitlab.md)
+- [Gogs](/cn/git/gogs.md)
+- [Gitee](/cn/git/gitee.md)
 
 请点击相关 Git 仓库查看详细配置方法

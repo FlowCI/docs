@@ -1,23 +1,22 @@
-# SSH-RSA 秘钥
+# `SSH-RSA` 类型的秘钥
 
-## 从管理员设置中创建 SSH-RSA 秘钥
+## 创建密钥
 
 1. 点击 `Settings` -> `Secret` -> `+`
 2. 输入一个名称
 3. 选择 `SSH Key` 类型
 4. 编辑 SSH 公私钥
-
    - 可以点击 `CREATE NEW SSH KEY` 按钮来创建新的 SSH-RSA 公私钥
-   - 或者 copy-paste 已有的公私钥
+   - 或者拷贝已有的公私钥
 5. 保存 `Save`
 
-![create ssh rsa](../../src/secret/create_ssh_key.gif)
+![create ssh rsa](../../_images/secret/create_ssh_key.gif)
 
 ## 如何使用
 
-- 在插件中应用，例如 `gitclone` 插件，需要配置 Git 的访问权限，只需要在 YAML 中输入所创建的秘钥名称即可
+- `gitclone` 插件中使用: 只需要在 `FLOWCI_GIT_CREDENTIAL` 变量中输入所创建的秘钥名称即可
 
-  ```yml
+  ```yaml
   envs:
     FLOWCI_GIT_URL: "https://github.com/FlowCI/spring-petclinic-sample.git"
     FLOWCI_GIT_BRANCH: "master"
@@ -30,4 +29,18 @@
     plugin: 'gitclone'
   ```
 
-- [SSH 主机中配置访问权限](../agents/ssh_host.md)
+- 配置 SSH 类型的可伸缩 Agent 中使用，[请参考](cn/agents/ssh_host.md#可伸缩-agent-配置-ssh-主机)
+
+- 从 `Step` 中获取 `SSH-RSA` 密钥
+
+  例如: 创建了一个名为 `my_ssh_key` 的 `SSH-RSA` 类型的密钥，可以在 YAML 配置中，通过 `secrets` 引入
+
+  ```yaml
+  steps:
+    - name: get sshrsa demo
+      secrets:
+      - my_ssh_key
+      bash: |
+        echo ${my_ssh_key_PUBLIC_KEY}
+        echo ${my_ssh_key_PRIVATE_KEY}
+  ```

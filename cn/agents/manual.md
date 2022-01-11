@@ -4,7 +4,7 @@
 
 > 如果从 [docker-install](https://github.com/FlowCI/docker-install.git) 安装 flow.ci, 默认会配置一个自动 Agent 启动器，所以可以不用配置 Agent，直接运行任务即可
 
-## 从管理员页面创建 Agent
+## 1. 从管理员页面创建 Agent
 
 * 点击 `Settings` -> `Agents` -> `+`
 * 选择 `Manual agent`
@@ -23,12 +23,12 @@
   
   新创建的 Agent 会在列表中显示，可以从列表中拷贝 token
 
-![how to create agent](../../src/agents/create_agent.gif)
+![how to create agent](../../_images/agents/create_agent.gif)
 
-## 启动 Agent
+## 2. 启动 Agent
 
 
-### 从 Docker 启动
+#### 2.1 从 Docker 启动
 
 最简单的方式为 Git 克隆 [docker-install](https://github.com/flowci/docker-install) 仓库，之后运行 `./agent.sh -t <token> -u <server url> start`，填入 token 和 server url 即可。
 
@@ -36,14 +36,14 @@
 
 ```bash
 docker run -it \
--e FLOWCI_SERVER_URL=<ci_server_url> \
--e FLOWCI_AGENT_TOKEN=<agent_token> \
+-e FLOWCI_SERVER_URL={ci_server_url} \
+-e FLOWCI_AGENT_TOKEN={agent_token} \
 -e FLOWCI_AGENT_VOLUMES="name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh" \
 -v /var/run/docker.sock:/var/run/docker.sock \
 flowci/agent
 ```
 
-### 从 Binary 启动
+#### 2.2 从 Binary 启动
 
 您可以从 [这里](https://github.com/FlowCI/flow-agent-x/releases) 找到最新的 Agent 版本.
 
@@ -53,31 +53,31 @@ flowci/agent
 - Docker
 
 
-__Linux__
+##### Linux
 
-替换 `<ci_server_url>` & `<agent_token>` 后运行以下 Bash 脚本
+替换 `{version}`, `{ci_server_url}`, `{agent_token}` 后运行以下 Bash 脚本
 
 ```bash
-wget https://github.com/FlowCI/flow-agent-x/releases/download/v1.21.33/flow-agent-x-linux
+wget https://github.com/FlowCI/flow-agent-x/releases/download/{version}/flow-agent-x-linux
 chmod +x flow-agent-x-linux
-./flow-agent-x-linux -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh
+./flow-agent-x-linux -u {ci_server_url} -t {agent_token} -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh
 ```
 
-__MacOS__
+##### MacOS (intel)
 
-替换 `<ci_server_url>` & `<agent_token>` 后运行以下 Bash 脚本
+替换 `{version}`, `{ci_server_url}`, `{agent_token}` 后运行以下 Bash 脚本
 
 ```bash
-wget https://github.com/FlowCI/flow-agent-x/releases/download/v1.21.33/flow-agent-x-mac
+wget https://github.com/FlowCI/flow-agent-x/releases/download/{version}/flow-agent-x-mac
 chmod +x flow-agent-x-mac
-./flow-agent-x-mac -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh
+./flow-agent-x-mac -u {ci_server_url} -t {agent_token} -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh
 ```
 
-__Windows (x64)__
+##### Windows (x64)
 
-替换 `<ci_server_url>` & `<agent_token>` 后运行以下 PowerShell 脚本
+替换 `{version}`, `{ci_server_url}`, `{agent_token}` 后运行以下 PowerShell 脚本
 
 ```powershell
-Invoke-WebRequest https://github.com/FlowCI/flow-agent-x/releases/download/v1.21.33/flow-agent-x-win -OutFile flow-agent-x-win.exe
-.\flow-agent-x-linux -u <ci_server_url> -t <agent_token> -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh
+Invoke-WebRequest https://github.com/FlowCI/flow-agent-x/releases/download/{version}/flow-agent-x-win -OutFile flow-agent-x-win.exe
+.\flow-agent-x-linux -u {ci_server_url} -t {agent_token} -m name=pyenv,dest=/ci/python,script=init.sh,image=flowci/pyenv,init=init-pyenv-volume.sh
 ```

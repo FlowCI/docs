@@ -1,8 +1,8 @@
-# 动态 Agent - k8s 集群
+# 可伸缩 Agent: 配置 k8s
 
 配置 k8s 集群后，flow.ci 会自动创建，并管理 Agent Pod
 
-![ssh host structure](../../src/agents/k8s_host_structure.png)
+![ssh host structure](../../_images/agents/k8s_host_structure.png)
 
 ## 从管理员界面配置 k8s
 
@@ -22,7 +22,7 @@
 * 填入集群信息
   * Namespace: k8s namespace 用于创建 Agent Pod
 
-  * Secret: kube config 秘钥，用于访问和创建 Agent Pod，需要先创建秘钥，之后在这里选择
+  * Secret: kube config 秘钥，用于访问和创建 Agent Pod. (如果没有此类型的密钥，请先创建，参考[如何创建 Kubeconfig 密钥](cn/secret/kubeconfig.md#k8s-kubeconfig-类型的密钥))
 
   * Max Pool Size: 最大可运行 Agent 的数量
 
@@ -30,4 +30,4 @@
 
   创建的 k8s 主机将会显示在列表中
 
-![how to create host](../../src/agents/k8s_host_create.gif)
+![how to create host](../../_images/agents/k8s_host_create.gif)

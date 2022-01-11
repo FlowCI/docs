@@ -1,6 +1,6 @@
 # Getting Started
 
-## 1. Install
+## Install
 
 > [Docker](https://docs.docker.com/install/) & [Docker-Compose](https://docs.docker.com/compose/install/) are required
 
@@ -14,9 +14,19 @@ cd flow-docker
 
 Open the link `http://localhost:2015` from web browser after installtion is finished.
 
-![cmd](../../src/start_server.gif)
+> - __Port__: default port for server is `8080`, for web is `2015`. Modify the default ports from `server.sh` 及 `server.yml`
+> - __IP__: It will be auto detected from `./server.sh start`, or set your IP from `./server.sh -h your_ip start` if the address cannot be found.
 
-## 2. Create a flow
+![cmd](../../_images/start_server.gif)
+
+
+## Set URL
+
+Check from `Settings -> System` `(http://{your_web_host}/#/settings/system)` to make sure the URL of server and web are correct.
+
+![config_url](../../_images/config_server_url.png)
+
+## Create a flow
 
 - Input flow name
   - Click 'create flow' button
@@ -24,11 +34,20 @@ Open the link `http://localhost:2015` from web browser after installtion is fini
   
 - Select YAML template
 
-## 3. First build
+![create_flow](../../_images/create_flow.gif)
+
+
+## RUN
 
 Click `Run` button from flow page
 
-> - Job cannot started if the blank template has been selected.
-> - How to config Git repo, please refer to [Link to Git](../git/index.md)
+> - Job CANNOT start when the blank template has been selected.
 
-![start](../../src/create_flow_and_build.gif)
+![start_job](../../_images/start_job.gif)
+
+
+- Git: How to config Git repo, please refer [Git Connection](en/git/index.md)
+
+- Agent: There are default agents on server host, to configurate more agetns, please refer [Agent](en/agents/index.md)
+
+- Trigger: The `OnJobFinish` event will be triggered when a job is done, the __email__ or other notifications could be set up by the trigger. please refer [Trigger](cn/trigger/on_job_finish.md)
