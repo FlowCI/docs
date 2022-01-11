@@ -71,7 +71,7 @@ cd flow-docker
 
 ## 基本架构
 
-![architecture](/_images/architecture.png)
+![architecture](../_images/architecture.png)
 
 ## 预览
 
