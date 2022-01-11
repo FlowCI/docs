@@ -16,7 +16,7 @@ Auth Secret repersent username and password pair.
 
 - Access `Auth` secret from script
 
-  It can be accessed from script if the `secrets` has beed defined from step YAML
+  It can be accessed from script if the `secrets` has beed defined in `step` YAML
 
   ```yaml
   steps:

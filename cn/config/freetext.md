@@ -1,4 +1,4 @@
-# 任意配置 (text)
+# 任意配置 (Free Text)
 
 ## 创建配置
 
@@ -13,7 +13,7 @@
 
 ## 如何使用
 
-- 从 Step 中获取 `SMTP` 配置
+- 从 Step 中获取 `Free Text` 配置
 
   例如: 需要自定义 Maven .m2 中的 `settings.xml`, 可以输入所需要的 `xml` 配置
   ```xml
