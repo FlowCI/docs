@@ -1,6 +1,6 @@
 <h3 align="center">
   <a href="https://flowci.github.io">
-    <img src="https://github.com/FlowCI/docs/raw/master/src/logo.png" alt="Logo" width="100">
+    <img src="https://github.com/FlowCI/docs/raw/master/_images/logo.png" alt="Logo" width="100">
   </a>
 </h3>
 
@@ -71,8 +71,8 @@ Need Help? submit issue from [here](https://github.com/FlowCI/docs/issues) or se
 
 ## Architecture
 
-![architecture](https://github.com/FlowCI/docs/raw/master/src/architecture.png)
+![architecture](../_images/architecture.png)
 
 ## Preview
 
-![demo](https://github.com/FlowCI/docs/raw/master/src/demo.gif)
+![demo](../_images/demo.gif)
