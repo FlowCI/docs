@@ -47,8 +47,8 @@
 
 * Trigger
   * [`OnJobFinish` Event](en/trigger/on_job_finish.md)
-    - [Email Trigger](en/trigger/on_job_finish.md#配置-email-触发器)
-    - [Webhook Trigger](en/trigger/on_job_finish.md#配置-webhook-触发器)
+    - [Email Trigger](en/trigger/on_job_finish.md#send-email)
+    - [Webhook Trigger](en/trigger/on_job_finish.md#send-http-request)
 
 * Plugins
 

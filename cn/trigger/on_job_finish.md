@@ -2,7 +2,7 @@
 
 此类事件可以定义 __当任务结束时__ 的行为
 
-## 配置 `Email` 触发器
+## 发送邮件
 
 可以 __发送邮件__ 通知给相应的用户
 
@@ -26,7 +26,7 @@
 ![email_sample](../../images/trigger/email_sample.png)
 
 
-## 配置 `Webhook` 触发器
+## 发送 HTTP 请求
 
 可以根据配置发送 __HTTP 请求__ 
 

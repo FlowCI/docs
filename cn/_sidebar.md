@@ -47,8 +47,8 @@
 
 * 触发器 (Trigger)
   * [任务结束事件](cn/trigger/on_job_finish.md)
-    - [Email 触发器](cn/trigger/on_job_finish.md#配置-email-触发器)
-    - [Webhook 触发器](cn/trigger/on_job_finish.md#配置-webhook-触发器)
+    - [发送邮件](cn/trigger/on_job_finish.md#发送邮件)
+    - [发送 HTTP 请求](cn/trigger/on_job_finish.md#发送-http-请求)
 
 * 插件 (Plugins)
 

@@ -53,4 +53,4 @@
   ![gmail_1](../../images/config/gmail_setting_1.png)
   ![gmail_2](../../images/config/gmail_setting_2.png)
 
-  About how to setup email trigger, please refer [Email Trigger](en/trigger/email.md)
+  About how to setup email trigger, please refer [Email Trigger](en/trigger/on_job_finish.md#send-email)
