@@ -9,11 +9,13 @@
 <p align="center">
     <a href="https://github.com/FlowCI/docs/blob/master/LICENSE"><img src="https://img.shields.io/github/license/flowci/flow-core-x"></a>
     <a href="https://github.com/FlowCI/flow-core-x/releases/"><img src="https://img.shields.io/github/v/release/flowci/flow-core-x"></a>
+    <a href="https://github.com/FlowCI"><img alt="GitHub Org's stars" src="https://img.shields.io/github/stars/flowci"></a>
+    <a href="https://hub.docker.com/u/flowci"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/flowci/core"></a>
 </p>
 
 <div align="center">
 
-**[English](./en/README.md) | 简体中文**
+**[English](en/README.md) | 简体中文**
 
 </div>
 
