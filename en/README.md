@@ -59,9 +59,7 @@ cd flow-docker
 ./server.sh start
 ```
 
-## Documentation
-
-+ [English](https://github.com/FlowCI/docs/tree/master/en/index.md) 
+## Help
 
 Need Help? submit issue from [here](https://github.com/FlowCI/docs/issues) or send email to `flowci@foxmail.com`
 

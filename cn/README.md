@@ -61,7 +61,7 @@ cd flow-docker
 
 ## 帮助
 
-如果需要帮助? 从[这里]提交问题 (https://github.com/FlowCI/docs/issues) 或发送邮件至 `flowci@foxmail.com`
+如果需要帮助? 从[这里](https://github.com/FlowCI/docs/issues) 提交问题  或发送邮件至 `flowci@foxmail.com`
 
 
 ## 构建模板

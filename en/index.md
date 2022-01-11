@@ -1,36 +1,56 @@
-# Table of contents
 
-* Getting Started
-  * [First Build](./start/index.md)
+* Quick Start
+  * [Install](en/start/index.md#Install)
+  * [Set URL](en/start/index.md#set-server-url)
+  * [Create a flow](en/start/index.md#create-a-flow)
+  * [Run](en/start/index.md#run)
 
-* [Link to Git](./git/index.md)
-  * [Github](./git/github.md)
-  * [Gitlab](./git/gitlab.md)
-  * [Gogs](./git/gogs.md)
-  * [Gitee](./git/gitee.md)
+* Flow
+  * [Structure](en/flow/structure.md#flow-structure)
 
-* YAML
-  * [Reference](./yml/reference_v1.md)
-  * [Plugins](./yml/plugins.md)
-  * [Templates](https://github.com/FlowCI/templates)
+* Job
+  * [Start](en/job/start.md)
+  * [Workspace](en/job/workspace.md)
+  * [Condition](en/job/condition.md)
+  * [Environment with Docker](en/job/docker.md)
+  * [Parallel](en/job/parallel.md)
+  * [Cache](en/job/cache.md)
+  * [Crontab](en/job/schedule.md)
+  * [Web Terminal](en/job/web_terminal.md)
 
-* Agents
-  * Manual Agents
-    * [Linux](./agents/manual.md)
-    * [MacOS](./agents/manual.md)
-    * [Windows](./agents/manual.md)
-    * [Docker](./agents/manual.md)
-  * Dynamic Agents
-    * [Host via SSH](./agents/ssh_host.md)
-    * [In K8s Cluster](./agents/k8s_host.md)
-  * [Environment Variables](./agents/vars.md)
+* Git Connection
+  * [Git setup](en/git/index.md)
+  * [Link to Github](en/git/github.md)
+  * [Link to Gitlab](en/git/gitlab.md)
+  * [Link to Gogs](en/git/gogs.md)
+  * [Link to Gitee](en/git/gitee.md)
+
+* Agent
+  * [What is Agent](en/agents/index.md)
+  * [Add Agent](en/agents/manual.md)
+  * Auto Scaling
+    * [Kubernates](en/agents/k8s_host.md)
+    * [SSH Host](en/agents/ssh_host.md)
 
 * Secret
-  * [SSH-RSA](./secret/ssh-rsa.md)
-  * [Auth (username and password)](./secret/auth.md)
-  * [Token](./secret/token.md)
-  * [Android Sign](./secret/android_sign.md)
+  * [SSH-RSA](en/secret/ssh-rsa.md)
+  * [Auth](en/secret/auth.md)
+  * [Token](en/secret/token.md)
+  * [Android Sign](en/secret/android_sign.md)
+  * [K8s kubeconfig](en/secret/kubeconfig.md)
+
 
 * Config
-  * [SMTP](./config/smtp.md)
-  * [Text](./config/text.md)
+  * [SMTP](en/config/smtp.md)
+  * [Free Text](en/config/freetext.md)
+
+* Trigger
+  * [`OnJobFinish` Event](en/trigger/on_job_finish.md)
+    - [Email Trigger](en/trigger/on_job_finish.md#send-email)
+    - [Webhook Trigger](en/trigger/on_job_finish.md#send-http-request)
+
+* Plugins
+
+* Reference
+  * [YAML](en/yml/reference_v1.md)
+  * [Variables](en/agents/vars.md)
