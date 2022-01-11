@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+
   <nav>
     <a href="#/en/">
       <img class="emoji" src="https://github.githubassets.com/images/icons/emoji/uk.png" alt="uk">
@@ -26,13 +30,14 @@
       repo: 'https://github.com/flowci/flow-core-x',
       loadSidebar: true,
       themeColor: '#5C53C4FF',
+      homepage: '/en/README.md',
       alias: {
         '/_sidebar.md': '/en/_sidebar.md'
-      }
+      },
+      plugins: [
+        EditOnGithubPlugin.create('https://github.com/flowci/docs/tree/develop/', null, 'Edit on GitHub')
+      ]
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
 </body>
 </html>
