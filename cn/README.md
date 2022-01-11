@@ -1,6 +1,6 @@
 <h3 align="center">
   <a href="https://flowci.github.io">
-    <img src="https://github.com/FlowCI/docs/raw/master/src/logo.png" alt="Logo" width="100">
+    <img src="https://github.com/FlowCI/docs/raw/master/_images/logo.png" alt="Logo" width="100">
   </a>
 </h3>
 
@@ -71,7 +71,7 @@ cd flow-docker
 
 ## 基本架构
 
-![architecture](https://github.com/FlowCI/docs/raw/master/src/architecture.png)
+![architecture](../_images/architecture.png)
 
 ## 预览
 
