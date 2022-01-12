@@ -83,4 +83,6 @@ steps:
     if [ $? == 0 ];then
       docker run --network ${FLOWCI_AGENT_DOCKER_NETWORK} --rm mysql:5.6 mysql -h${CONTAINER_IP_1} -uroot -p12345 mysql -e "select * from user"
     fi
-```
+  ```
+
+  ![multiple docker](../../_images/job/multiple_docker.png)
