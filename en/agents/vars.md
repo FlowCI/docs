@@ -16,6 +16,14 @@
 
 - `FLOWCI_JOB_TRIGGER`
 
+- `FLOWCI_JOB_URL`
+
+- `FLOWCI_JOB_START_AT`
+
+- `FLOWCI_JOB_FINISH_AT`
+
+- `FLOWCI_JOB_DURATION`
+
 ## Agent
 
 - `FLOWCI_AGENT_TOKEN`
@@ -47,21 +55,17 @@
 - `FLOWCI_GIT_EVENT`: `PUSH` | `TAG` | `PR_OPENED` | `PR_MERGED`
 
 
-#### Commit
+#### Push / Tag
 
 - `FLOWCI_GIT_BRANCH`
 
 - `FLOWCI_GIT_AUTHOR`
 
-- `FLOWCI_GIT_COMMIT_ID`
+- `FLOWCI_GIT_COMMIT_MESSAGE`: Commit message of latest commit
 
-- `FLOWCI_GIT_COMMIT_MESSAGE`
+- `FLOWCI_GIT_COMMIT_TOTAL`: 
 
-- `FLOWCI_GIT_COMMIT_TIME`
-
-- `FLOWCI_GIT_COMMIT_URL`
-
-- `FLOWCI_GIT_COMMIT_NUM`
+- `FLOWCI_GIT_COMMIT_LIST`: commit list, base64 format. example: `base64([{id:xx, message: xxx, time:xxx, url: xxx, author: {name: xx, email: xx}}, {xxx}, ...])`
 
 #### PR
 
