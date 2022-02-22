@@ -1,4 +1,4 @@
-# K8s `kubeconfig` Secret
+# K8s "kubeconfig" Secret
 
 ## Create
 

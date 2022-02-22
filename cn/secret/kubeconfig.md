@@ -1,4 +1,4 @@
-# K8s `kubeconfig` 类型的密钥
+# K8s "kubeconfig" 类型的密钥
 
 ## 创建密钥
 
