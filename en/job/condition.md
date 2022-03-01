@@ -1,6 +1,6 @@
 # Run Condition
 
-Every jobs or steps could set start condition with `Groovy` script.
+Every jobs or steps could apply a starting condition with `Groovy` script.
 
 The [variables](en/agents/vars.md) could be used in the `Groovy` script, the return value of `Groovy` should be `boolean`, for example:
 
