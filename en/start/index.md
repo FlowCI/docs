@@ -20,7 +20,7 @@ Open the link `http://localhost:2015` from web browser after installtion is fini
 ![cmd](../../_images/start_server.gif)
 
 
-## Set URL
+## Set Host URL
 
 Check from `Settings -> System` `(http://{your_web_host}/#/settings/system)` to make sure the URL of server and web are correct.
 

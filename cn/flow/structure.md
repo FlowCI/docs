@@ -12,6 +12,8 @@
 
 ### 举个例子
 
+从 Git 仓库克隆代码，在 Java 8 和 11 的环境下同时运行测试，之后部署到不同的环境中
+
 ![sample](../../_images/flow/sample.png)
 
 

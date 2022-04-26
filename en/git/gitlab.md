@@ -28,7 +28,7 @@ The webhook used for receive git notification such as push, tag, pull request an
   
   Check events `Push events`, `Tag push events` and `Merge request events`
   
-  ![events](../../_images/gitlab_setup_webhook.png)
+  ![events](../../_images/git/gitlab_setup_webhook.png)
 
 ## Verify GitLab Settings
 

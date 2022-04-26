@@ -14,7 +14,7 @@ The webhook used for receive git notification such as push, tag, pull request an
     > Hint: Your host must be exposed to internet (public ip or domain), otherwide the GitHub events can not be received.
     > If pulbic ip or domain not availble in your environments, please use the tools like [ngrok](https://ngrok.com/).  
 
-   ![webhook settings](../../_images/git/github_select_webhook_url.png)
+   ![webhook settings](../../_images/git/select_webhook_url.gif)
 
 2. Setup webhook
 

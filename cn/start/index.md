@@ -20,7 +20,7 @@ cd flow-docker
 ![start_server](../../_images/start_server.gif)
 
 
-## 配置 URL
+## 配置 Host URL
 
 确定服务端及前端的 URL 正确并可访问，已确保 flow.ci 正常工作。
 

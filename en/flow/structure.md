@@ -12,7 +12,7 @@ The basic elements of flow include:
 ### Let's make an example!
 
 
-Build the cloned code, run test for both Java 8 and 11, and then deploy to two environments.
+Clone the code from git repo, run test for both Java 8 and 11, and then deploy to two environments.
 
 
 ![sample](../../_images/flow/sample.png)
