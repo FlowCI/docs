@@ -1,6 +1,6 @@
 # GitLab Configuration
 
-## Setup Access Permission
+## Setup Access Permission for Private Repo
 
 Copy `public key` from admin page, open GitLab repo web and add it from `Settings > Repository -> Deploy Keys` for single repo access. GitLab not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access
 

@@ -1,6 +1,6 @@
 # GitHub Configuration
 
-## Setup Access Permission
+## Setup Access Permission for Private Repo
 
 Copy `public key` from admin page, open GitHub repo web and add it from `Settings > Deploy key` for single repo access. GitHub not allowed to add same public key for muliple repositories, we recommend to have a special 'CI user' to manage single public key access: [adding new ssh key to your GitHub account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
 

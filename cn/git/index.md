@@ -1,6 +1,6 @@
 # 工作流中配置 Git
 
-## 配置工作流
+## 克隆 Git 仓库
 
 flow.ci 通过 [git clone](https://github.com/flowci-plugins/gitclone) 插件来实现 clone 代码.
 

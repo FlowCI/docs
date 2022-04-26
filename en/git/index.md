@@ -1,6 +1,17 @@
 # Git setup
 
-## YAML setup
+What you need to config?
+
+- Git repo URL to clone
+- Access permission for private Git repo
+- Webhook that can trigger CI job
+- Git provider host
+- Access permission to write job status back
+
+![structure](../../_images/git/structure.png)
+
+
+## Clone Git repo
 
 flow.ci clones git repo via [git clone](https://github.com/flowci-plugins/gitclone) plugin
 
@@ -16,7 +27,7 @@ steps:
 ```
 
 
-## Git repo access permission
+## Access permission for private Git repo
 
 The __SSH-RSA__ `secret` is required if git url is __SSH__ based, for example `git@github.com:FlowCI/docs.git`
 
@@ -49,7 +60,7 @@ The __SSH-RSA__ `secret` is required if git url is __SSH__ based, for example `g
 
 ## Setup Git provider
 
-Different Git provider has different way to setup webhook, ssh permission and events.
+Different Git provider has different way to setup access permission and webhook
 
 flow.ci currenlty supports:
 
@@ -57,5 +68,6 @@ flow.ci currenlty supports:
 - [GitLab](en/git/gitlab.md)
 - [Gogs](en/git/gogs.md)
 - [Gitee](en/git/gitee.md)
+- [Gerrit](en/git/gerrit.md)
 
 please click around the links for more detail
