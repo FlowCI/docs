@@ -37,3 +37,30 @@ The webhook used for receive git notification such as push, tag, pull request an
   Test the access right from flow settings by click 'test' button, the green will be shown if everything correct.
 
   ![gitlab_test](../../_images/git/gitlab_test_config.gif)
+
+
+## Setup Access permission to Write Job Status to GitHub
+
+1. Create a Token
+
+    In order to have permission for writing job status back to GitLab, we need to create a token with `api` permission from https://gitlab.com/-/profile/personal_access_tokens (replace `https://gitlab.com` to your own GitLab host when access private gitlab)
+
+    ![create token](../../_images/git/gitlab_create_access_token.png)
+
+2. Add GitLab Token to flow.ci Secret
+
+    Open the secret settings page `Settings -> Secret -> +` , paste the token copied from GitLab and save
+
+    ![add token](../../_images/git/add_token.png)
+
+3. Link to GitLab
+
+    Open the git connection page `Settings -> Git -> +`, select `GitLab` on git source, input your GitLab host address, and then select a secret created on the last step
+
+    ![link](../../_images/git/gitlab_add_link.png)
+
+4. GitLab commit status
+
+    After the configuration, the correspond commit status will be updated after job finished.
+
+    ![demo](../../_images/git/gitlab_stage_updated.png)
