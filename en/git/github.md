@@ -48,3 +48,30 @@ The webhook used for receive git notification such as push, tag, pull request an
   Test the access right from flow settings by click 'test' button, the green will be shown if everything correct.
 
   ![github_test](../../_images/git/github_test_config.gif)
+
+
+## Setup Access permission to Write Job Status to GitHub
+
+1. Create a Token
+
+    In order to have permission for writing job status back to GitHub, we need to create a token with `repo:status` scope from https://github.com/settings/tokens
+
+    ![create token](../../_images/git/github_create_access_token.png)
+
+2. Add GitHub Token to flow.ci Secret
+
+    Open the secret settings page `Settings -> Secret -> +` , paste the token copied from Github and save
+
+    ![add token](../../_images/git/github_add_token.png)
+
+3. Link to GitHub
+
+    Open the git connection page `Settings -> Git -> +`, select `GitHub` on git source, and select a secret created on last step
+
+    ![link](../../_images/git/github_add_link.png)
+
+4. GitHub commit status
+
+    After the configuration, the correspond commit status will be updated after job finished.
+
+    ![demo](../../_images/git/github_check_updated.png)
