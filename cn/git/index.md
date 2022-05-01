@@ -55,5 +55,6 @@ steps:
 - [GitLab](/cn/git/gitlab.md)
 - [Gogs](/cn/git/gogs.md)
 - [Gitee](/cn/git/gitee.md)
+- [Gerrit](/cn/git/gerrit.md)
 
 请点击相关 Git 仓库查看详细配置方法

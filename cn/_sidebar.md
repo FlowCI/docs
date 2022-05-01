@@ -18,12 +18,13 @@
   * [定时任务](cn/job/schedule.md)
   * [网页终端](cn/job/web_terminal.md)
 
-* Git 仓库
-  * [工作流中配置 Git](cn/git/index.md)
-  * [连接 Github](cn/git/github.md)
-  * [连接 Gitlab](cn/git/gitlab.md)
-  * [连接 Gogs](cn/git/gogs.md)
-  * [连接 Gitee](cn/git/gitee.md)
+* Git 集成
+  * [配置 Git](cn/git/index.md)
+  * [Github](cn/git/github.md)
+  * [Gitlab](cn/git/gitlab.md)
+  * [Gogs](cn/git/gogs.md)
+  * [Gitee](cn/git/gitee.md)
+  * [Gerrit](cn/git/gerrit.md)
 
 * Agent
   * [什么是 Agent](cn/agents/index.md)

@@ -43,7 +43,7 @@ The webhook used for receive git notification such as push, tag, pull request an
 
   The green check box will be shown after 'webhook' field if the flow receive the 'ping' request after GitHub webhook created.
 
-- Deploy Key:
+- Permission for repo:
   
   Test the access right from flow settings by click 'test' button, the green will be shown if everything correct.
 

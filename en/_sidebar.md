@@ -18,12 +18,13 @@
   * [Crontab](en/job/schedule.md)
   * [Web Terminal](en/job/web_terminal.md)
 
-* Git Connection
+* Git Integration
   * [Git setup](en/git/index.md)
-  * [Link to Github](en/git/github.md)
-  * [Link to Gitlab](en/git/gitlab.md)
-  * [Link to Gogs](en/git/gogs.md)
-  * [Link to Gitee](en/git/gitee.md)
+  * [Github](en/git/github.md)
+  * [Gitlab](en/git/gitlab.md)
+  * [Gogs](en/git/gogs.md)
+  * [Gitee](en/git/gitee.md)
+  * [Gerrit](en/git/gerrit.md)
 
 * Agent
   * [What is Agent](en/agents/index.md)
