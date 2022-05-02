@@ -1,4 +1,4 @@
-# Gitee Configuration
+# Gitee Integration
 
 ## Setup Access Permission for Private Repo
 

@@ -1,4 +1,4 @@
-# Gogs Configuration
+# Gogs Integration
 
 ## Setup Access Permission for Private Repo
 

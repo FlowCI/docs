@@ -1,4 +1,4 @@
-# GitLab Configuration
+# GitLab Integration
 
 ## Setup Access Permission for Private Repo
 

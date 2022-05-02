@@ -1,4 +1,4 @@
-# GitHub Configuration
+# GitHub Integration
 
 ## Setup Access Permission for Private Repo
 
@@ -64,13 +64,13 @@ The webhook used for receive git notification such as push, tag, pull request an
 
     ![add token](../../_images/git/add_token.png)
 
-3. Link to GitHub
+3. Setup GitHub
 
-    Open the git connection page `Settings -> Git -> +`, select `GitHub` on git source, and select a secret created on the last step
+    Open the git integration page `Settings -> Git -> +`, select `GitHub` on git source, and select a secret created on the last step
 
     ![link](../../_images/git/github_add_link.png)
 
-4. GitHub commit status
+4. GitHub Commit Status
 
     After the configuration, the correspond commit status will be updated after job finished.
 
