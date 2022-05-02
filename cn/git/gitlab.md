@@ -38,3 +38,32 @@
   可以点击 `Test` 按钮验证访问权限是否配置正确.
 
   ![gitlab_test](../../_images/git/gitlab_test_config.gif)
+
+
+##  配置 CI 任务状态写入到 GitLab 的权限
+
+1. 在 GitLab 中创建 Token
+
+    In order to have permission for writing job status back to GitLab, we need to create a token with `api` permission from https://gitlab.com/-/profile/personal_access_tokens (replace `https://gitlab.com` to your own GitLab host when access private gitlab)
+
+    我们须创建一个拥有 `api` 权限的 Token，以便让 flow.ci 获得任务状态的写入权限，可以在 GitLab `https://gitlab.com/-/profile/personal_access_tokens` 页面中创建 (如私有 GitLab 仓库，请替换 `https//gitlab.com`)。
+
+    ![create token](../../_images/git/gitlab_create_access_token.png)
+
+2. 添加 Token 到 flow.ci 密钥
+
+    在 flow.ci 中打开添加密钥页面  `Settings -> Secret -> +`，黏贴从 GitLab 中拷贝的 Token，并保存。
+
+    ![add token](../../_images/git/add_token.png)
+
+3. flow.ci 中配置 GitLab
+
+    在 flow.ci 中打开 Git 集成页面 `Settings -> Git -> +`, 选择 `GitLab`, 输入 GitLab 地址, 之后选择上一步所添加的密钥
+
+    ![link](../../_images/git/gitlab_add_link.png)
+
+4. 任务状态显示
+
+    如果一切配置正确，当 CI 任务完成后，GitLab 的提交中即可显示任务状态。
+
+    ![demo](../../_images/git/gitlab_stage_updated.png)
