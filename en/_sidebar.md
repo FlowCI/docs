@@ -11,7 +11,7 @@
 * Job
   * [Start](en/job/start.md)
   * [Workspace](en/job/workspace.md)
-  * [Condition](en/job/condition.md)
+  * [Conditions](en/job/condition.md)
   * [Environment with Docker](en/job/docker.md)
   * [Parallel](en/job/parallel.md)
   * [Cache](en/job/cache.md)

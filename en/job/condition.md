@@ -1,4 +1,4 @@
-# Run Condition
+# Conditions
 
 Every jobs or steps could apply a starting condition with `Groovy` script.
 
@@ -10,7 +10,7 @@ The [variables](en/agents/vars.md) could be used in the `Groovy` script, the ret
      true
 ```
 
-## Condition for Job
+## Jobs Condition
 
 Set `condition` in the YAML root
 
@@ -26,7 +26,7 @@ steps:
     echo "this is the step one"
 ```
 
-## Condition for Step
+## Steps Condition
 
 Set `condition` in the step YAML, the step will be __skipped__ when the condtion script return `false`
 
