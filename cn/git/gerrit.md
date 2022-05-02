@@ -56,5 +56,28 @@
   
   ![test](../../_images/git/gerrit_test_config.gif)
 
-## 配置 CI 任务状态写入权限
+## 配置 CI 任务状态写入到 Gerrit 的权限
 
+1. 在 Gerrit 中创建 Http Credential
+
+    我们必须创建一个 `HTTP Credentials (GENERATE NEW PASSWORD)` 以便让 flow.ci 获得任务状态的写入权限，可以在 Gerrit `{your_gerrit_host}/settings/#HTTPCredentials` 页面创建。
+
+    ![token](../../_images/git/gerrit_create_access_pw.png)
+
+2. 添加密码到 flow.ci 密钥
+    
+    在 flow.ci 中打开添加密钥页面  `Settings -> Secret -> +`，黏贴从 Gerrit 中拷贝的密码，并保存。
+
+    ![add token](../../_images/git/add_token.png)
+
+3. flow.ci 中配置 Gerrit
+
+    在 flow.ci 中打开 Git 集成页面 `Settings -> Git -> +`, 选择 `Gerrit`, 输入 Gerrit 地址, 之后选择上一步所添加的密钥
+
+    ![link](../../_images/git/gerrit_add_link.png)
+
+4. 任务状态显示
+
+    如果一切配置正确，当 CI 任务完成后，Gerrit PatchSet 中即可显示任务状态。
+
+    ![commit status](../../_images/git/gerrit_commit_status.png)

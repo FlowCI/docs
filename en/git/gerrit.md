@@ -62,7 +62,7 @@ Webhook is a way of how to trigger CI job from Gerrit.
 
 ## Setup Access permission to Write Job Status to Gerrit
 
-1. Create Access Password in Gerrit
+1. Create Http Credential in Gerrit
 
     In order to have permission for writing job status back to Gerrit, we need to create a `HTTP Credentials (GENERATE NEW PASSWORD) ` in Gerrit `{your_gerrit_host}/settings/#HTTPCredentials`
 
@@ -76,7 +76,7 @@ Webhook is a way of how to trigger CI job from Gerrit.
 
 3. Setup Gerrit in flow.ci
 
-    Open the git connection page `Settings -> Git -> +`, select `Gerrit` on git source, input your Gerrit host address, and then select a secret created on the last step
+    Open the git integration page `Settings -> Git -> +`, select `Gerrit` on git source, input your Gerrit host address, and then select a secret created on the last step
 
     ![link](../../_images/git/gerrit_add_link.png)
 
