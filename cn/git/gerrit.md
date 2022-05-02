@@ -60,7 +60,7 @@
 
 1. 在 Gerrit 中创建 Http Credential
 
-    我们必须创建一个 `HTTP Credentials (GENERATE NEW PASSWORD)` 以便让 flow.ci 获得任务状态的写入权限，可以在 Gerrit `{your_gerrit_host}/settings/#HTTPCredentials` 页面创建。
+    我们须创建一个 `HTTP Credentials (GENERATE NEW PASSWORD)` 以便让 flow.ci 获得任务状态的写入权限，可以在 Gerrit `{your_gerrit_host}/settings/#HTTPCredentials` 页面创建。
 
     ![token](../../_images/git/gerrit_create_access_pw.png)
 

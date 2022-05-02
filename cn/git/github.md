@@ -47,3 +47,30 @@
   可以点击 `Test` 按钮验证访问权限是否配置正确.
 
   ![github_test](../../_images/git/github_test_config.gif)
+
+
+##  配置 CI 任务状态写入到 GitHub 的权限
+
+1. 在 GitHub 中创建 Token
+
+    我们须创建一个拥有 `repo:status` 权限的 Token，以便让 flow.ci 获得任务状态的写入权限，可以在 GitHub `https://github.com/settings/tokens` 页面中创建。
+
+    ![create token](../../_images/git/github_create_access_token.png)
+
+2. 添加 Token 到 flow.ci 密钥
+
+    在 flow.ci 中打开添加密钥页面  `Settings -> Secret -> +`，黏贴从 GitHub 中拷贝的 Token，并保存。
+
+    ![add token](../../_images/git/add_token.png)
+
+3. flow.ci 中配置 GitHub
+
+    在 flow.ci 中打开 Git 集成页面 `Settings -> Git -> +`, 选择 `GitHub`, 之后选择上一步所添加的密钥
+
+    ![link](../../_images/git/github_add_link.png)
+
+4. 任务状态显示
+
+    如果一切配置正确，当 CI 任务完成后，GitHub 的提交中即可显示任务状态。
+
+    ![demo](../../_images/git/github_check_updated.png)
