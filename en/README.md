@@ -21,7 +21,8 @@
 
 ## What is flow.ci?
 
-flow.ci is an open-source CI/CD automation server that designed for reducing the complexity and increasing user experience. It supports high availability, multiple building environment, and scalability with dynamic agents.
+flow.ci is an open-source CI/CD automation server that designed for setting up a self-hosted CI/CD service with the easiest, fastest and most painless way. It supports high availability, multiple building environment, and scalability with dynamic agents.
+
 
 - __High Availability__
 
@@ -29,7 +30,7 @@ flow.ci is an open-source CI/CD automation server that designed for reducing the
 
 - __High Performance__
 
-    - __scaling__: automatically scale agent either on K8s cluster or Linux host
+    - __scaling__: auto scaling agents either on K8s cluster or Linux host
     - __parallel__: job steps can be executed in parallel on multiple agents
     - __cache__: cache anything to speed up the build
 
