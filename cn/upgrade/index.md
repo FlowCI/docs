@@ -1,8 +1,8 @@
-# Upgrade
+# 版本升级
 
-### from version 1.22.xx to 1.23.xx
+### 从版本 1.22.xx 升级至 1.23.xx
 
-the database structure has been changed on version `1.23.xx`, need to execute the following script on the mongodb
+由于数据库的改动，需要在 `mongodb` 中执行以下脚本，否则会服务启动失败
 
 ```bash
 db.job.dropIndex('index_flow_id')
