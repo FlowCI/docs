@@ -55,3 +55,4 @@
 * Reference
   * [YAML](en/yml/reference_v1.md)
   * [Variables](en/agents/vars.md)
+  * [Upgrade](en/upgrade/index.md)

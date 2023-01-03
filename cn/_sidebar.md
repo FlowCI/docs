@@ -55,3 +55,4 @@
 * 参考
   * [YAML](cn/yml/reference_v1.md)
   * [环境变量](cn/agents/vars.md)
+  * [Upgrade](cn/upgrade/index.md)
